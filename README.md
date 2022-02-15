@@ -1,6 +1,6 @@
-- 👋 Hi, I’m @evandro-ruiz (Evandro Ruiz)
+- 👋 Hi, I’m Evandro Ruiz (@evandro-ruiz)
 - 👀 I’m interested in Natural Language Processing
-- 🌱 I’m currently teaching a class on introduction to web developent
+- 🌱 I’m currently teaching a class on Introduction to Web Developent
 - 📫 How to reach me evandro@usp.br
 
 <!---
