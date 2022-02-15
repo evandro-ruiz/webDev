@@ -1,4 +1,10 @@
-- Este é um repositório didático da disciplina 5954024 Introdução ao Desenvolvimento Web
+Repositório didático da disciplina **5954024 Introdução ao Desenvolvimento Web**
+<h3>Programa</h3>
+
+- Histórico sobre desenvolvimento de aplicações web. 
+- Infraestrutura básica para o desenvolvimento de aplicações Web: requisições HTTP, linguagens de marcação (HTML, CSS).
+- Processamento cliente e servidor com Javascript. 
+- Desenvolvimento de trabalhos práticos.
 
 <!---
 evandro-ruiz/evandro-ruiz is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
