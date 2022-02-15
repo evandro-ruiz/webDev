@@ -1,5 +1,4 @@
-- 👋 Hi, I’m Evandro Ruiz (@evandro-ruiz)
-- This is a general repository for many subjects
+- Este é um repositório didático da disciplina 5954024 Introdução ao Desenvolvimento Web
 
 <!---
 evandro-ruiz/evandro-ruiz is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
