@@ -1,7 +1,5 @@
 - 👋 Hi, I’m Evandro Ruiz (@evandro-ruiz)
-- 👀 I’m interested in Natural Language Processing
-- 🌱 I’m currently teaching a class on Introduction to Web Developent
-- 📫 How to reach me evandro@usp.br
+- This is a general repository for many subjects
 
 <!---
 evandro-ruiz/evandro-ruiz is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
