@@ -1,9 +1,9 @@
 Repositório didático da disciplina **5954024 Introdução ao Desenvolvimento Web**
 <h3>Programa</h3>
 
-- Histórico sobre desenvolvimento de aplicações web. 
+- xxHistórico sobre desenvolvimento de aplicações web.
 - Infraestrutura básica para o desenvolvimento de aplicações Web: requisições HTTP, linguagens de marcação (HTML, CSS).
-- Processamento cliente e servidor com Javascript. 
+- Processamento cliente e servidor com Javascript.
 - Desenvolvimento de trabalhos práticos.
 
 <!---
