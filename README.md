@@ -6,6 +6,9 @@ Repositório didático da disciplina **5954024 Introdução ao Desenvolvimento W
 - Processamento cliente e servidor com Javascript.
 - Desenvolvimento de trabalhos práticos.
 
+<h2>Tópicos</h2>
+
+- HTML <a href="aula_html.html">essencial</a>
 <!---
 evandro-ruiz/evandro-ruiz is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
