@@ -4,7 +4,7 @@
  <title>Introdução a linguagem  HTML</title>
  <meta name="author" content="Evandro Eduardo Seron
        Ruiz FFCLRP - USP (imagcom.org/evandro">
- <meta name="description" content="Tutorial basico para editoração 
+ <meta name="description" content="Tutorial basico para editoração
        de documentos HTML.">
  <meta name="KeyWords" content="HTML, páginas Web, editoração, tutorial">
  <META name="Editor" content="Emacs">
@@ -44,8 +44,8 @@ edição de conteúdos para Internet.
 </p>
 
 <p>
-Normalmente quando solicitamos um 
-endereço Internet (URL - <dfn>Uniform Resource Locator</dfn>) 
+Normalmente quando solicitamos um
+endereço Internet (URL - <dfn>Uniform Resource Locator</dfn>)
 este aponta para um computador servidor, mais especificamente para
 um diretório nele e, por padronização, de todos os arquivos
 neste diretório (pasta) a página chamada e a página que é apresentada
@@ -90,7 +90,7 @@ links,
 
 <p>
 Examinando o documento acima vemos que &lt<strong>html&gt;</strong> indica o início de
-um documento nesta linguagem e que certamente a etiqueta 
+um documento nesta linguagem e que certamente a etiqueta
 &lt<strong>/html</strong>&gt;
 indica o final do texto editado
 </p>
@@ -153,7 +153,7 @@ As linhas horizontais como esta abaixo<br>
 são inseridas pela etiqueta
 &lt;<strong>hr</strong>&gt; que aceita como
 atributos <strong>size=largura_em_pixels</strong> e
-<strong>width=comprimento_em_%_da_tela ou pixels</strong> 
+<strong>width=comprimento_em_%_da_tela ou pixels</strong>
 </p>
 
 <h2>As listas</h2>
@@ -238,7 +238,7 @@ Produzem o resultado abaixo:
 
 <h3><a name="ligac">Ligações - links</a></h3>
 <p>
-As ligações, ou <em>links</em>, são a essencia dos documentos hipertexto. 
+As ligações, ou <em>links</em>, são a essencia dos documentos hipertexto.
 São os
 <em>links</em> que promovem o direcionamento de um texto para outro
 documento, outra localização, ou mais tecnicamente, outro URL.</p>
@@ -263,7 +263,7 @@ onde:
 <p>
 Vejamos um exemplo:<br>
 &lt;<strong>a href="http://www.usp.br"</strong>&gt;Link para USP&lt;<strong>/a</strong>&gt;<br>
-É equivalente à: <a href="http://www.usp.br">Link para USP</a>. 
+É equivalente à: <a href="http://www.usp.br">Link para USP</a>.
 </p>
 <p>
 Agora retome ao seu documento de edição, ou melhor, à página que você
@@ -300,7 +300,7 @@ no lugar de uma URL. Vejamos o exemplo<br>
 </p>
 
 <p>
-Edite outro arquivo HTML com informações adicionais suas, 
+Edite outro arquivo HTML com informações adicionais suas,
 chameo de <code>mais_bio.html</code>. Edite o arquivo <code>index.html</code>
 de modo a inserir uma ligação para este arquivo.
 </p>
@@ -337,15 +337,15 @@ não estaja no seu disco local.
 
 <p>
 Vejamos um exemplo: <br>
-<img src="http://www.ffclrp.usp.br/imagens/logo.png">
+<img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png">
 </p>
 
 <p>
 A figura acima surgiu da digitação do seguinte
 comando:
-<br><code>&lt;img src= "http://www.ffclrp.usp.br/imagens/logo.png"></code><br>
-já que <code>logo.png</code> é um arquivo que se encontra
-na URL da FFCLRP.
+<br><code>&lt;img src= "http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png"></code><br>
+já que <code>logo_usp.png</code> é um arquivo que se encontra
+nesta URL.
 </p>
 
 <p>
@@ -364,7 +364,7 @@ atributos destacamos:
 </p>
 
 <dl>
-<dt> alt </dt> 
+<dt> alt </dt>
 <dd> descreve um texto que será exibido quando a imagem
      não for carragada pelo <em>browser</em>, em casos de navegadores tipo
      texto ou com o carragemento de imagens desligado; </dd>
@@ -381,8 +381,8 @@ atributos destacamos:
 No modelo genérico específicamos o atributo da seguinte forma:
 </p>
 
-<p><code>&lt;<font COLOR="#FF0000">img</font> 
-  <strong>src</strong>=<font COLOR="#0000FF">"<i>URL_imagem</i>"</font> 
+<p><code>&lt;<font COLOR="#FF0000">img</font>
+  <strong>src</strong>=<font COLOR="#0000FF">"<i>URL_imagem</i>"</font>
   <strong>atributo</strong>=<font COLOR="#0000FF">"<i>valor_atributo</i>"
   </font>&gt;
 </code></p>
@@ -390,32 +390,32 @@ No modelo genérico específicamos o atributo da seguinte forma:
 <p>
 Vejamos para o caso de <em>alt</em>
 </p>
-<p><code>&lt;<font COLOR="#FF0000">img</font> 
-  <strong>src</strong>=<font COLOR="#0000FF">"<i>URL_imagem</i>"</font> 
+<p><code>&lt;<font COLOR="#FF0000">img</font>
+  <strong>src</strong>=<font COLOR="#0000FF">"<i>URL_imagem</i>"</font>
   <strong>alt</strong>=<font COLOR="#0000FF">"<i>texto_explicativo</i>"
   </font>&gt;
 </code></p>
 
 <p>
 Vejamos um exemplo: <br>
-<img src="http://www.ffclrp.usp.br/imagens/logo.png" alt="Logotipo da FFCLRP.">
+<img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" alt="Logotipo da USP.">
 </p>
 
 <p>
 A figura acima surgiu da digitação do seguinte
 comando:
-<br><code>&lt;img src="http://www.ffclrp.usp.br/imagens/logo.png" alt="Logotipo da FFCLRP."></code><br>.
+<br><code>&lt;img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" alt="Logotipo da USP."></code><br>.
 </p>
 
 <p>
 Vejamos outros exemplos com os atributos exemplo: <br>
-<img src="http://www.ffclrp.usp.br/imagens/logo.png" width="50">
+<img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" width="50">
 </p>
 
 <p>
 A figura acima surgiu da digitação do seguinte
 comando:
-<br><code>&lt;img src= "http://www.ffclrp.usp.br/imagens/logo.png" width="50"></code><br>
+<br><code>&lt;img src= "http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" width="50"></code><br>
 que é a largura da imagem em pixels, pontos de imagem.
 No lugar da medida em pixels pode ser usada a medida em porcentagem,
 como <code>"50%"</code> que significa metade da dimensão especificada
@@ -424,23 +424,23 @@ da tela, ou seja, da sua largura ou altura.
 
 <p>
 Vejamos outros exemplos com os atributos exemplo: <br>
-<img src="http://www.ffclrp.usp.br/imagens/logo.png" border=2>
+<img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" border=2>
 </p>
 
 <p>
 Adicionamos uma borda de dimensão de dois pixels,
 fazendo:
-<br><code>&lt;img src="http://www.ffclrp.usp.br/imagens/logo.png" border=2></code><br>
+<br><code>&lt;img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" border=2></code><br>
 </p>
 
 <p>
-<img src="http://www.ffclrp.usp.br/imagens/logo.png" align="top" border=1>
+<img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" align="top" border=1>
 Texto adjacente  alinhado com em relação a linha que passa pelo
 topo da imagem. Com textos longos o resultado não é muito bom.
 </p>
 
 <p>
-<img src="http://www.ffclrp.usp.br/imagens/logo.png" align="bottom" border=1>
+<img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" align="bottom" border=1>
 Texto adjacente  alinhado com em relação a linha que passa abaixo
  da imagem. Os resultados assim parecem melhores. Este é
 o padrão caso não especifiquemos o alinhamento.
@@ -448,7 +448,7 @@ o padrão caso não especifiquemos o alinhamento.
 
 
 <p>
-<img src="http://www.ffclrp.usp.br/imagens/logo.png" align="middle" border=1>
+<img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" align="middle" border=1>
 Texto adjacente  alinhado com em relação a linha que passa pelo
 meio da imagem. Os resultados com textos longos também
 não são bons.
@@ -485,13 +485,13 @@ Alguns dos pricipais marcadores lógicos são:
  Capitão de Voluntários:
  <blockquote>
  &lt;<font COLOR="#FF0000">blockquote</font>&gt;
- Quando eu entrava, já ele estava na cadeira de balanço. 
- Os móveis da sala eram poucos, os ornatos raros, tudo simples. X... 
- estendia-me a mão larga e forte; eu ia sentar-me ao pé da janela, 
+ Quando eu entrava, já ele estava na cadeira de balanço.
+ Os móveis da sala eram poucos, os ornatos raros, tudo simples. X...
+ estendia-me a mão larga e forte; eu ia sentar-me ao pé da janela,
  olho na sala, olho na rua. Maria, ou já estava ou vinha de dentro.
  Éramos nada um para o outro; ligava-nos unicamente a afeição de X...
  Conversávamos; eu saía para casa ou ia passear, eles ficavam e iam dormir.
- Algumas vezes jogávamos cartas, às noites, e, para o fim do tempo, 
+ Algumas vezes jogávamos cartas, às noites, e, para o fim do tempo,
  era ali que eu passava a maior parte destas
  &lt;<font COLOR="#FF0000">blockquote</font>&gt;
  </blockquote>
@@ -499,7 +499,7 @@ Alguns dos pricipais marcadores lógicos são:
  <dt> &lt;address&gt;</dt>
  <dd> Bem auto-explicativo estas etiquetas podem ser
  usadas dentro de uma página, como: para maiores
- informações ler 
+ informações ler
  &lt;<font COLOR="#FF0000">address</font>&gt;http://www.icmc.sc.usp.br/manuals/HTML/textos.html&lt;<font COLOR="#FF0000">address</font>&gt;
  que apareceria como sendo
  <address>http://www.icmc.sc.usp.br/manuals/HTML/textos.htm</address>
@@ -507,7 +507,7 @@ Alguns dos pricipais marcadores lógicos são:
 
  <dt>&lt;cite&gt;</dt>
  <dd> Para citações bibliográficas, de obras, textos, como a que
-  fiz sobre Machado de Assis acima, ou como: Ver 
+  fiz sobre Machado de Assis acima, ou como: Ver
   <cite>Obras poéticas de Gonçalves Dias, por Manuel Bandeira</cite>
   </dd>
 
@@ -583,4 +583,3 @@ www.imagcom.org/evandro/basics/htmlBasico/aula_html.html</a>-->
 
 
 </html>
-
