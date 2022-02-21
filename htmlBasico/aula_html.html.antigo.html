@@ -1,0 +1,569 @@
+<html>
+<head>
+ <title>Introdução a linguagem  HTML</title>
+ <meta name="author" content="Evandro Eduardo Seron
+       Ruiz FFCLRP - USP (imagcom.org/evandro">
+ <meta name="description" content="Tutorial basico para editoracao 
+       de documentos HTML.">
+ <meta name="KeyWords" content="HTML, páginas Web, editoração, tutorial">
+ <meta name="Editor" content="Emacs">
+</head>
+
+<body>
+<h1>Introdução a linguagem HTML</h1>
+<p>
+HTML é uma linguagem de marcação de documentos. HTML significa
+<dfn>HyperText Markup Language</dfn>, ou seja, uma linguagem de marcação
+para hipertextos. Uma linguagem de marcação, como o próprio nome diz, marca
+partes do texto para serem trabalhadas. Em HTML as partes de texto marcadas
+indicam como fazer a formatação de um texto.
+</p>
+
+<p>
+Todo documento HTML é marcado usando-se etiquetas, também chamadas
+de <em>tags</em>, do seguinte modo:
+<pre>
+&lt;<font color=#aa0000>etiqueta</font>&gt;...elemento_a_ser_etiquetado...&lt;<font color=#aa0000>etiqueta</font>&gt;
+</pre>
+</p>
+
+<p>
+Existem, como veremos, etiquetas mais complexas, especialmente aquelas
+pra ligações hipertextos, que estão na forma:
+<pre>
+&lt;<font color=#aa0000>etiqueta </font><font color=#00bb00>atributo=valor</font>&gt;...elemento_a_ser_etiquetado...&lt;<font color=#aa0000>etiqueta</font>&gt;
+</pre>
+e que veremos com mais detalhes mais tarde.
+</p>
+
+<p>
+Em suma, HTML como linguagem de marcação é a linguagem padrão atualmente
+para descrição de páginas na Web, ou seja, é a ferramenta básica para
+edição de conteúdos para Internet.
+</p>
+
+<p>
+Todo endereço Internet (URL - <dfn>Uniform Resource Locator</dfn>) que
+solicitamos a página solicitada é, por padrão, a página chamada
+<strong>index.html</strong>.
+</p>
+
+<p>
+Este documento foi todo escrito obviamente em HTML, mas foi escrito
+num editor de programas, usando apenas caracteres do teclado e
+nenhuma ferramenta de edição, para que ele pudesse ser usado também
+como aprendizado da linguagem
+</p>
+
+<p>
+Linguagens marcadoras simples com esta são uma boa opção para edição
+de relatórios ou documentos curtos que podem ser visualizados com
+ajuda de qualquer navegador, podem ser escritos com editores
+simples de texto, como o <em>Bloco de Notas</em>
+do <em>Windows</em> e independem da versão do software
+de edição.
+</p>
+
+<h2>Documento básico</h2>
+Exitem, no entanto, algumas etiquetas essenciais que definem a estrutura
+básica de um documento HTML, que são:
+<PRE>
+&lt;<font color=#aa0000>html</font>&gt;
+&lt;<font color=#ff0000>head</font>&gt;&lt;<font color=#aa0000>title</font>&gt;<strong>Titulo do Documento</strong>&lt;<font color=#aa0000>/title</font>&gt;&lt;<font color=#ff0000>/head</font>&gt;
+&lt;<font color=#ff0000>body</font>&gt;
+<strong>texto,
+imagem,
+links,
+...</strong>
+&lt;<font color=#ff0000>/body</font>&gt;
+&lt;<font color=#aa0000>/html</font>&gt;
+</PRE>
+
+<p>
+Examinando o documento acima vemos que &lt<strong>html&gt;</strong> indica o início de
+um documento nesta linguagem e que certamente a etiqueta 
+&lt<strong>/html</strong>&gt;
+indica o final do texto editado
+</p>
+</p>
+A seção indicada por &lt<strong>head</strong>&gt; &lt<strong>/head</strong>&gt;
+marca o que
+será visto no cabeçalho de uma página, ou seja, é o título da janela
+do visualizador, do navegador, de textos.
+</p>
+
+<p>
+Para a inserção de textos no corpo do documento a etiqueta
+fundamental é a marcadora de parágrafos, isso mesmo, até mesmo
+os parágrafos devem ser marcados para serem exibidos corretamente.
+Logo todo parágrafo deve estar inserido entre as etiquetas
+&lt;<strong>p</strong>&gt; &lt;<strong>/p</strong>&gt;
+</p>
+
+<p>
+Estamos então prontos para editarmos o nosso primeiro documento
+HTML. Faça o seu. Edite um arquivo HTML com uma frase contendo
+o seu nome e uma breve apresentação sua. Chame este arquivo
+de <code>index.html</code>.
+</p>
+
+<h3>Mais dicas no documento básico</h3>
+<p>
+As seções, ou seja, os cabeçalhos podem ser marcados com a etiqueta
+&lt;<strong>hx</strong>&gt; &lt;<strong>/hx</strong>&gt;
+onde <strong>x</strong> é um número de 1 a 6 que indica o tamanho
+co cabeçalho. O de número 6 é o maior.
+Vejamos os diferentes cabeçalhos:
+<h1> Um cabeçalho h1 </h1>
+<h2> Um cabeçalho h2 </h2>
+<h3> Um cabeçalho h3 </h3>
+<h4> Um cabeçalho h4 </h4>
+<h5> Um cabeçalho h5 </h5>
+<h6> Um cabeçalho h6 </h6><br>
+Notem que já existe um espaçamento natural entre eles.<br><br>
+Outra etiqueta essencial é a etiqueta para mudança de linha
+que é a etiqueta &lt;<strong>br</strong>&gt; Quantas vezes ela
+for usada tantas serão os avanços de linha.
+</p>
+
+<p>
+Os parágrafos também podem ter atributos de alinhamento
+a direita, a esquerda e também podem ser centrlizados. <br>
+&lt;<strong>p align=right</strong>&gt; faz a centralização à
+direita. São análogos os atributos
+&lt;<strong>p align=left</strong>&gt; e
+&lt;<strong>p align=center</strong>&gt;.
+</p>
+
+<p>
+As linhas horizontais como esta abaixo<br>
+<hr>
+são inseridas pela etiqueta
+&lt;<strong>hr</strong>&gt; que aceita como
+atributos <strong>size=largura_em_pixels</strong> e
+<strong>width=comprimento_em_%_da_tela ou pixels</strong> 
+</p>
+
+<h2>As listas</h2>
+<p>
+Tão importante quanto os parágrafos, as listas são outro tipo de
+formatação muito usada nos textos.<br>
+Em HTML temos basicamente três tipos de listas:
+<ol>
+  <li> as listas de definição; </li>
+  <li> as listas de tópicos, não numerados; e</li>
+  <li> as listas numeradas.</li>
+</ol>
+</p>
+
+<h3>As listas de definição</h3>
+<p>
+Estas listas têm o seguinte formato:<br>
+<pre>&lt;dl&gt;
+&lt;dt&gt;termo a ser definido (<em>definition term</em>)&lt;dt&gt;
+&lt;dd&gt;definição&lt;dd&gt;
+&lt;dt&gt;termo a ser definido&lt;dt&gt;
+&lt;dd&gt;definição&lt;dd&gt;
+&lt;/dl&gt;</pre>
+</p>
+
+<p>
+Que produz:
+<dl>
+<dt>termo a ser definido</dt>
+<dd>defini&ccedil;&atilde;o</dd>
+<dt>termo a ser definido</dt>
+<dd>defini&ccedil;&atilde;o</dd>
+</dl>
+</p>
+
+<h3>As listas não numeradas - Listas de tópicos</h3>
+<p>
+Vejam o exemplo abaixo:<br>
+<code>
+<dl><dt>&lt;ul&gt;
+  <dt>&lt;li&gt;item da lista&lt;/li&gt;
+  <dt>&lt;li&gt;outro item da lista&lt;/li&gt;
+  <dt>&lt;li&gt;mais um item&lt;/li&gt;
+  <dt>&lt;/ul&gt;
+</dl>
+</code>
+O código
+&lt;<strong>ul</strong>&gt; é mnemônico para <em>unumbered list</em>. Assim
+pode ficar mais fácil memorizar.
+</p>
+
+<p>
+Produzem o resultado abaixo:
+<ul>
+<li>item da lista</li>
+<li>outro item da lista</li>
+<li>mais um item</li>
+</ul>
+
+<h3>As listas numeradas</h3>
+<p>
+Vejam novamente um exemplo abaixo:<br>
+<code>
+<dl><dt>&lt;ol&gt;
+  <dt>&lt;li&gt;primeiro item da lista&lt;/li&gt;
+  <dt>&lt;li&gt;segundo item da lista&lt;/li&gt;
+  <dt>&lt;li&gt;terceiro item&lt;/li&gt;
+  <dt>&lt;/ol&gt;
+</dl>
+</code>
+O código
+&lt;<strong>ol</strong>&gt; é mnemônico para <em>ordered list</em>.
+</p>
+
+<p>
+Produzem o resultado abaixo:
+<ol>
+<li>primeiro item da lista</li>
+<li>segundo item da lista</li>
+<li>terceiro item</li>
+</ol>
+
+<h3><a name="ligac">Ligações - links</a></h3>
+<p>
+As ligações, ou <em>links</em>, são a essencia dos documentos hipertexto. São os
+<em>links</em> que promovem o direcionamento de um texto para outro
+documento, outra localização, outra URL.<br>
+Esta etiqueta de links tem o seguinte formato:<br>
+
+<code>
+&lt;<font color=#ff0000>a</font> <strong>href</strong> = <font color=#0000ff>"<i>URL_destino</i>"</font>&gt;&acirc;ncora&lt;<font color=#ff0000>/a</font>&gt;
+</code>
+</p>
+
+<p>
+onde:
+<dl>
+<dt><strong>URL_destino</strong></dt>
+<dd> é a URL do documento de destino;</dd>
+<dt><strong>âncora</strong></dt>
+<dd> é o texto que servirá de ligação para a URL informada.</dd>
+</dl>
+</p>
+
+<p>
+Vejamos um exemplo:<br>
+&lt;<strong>a href="http://www.usp.br"</strong>&gt;Link para USP&lt;<strong>/a</strong>&gt;<br>
+É equivalente à: <a href="http://www.usp.br">Link para USP</a>. 
+</p>
+<p>
+Agora retome ao seu documento de edição, ou melhor, à página que você
+estava editando e insira <em>links</em> para locais citados, por exemplo,
+para a cidade que nasceu e para a Unidade onde está fazendo a sua graduação.
+</p>
+
+<h3>Links para dentro do próprio documento</h3>
+<p>
+Ao contrário dos links anteriores, chamados <em>links absolutos</em>
+podemos ter links <em>relativos</em> ao mesmo documento que se está
+visualizando.<br>
+Para tal devemos definir e nomear uma âncora onde o link com aquele
+nome será apontado e, definir o link de maneira análoga acima.
+Vejamos:<br>
+<pre>
+Veja o assunto &lt;<font color=#ff0000>a</font> <strong>href</strong>=<font color=#0000ff>"#relativo"</font>&gt;Ligações - links&lt;<font color=#ff0000>/a</font>&gt;.
+</pre>
+teremos uma ligação hipertexto para um trecho deste
+mesmo documento:
+</p>
+
+<p>
+Por exemplo:
+leia novamente sobre <a href="#ligac">Ligações - links</a>.
+</p>
+
+<p>
+Outros arquivos do mesmo diretório, ou de outro diretório relativo
+ao documento atual, também podem ser referenciados como link.
+Basta seguir a receita para link absoluto e colocar o nome do arquivo
+no lugar de uma URL. Vejamos o exemplo<br>
+&lt;<font color=#ff0000>a</font> href</strong>=<font color=#0000ff>"arquivo_destino"</font>&gt;Link para arquivo&lt;<font color=#ff0000>/a</font>&gt;.<br>
+</p>
+
+<p>
+Edite outro arquivo HTML com informações adicionais suas, 
+chameo de <code>mais_bio.html</code>. Edite o arquivo <code>index.html</code>
+de modo a inserir uma ligação para este arquivo.
+</p>
+
+<p>
+Na próxima aula veremos mais sobre formatação de caracteres e inserção de
+imagens. Por hoje é só, pessoal.
+</p>
+<hr>
+
+
+<h3>Inserção de imagens</h3>
+<p>
+Como todo texto multimídia as imagens não devem faltar num documento
+HTML. Para inserção de imagens devemos proceder de modo análogo
+as ligações absolutas, com a diferença do elemento <em>img</em>.<br>
+Vejamos como inserir uma imagem que está neste mesmo
+diretório:
+</p>
+
+<p><code>
+&lt;<font COLOR="#FF0000">img</font>
+ <strong>src</strong>=<font COLOR="#0000FF">"<i>URL_imagem</i>"</font>&gt;
+</code></p>
+
+<p>
+No parágrafo acima <em>src</em> significa <em>source</em>, ou seja,
+o arquivo fonte, a imagem e sua localização, que deverá
+ser fornecido para o navegador encontar a imagem. Já <em>URL</em>
+significa <em>Uniform Resource Locator</em> que é o endereço
+Internet do objeto (imagem) que se deseja mostrar, caso esta imagem
+não estaja no seu disco local.
+</p>
+
+<p>
+Vejamos um exemplo: <br>
+<img src=logo_usp.jpg>
+</p>
+
+<p>
+A figura acima surgiu da digitação do seguinte
+comando:
+<br><code>&lt;img src= "logo_usp.jpg"></code><br>
+já que <code>logo_usp.jpg</code> é um arquivo que se encontra
+neste mesmo diretório em que escrevo este arquivo html.
+</p>
+
+<p>
+Podemos inserir nas páginas HTML arquivos nos formatos
+<code>*.jpg</code>, <code>*.gif</code> e <code>*.png</code>.
+Isto, óbviamente, até este momento. No futuro esperamos
+que os navegadores aceitem outros formatos de arquivos
+de imagens.
+</p>
+
+<h3>Atributos do comando de inserção de imagens</h3>
+<p>
+Existem uma série de atributos que podem ser adicionados
+após o nome da figura, ou imagem, inserida, dentre eles
+destacamos:
+</p>
+
+<dl>
+<dt> alt </dt> 
+<dd> descreve um texto que será exibido quando a imagem
+     não for carragada pelo browser, em casos de browsers tipo
+     texto ou com o carragemento de imagens desligado; </dd>
+<dt> width e height </dt>
+<dd> especificam a largura e a altura da imagem; </dd>
+<dt> border </dt>
+<dd> especifica a existência e a espessura da borda da figura; </dd>
+<dt> align </dt>
+<dd> especifica o alinhamento da imagem dentro do parágrafo. </dd>
+<dt> </dt>
+</dl>
+
+<p>
+No modelo genérico específicamos o atributo da seguinte forma:
+</p>
+
+<p><code>&lt;<font COLOR="#FF0000">img</font> 
+  <strong>src</strong>=<font COLOR="#0000FF">"<i>URL_imagem</i>"</font> 
+  <strong>atributo</strong>=<font COLOR="#0000FF">"<i>valor_atributo</i>"
+  </font>&gt;
+</code></p>
+
+<p>
+Vejamos para o caso de <em>alt</em>
+</p>
+<p><code>&lt;<font COLOR="#FF0000">img</font> 
+  <strong>src</strong>=<font COLOR="#0000FF">"<i>URL_imagem</i>"</font> 
+  <strong>alt</strong>=<font COLOR="#0000FF">"<i>texto_explicativo</i>"
+  </font>&gt;
+</code></p>
+
+<p>
+Vejamos um exemplo: <br>
+<img src=logo_usp.jpg alt="Logotipo extraído da página da USP.">
+</p>
+
+<p>
+A figura acima surgiu da digitação do seguinte
+comando:
+<br><code>&lt;img src= "logo_usp.jpg" alt="Logotipo extraído da página da USP."></code><br>.
+</p>
+
+<p>
+Vejamos outros exemplos com os atributos exemplo: <br>
+<img src=logo_usp.jpg width="200">
+</p>
+
+<p>
+A figura acima surgiu da digitação do seguinte
+comando:
+<br><code>&lt;img src= "logo_usp.jpg" width="200"></code><br>
+que é a largura da imagem em pixels, pontos de imagem.
+No lugar da medida em pixels pode ser usada a medida em porcentagem,
+como <code>"50%"</code> que significa metade da dimensão especificada
+da tela, ou seja, da sua largura ou altura.
+</p>
+
+<p>
+Vejamos outros exemplos com os atributos exemplo: <br>
+<img src=logo_usp.jpg border=2>
+</p>
+
+<p>
+Adicionamos uma borda de dimensão de dois pixels,
+fazendo:
+<br><code>&lt;img src= "logo_usp.jpg" border=2></code><br>
+</p>
+
+<p>
+<img src=logo_usp.jpg align="top" border=1>
+Texto adjacente  alinhado com em relação a linha que passa pelo
+topo da imagem. Com textos longos o resultado não é muito bom.
+</p>
+
+<p>
+<img src=logo_usp.jpg align="bottom" border=1>
+Texto adjacente  alinhado com em relação a linha que passa abaixo
+ da imagem. Os resultados assim parecem melhores. Este é
+o padrão caso não especifiquemos o alinhamento.
+</p>
+
+
+<p>
+<img src=logo_usp.jpg align="middle" border=1>
+Texto adjacente  alinhado com em relação a linha que passa pelo
+meio da imagem. Os resultados com textos longos também
+não são bons.
+</p>
+
+<h3>Formatação lógica de caracteres</h3>
+<p>
+A formatação lógica de caracteres permite especificar
+etiquetas que discriminen os caracteres quanto a sua
+especificidade e não somente quanto a sua aparência,
+portanto a apresentação caracter marcado poderá depender
+da implementação ou do ambiente já que não é descrita
+pela etiqueta.
+</p>
+
+<p>
+Alguns dos pricipais marcadores lógicos são:
+</p>
+
+<dl>
+  <dt> &lt;pre&gt;</dt>
+  <dd> Apresenta o texto da mesma forma que foi digitado, mantendo
+  as quebras de linhas e os espaçamentos. Por exemplo:
+<pre>&lt;<font COLOR="#FF0000">pre</font>&gt este é um
+                texto pre - f o r m  a   t   a   do
+            um,	dois,                          três.&lt;<font COLOR="#FF0000">/pre</font>&gt;</pre>
+</pre>
+
+ <dt> &lt;blockquote&gt;</dt>
+ <dd> É usada para citações de trechos longos, com
+ diagramação esperada como em livros, parágrafos mais
+ compactos normalmente centralizados, Por exemplo: vejamos
+ este típico texto Machadiano em <cite>Obra Completa</cite>, Um
+ Capitão de Voluntários:
+ <blockquote>
+ &lt;<font COLOR="#FF0000">blockquote</font>&gt;
+ Quando eu entrava, já ele estava na cadeira de balanço. 
+ Os móveis da sala eram poucos, os ornatos raros, tudo simples. X... 
+ estendia-me a mão larga e forte; eu ia sentar-me ao pé da janela, 
+ olho na sala, olho na rua. Maria, ou já estava ou vinha de dentro.
+ Éramos nada um para o outro; ligava-nos unicamente a afeição de X...
+ Conversávamos; eu saía para casa ou ia passear, eles ficavam e iam dormir.
+ Algumas vezes jogávamos cartas, às noites, e, para o fim do tempo, 
+ era ali que eu passava a maior parte destas
+ &lt;<font COLOR="#FF0000">blockquote</font>&gt;
+ </blockquote>
+
+ <dt> &lt;address&gt;</dt>
+ <dd> Bem auto-explicativo estas etiquetas podem ser
+ usadas dentro de uma página, como: para maiores
+ informações ler 
+ &lt;<font COLOR="#FF0000">address</font>&gt;http://www.icmc.sc.usp.br/manuals/HTML/textos.html&lt;<font COLOR="#FF0000">address</font>&gt;
+ que apareceria como sendo
+ <address>http://www.icmc.sc.usp.br/manuals/HTML/textos.htm</address>
+ </dd>
+
+ <dt>&lt;cite&gt;</dt>
+ <dd> Para citações bibliográficas, de obras, textos, como a que
+  fiz sobre Machado de Assis acima, ou como: Ver 
+  <cite>Obras poéticas de Gonçalves Dias, por Manuel Bandeira</cite>
+  </dd>
+
+ <dt>&lt;em&gt;</dt>
+ <dd> A ênfase de textos pode ser obtida com esta etiqueta.
+ Produz textos tipo: <em>enfatizados</em>. </dd>
+
+ <dt>&lt;strong&gt;</dt>
+ <dd> Os textos em <strong>negrito</strong> são normalmente produzidos
+ por esta etiqueta.</dd>
+</dl>
+
+
+<h3>Formatadores físicos</h3>
+</p>
+Estes sim especificam e marcam a aparênccia da seqüência de
+caracteres no navegador. Vejamos alguns:
+</p>
+
+<dl>
+<dt><code><strong>&lt;i&gt;</strong></code></dt>
+<dd><i>Itálico</i>, ou melhor, caracteres levemente inclinados, na prática.
+Normalmente não são fontes especiais tipo itálico e se confundem com
+as enfatizadas. </dd>
+
+<dt><code><strong>&lt;tt&gt;</strong></code></dt>
+<dd>Conhecido como tipo fixo (de espaçamento fixo), a abreviação
+  significa <tt>teletype</tt>.
+</dd>
+
+
+<dt><code><strong>&lt;u&gt;</strong></code></dt>
+<dd> É o <u>Sublinhado</u>. Cuidado para não confundir com
+  os <i>links</i>.
+</dd>
+
+<dt><code><strong>&lt;strike&gt;</strong></code> ou <code><strong>&lt;s&gt;</strong></code></dt>
+<dd>Frase <s>riscada</s>.
+</dd>
+
+
+<dt><code><strong>&lt;big&gt;</strong></code></dt>
+<dd>Fonte <big>um pouco maior</big>.
+</dd>
+
+<dt><code><strong>&lt;small&gt;</strong></code></dt>
+<dd>Fonte <small>um pouco menor</small>.
+</dd>
+
+
+<dt><code><strong>&lt;sub&gt;</strong></code></dt>
+<dd>Construção em estilo <sub>índice</sub>, como em H<sub>2</sub>O.
+</dd>
+
+<dt><code><strong>&lt;sup&gt;</strong></code></dt>
+<dd>Construção em estilo <sup>expoente</sup>, como em Km<sup>2</sup>.
+</dd>
+
+<p>
+E com isso terminamos este pequeno tutorial. Espero que
+o código fonte deste documento também sirva como
+modelo para sua inicição na escrita HTML.
+</p>
+<hr>
+
+<p font-family: arial, 'sans serif'; font-size: 50%, color:DarkBlue,>
+Última modificação feita em: 12 de março de 2014<br>
+Evandro Eduardo Seron Ruiz, Ph.D. <code>(evandro at usp ponto br)</code> <br>
+</p>
+
+
+</html>
+

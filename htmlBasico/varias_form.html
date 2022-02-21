@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <title>Tipos para formulários</title> 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+</head> 
+<body> 
+<h2>Tipos para  formulários</h2>
+
+<p>Os formulários são muito usados para páginas HTML ativas, ou seja,
+páginas que respondem, ou se configuram, de acordo com as entradas dos usuários.</p>
+
+<p>A seguir mostramos alguns tipos de entradas formatadas que podemos
+usar com partes de um formulário. Observamos que estes vários tipos
+de entradas não estão respondendo pois não acrescentamos chamadas
+para estes. No momento estamos somente analisando as possibilidades
+de uso e como eles são
+escritos.</p>
+
+<hr>
+<h4>Estrada de texto</h4>
+<form method="post" action="<?php echo $PHP_SELF;?>"> 
+Nome:<input type="text" size="12" maxlength="12" name="Fname"><br> 
+Sobrenome:<input type="text" size="12" maxlength="36" name="Lname"><br> 
+</form>
+
+<p>A entrada acima foi produzida com o seguinte código:</p>
+<code>
+&lt;form method="post" action="&lt;?php echo $PHP_SELF;?&gt;"&gt;&lt;br&gt;<br>
+Nome:&lt;input type="text" size="12" maxlength="12" name="Fname"&gt;&lt;br/&gt<br> 
+Sobrenome:&lt;input type="text" size="12" maxlength="36" name="Lname"&gt;&lt;br/&gt;<br> 
+&lt;/form&gt;
+</code>
+
+<hr>
+<h4>Tipo <em>radio button</em></h4>
+Masculino:<input type="radio" value="Masculino" name="gender"><br>
+Feminino:<input type="radio" value="Feminino" name="gender"><br>
+
+<p>A entrada acima foi produzida com o seguinte código:</p>
+<code>
+Masculino:&lt;input type="radio" value="Masculino" name="genderM"&gt;<br>
+Feminino:&lt;input type="radio" value="Feminino" name="genderF"&gt;<br>
+</code>
+
+<hr>
+<h4>Tipo <em>check box</em></h4>
+Por favor, escolha os pratos:<br />
+Salada:<input type="checkbox" value="Salada" name="food"><br>
+Pizza:<input type="checkbox" value="Pizza" name="food"><br>
+Massa:<input type="checkbox" value="Massa" name="food"><br>
+
+<p>A entrada acima foi produzida com o seguinte código:</p>
+<code>
+Salada:&lt;input type="checkbox" value="Salada" name="foods"&gt;<br />
+Pizza:&lt;input type="checkbox" value="Pizza" name="foodp"&gt;<br />
+Massa:&lt;input type="checkbox" value="Massa" name="foodm"&gt;<br />
+</code>
+
+<hr>
+<h4>Área para texto</h4>
+<textarea rows="5" cols="20" name="frase" wrap="physical">
+Entre com sua frase favorita</textarea><br />
+
+<p>A entrada acima foi produzida com o seguinte código:</p>
+<code>
+&lt;textarea rows="5" cols="20" name="frase" wrap="physical"&gt;<br>
+Entre com sua frase favorita&lt;/textarea&gt;<br />
+</code>
+
+<hr>
+<h4>Seleção tipo <em>pull-down</em></h4>
+Selecione o grau educacional alcançado:<br />
+<select name="education">
+<option value="primo">1o grau</option>
+<option value="segundo">2o grau</option>
+<option value="uni">Universidade</option></select><br />
+
+<p>A entrada acima foi produzida com o seguinte código:</p>
+<code>
+&lt;select name="education"&gt;<br>
+&lt;option value="primo">1o grau&gt;&lt;/option&gt;<br>
+&lt;option value="segundo">2o grau&gt;&lt;/option&gt;<br>
+&lt;option value="uni">Universidade&gt;&lt;/option&gt;&lt;/select&gt;<br />
+</code>
+
+<hr>
+<h4>Seleção</h4>
+Selecione um período do dia:<br />
+<select name="TofD" size="3">
+<option value="manha">Diurno</option>
+<option value="dia">Vespertino</option>
+<option value="noite">Noturno</option></select><br />
+
+<p>A entrada acima foi produzida com o seguinte código:</p>
+<code>
+&lt;select name="TofD" size="3"&gt;<br>
+&lt;option value="manha"&gt;Diurno&lt;/option&gt;<br>
+&lt;option value="dia"&gt;Vespertino&lt;/option&gt;<br>
+&lt;option value="noite"&gt;Noturno&lt;/option&gt;&lt;/select&gt;<br />
+</code>
+
+<hr>
+<h4>Botão de ação</h4>
+<input type="submit" value="Enviar" name="submit">
+
+<p>A entrada acima foi produzida com o seguinte código:</p>
+<code>
+&lt;input type="submit" value="Enviar" name="submit"&gt;
+</code>
+<hr>
+<p font-family: arial, 'sans serif'; font-size: 50%, color:DarkBlue,>
+Última modificação feita em: 12 de março de 2014<br>
+Evandro Eduardo Seron Ruiz, Ph.D. <code>(evandro at usp ponto br)</code> <br>
+</p>
+
+<!--<a href="http://www.imagcom.org/evandro/basics/htmlBasico/aula_html.html">
+www.imagcom.org/evandro/basics/htmlBasico/aula_html.html</a>-->
+</p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* estilo.css, definicao simples de estilo */
+/* define cores para partes do documento   */
+
+body
+{
+  background: #E0FFFF;
+}
+
+/* Altera forma dos links */
+a:link
+{
+  font-weight:normal; color:Navy
+}
+a:visited
+{
+  font-weight:normal; color:Green;
+}
+a:hover
+{
+  font-weight:bold; color: Red; font-variant:small-caps;
+}
+
+/* Alteracao do parágrafo */
+p {
+  font-style:italic; font-size:18px;
+}
+blue {
+  color:#0000FF;
+}
+/* Borda das imagens */
+img {
+  border-color: #000000; border:thick; border-style:ridge;
+}
