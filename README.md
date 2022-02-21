@@ -8,9 +8,9 @@ Repositório didático da disciplina **5954024 Introdução ao Desenvolvimento W
 
 <h4>Tópicos</h4>
 
-- HTML <a href="http://evandro-ruiz.github.io/webDev/aula_html.html">essencial</a>
-- HTML <a href="http://evandro-ruiz.github.io/webDev/tst_estilo.html">teste de estilo</a>
-- HTML <a href="http://evandro-ruiz.github.io/webDev/varias_form.html">teste de formulário</a>
+- HTML <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/aula_html.html">essencial</a>
+- HTML <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/tst_estilo.html">teste de estilo</a>
+- HTML <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/varias_form.html">teste de formulário</a>
 
 <!---
 evandro-ruiz/evandro-ruiz is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
