@@ -4,14 +4,14 @@
  <title>Introdução a linguagem  HTML</title>
  <meta name="author" content="Evandro Eduardo Seron
        Ruiz FFCLRP - USP (imagcom.org/evandro">
- <meta name="description" content="Tutorial basico para editora��o
+ <meta name="description" content="Tutorial basico para editoração 
        de documentos HTML.">
- <meta name="KeyWords" content="HTML, p�ginas Web, editora��o, tutorial">
+ <meta name="KeyWords" content="HTML, páginas Web, editoração, tutorial">
  <META name="Editor" content="Emacs">
 </head>
 
 <body>
-<h1>Introduçãoo a linguagem HTML</h1>
+<h1>Introdução a linguagem HTML</h1>
 <p>
 HTML é uma linguagem de marcação de documentos. HTML significa
 <dfn>HyperText Markup Language</dfn>, ou seja, uma linguagem de marcação
@@ -38,43 +38,43 @@ e que veremos com mais detalhes mais tarde.
 </p>
 
 <p>
-Em suma, HTML como linguagem de marca��o, � a linguagem padr�o atualmente
-para descri��o de p�ginas na Web, ou seja, � a ferramenta b�sica para
-edi��o de conte�dos para Internet.
+Em suma, HTML como linguagem de marcação, é a linguagem padrão atualmente
+para descrição de páginas na Web, ou seja, é a ferramenta básica para
+edição de conteúdos para Internet.
 </p>
 
 <p>
-Normalmente quando solicitamos um
-endere�o Internet (URL - <dfn>Uniform Resource Locator</dfn>)
+Normalmente quando solicitamos um 
+endereço Internet (URL - <dfn>Uniform Resource Locator</dfn>) 
 este aponta para um computador servidor, mais especificamente para
-um diret�rio nele e, por padroniza��o, de todos os arquivos
-neste diret�rio (pasta) a p�gina chamada e a p�gina que � apresentada
-para o usu�rio � a p�gina
+um diretório nele e, por padronização, de todos os arquivos
+neste diretório (pasta) a página chamada e a página que é apresentada
+para o usuário é a página
 <strong>index.html</strong>.
 </p>
 
 <p>
-Este documento que voc� est� lendo
+Este documento que você está lendo
 foi todo escrito em HTML. Ele foi escrito
 num editor de programas, usando apenas caracteres do teclado e
-nenhuma ferramenta de edi��o, para que ele pudesse ser usado tamb�m
+nenhuma ferramenta de edição, para que ele pudesse ser usado também
 como meio de aprendizado da linguagem.
 </p>
 
 <p>
-Linguagens marcadoras simples com esta s�o uma boa op��o para edi��o
-de relat�rios ou documentos curtos que podem ser visualizados com
+Linguagens marcadoras simples com esta são uma boa opção para edição
+de relatórios ou documentos curtos que podem ser visualizados com
 ajuda de qualquer navegador. Estes documentos podem ser escritos com editores
 simples de texto, como o <em>Bloco de Notas</em>
 do <em>Windows</em>, ou o <em>Gedit</em> para os
-sistemas <em>GNU/Linux</em>, ou similares, e independem da vers�o do software
-de edi��o. Assim, voc� estar� editando texto <q>puro</q>, texto que n�o ficar�
+sistemas <em>GNU/Linux</em>, ou similares, e independem da versão do software
+de edição. Assim, você estará editando texto <q>puro</q>, texto que não ficará
 obsoleto (pelo menos enquanto esta linguagem persisitir) no seu computador.
 </p>
 
-<h2>Documento b�sico</h2>
+<h2>Documento básico</h2>
 Exitem, no entanto, algumas etiquetas essenciais que definem a estrutura
-b�sica de um documento HTML, que s�o:
+básica de um documento HTML, que são:
 <PRE>
 &lt;<font color=#aa0000>!DOCTYPE html</font>&gt;
 &lt;<font color=#aa0000>html</font>&gt;
@@ -89,60 +89,60 @@ links,
 </PRE>
 
 <p>
-Examinando o documento acima vemos que &lt<strong>html&gt;</strong> indica o in�cio de
-um documento nesta linguagem e que certamente a etiqueta
+Examinando o documento acima vemos que &lt<strong>html&gt;</strong> indica o início de
+um documento nesta linguagem e que certamente a etiqueta 
 &lt<strong>/html</strong>&gt;
 indica o final do texto editado
 </p>
 </p>
-A se��o indicada por &lt<strong>head</strong>&gt; &lt<strong>/head</strong>&gt;
+A seção indicada por &lt<strong>head</strong>&gt; &lt<strong>/head</strong>&gt;
 marca o que
-ser� visto no cabe�alho de uma p�gina, ou seja, � o t�tulo da janela
+será visto no cabeçalho de uma página, ou seja, é o título da janela
 do visualizador, do navegador, de textos.
 </p>
 
 <p>
-Para a inser��o de textos no corpo do documento a etiqueta
-fundamental � a marcadora de par�grafos, isso mesmo, at� mesmo
-os par�grafos devem ser marcados para serem exibidos corretamente.
-Logo todo par�grafo deve estar inserido entre as etiquetas
+Para a inserção de textos no corpo do documento a etiqueta
+fundamental é a marcadora de parágrafos, isso mesmo, até mesmo
+os parágrafos devem ser marcados para serem exibidos corretamente.
+Logo todo parágrafo deve estar inserido entre as etiquetas
 &lt;<strong>p</strong>&gt; &lt;<strong>/p</strong>&gt;
 </p>
 
 <p>
-Estamos ent�o prontos para editarmos o nosso primeiro documento
-HTML. Fa�a o seu. Edite um arquivo HTML com uma frase contendo
-o seu nome e uma breve apresenta��o sua. Chame este arquivo
-de <code>index.html</code>. Para visualiz�-lo, carregue-o a partir
+Estamos então prontos para editarmos o nosso primeiro documento
+HTML. Faça o seu. Edite um arquivo HTML com uma frase contendo
+o seu nome e uma breve apresentação sua. Chame este arquivo
+de <code>index.html</code>. Para visualizá-lo, carregue-o a partir
 de um navegador web.
 </p>
 
-<h3>Mais dicas no documento b�sico</h3>
+<h3>Mais dicas no documento básico</h3>
 <p>
-As se��es de um documento, ou seja, os cabe�alhos como s�o chamados
+As seções de um documento, ou seja, os cabeçalhos como são chamados
 na linguagem HTML,  podem ser marcados com a etiqueta
 &lt;<strong>hx</strong>&gt; &lt;<strong>/hx</strong>&gt;
-onde <strong>x</strong> � um n�mero de 1 a 6 que indica o tamanho
-do texto do  cabe�alho. O de n�mero 6 � o maior.
-Vejamos os diferentes cabe�alhos:
-<h1> Um cabe�alho h1 </h1>
-<h2> Um cabe�alho h2 </h2>
-<h3> Um cabe�alho h3 </h3>
-<h4> Um cabe�alho h4 </h4>
-<h5> Um cabe�alho h5 </h5>
-<h6> Um cabe�alho h6 </h6>
+onde <strong>x</strong> é um número de 1 a 6 que indica o tamanho
+do texto do  cabeçalho. O de número 6 é o maior.
+Vejamos os diferentes cabeçalhos:
+<h1> Um cabeçalho h1 </h1>
+<h2> Um cabeçalho h2 </h2>
+<h3> Um cabeçalho h3 </h3>
+<h4> Um cabeçalho h4 </h4>
+<h5> Um cabeçalho h5 </h5>
+<h6> Um cabeçalho h6 </h6>
 </p>
-<p>Notem que j� existe um espa�amento natural entre estes cabe�alhos.</p>
-Outra etiqueta essencial � a etiqueta para mudan�a de linha
-que � a etiqueta &lt;<strong>br</strong>&gt;. Quantas vezes ela
-for usada tantas ser�o os avan�os de linha.
+<p>Notem que já existe um espaçamento natural entre estes cabeçalhos.</p>
+Outra etiqueta essencial é a etiqueta para mudança de linha
+que é a etiqueta &lt;<strong>br</strong>&gt;. Quantas vezes ela
+for usada tantas serão os avanços de linha.
 </p>
 
 <p>
-Os par�grafos tamb�m podem ter atributos de alinhamento
-a direita, a esquerda e tamb�m podem ser centrlizados. <br>
-&lt;<strong>p align=right</strong>&gt; faz a centraliza��o �
-direita. S�o an�logos os atributos
+Os parágrafos também podem ter atributos de alinhamento
+a direita, a esquerda e também podem ser centrlizados. <br>
+&lt;<strong>p align=right</strong>&gt; faz a centralização à
+direita. São análogos os atributos
 &lt;<strong>p align=left</strong>&gt; e
 &lt;<strong>p align=center</strong>&gt;.
 </p>
@@ -150,32 +150,32 @@ direita. S�o an�logos os atributos
 <p>
 As linhas horizontais como esta abaixo<br>
 <hr>
-s�o inseridas pela etiqueta
+são inseridas pela etiqueta
 &lt;<strong>hr</strong>&gt; que aceita como
 atributos <strong>size=largura_em_pixels</strong> e
-<strong>width=comprimento_em_%_da_tela ou pixels</strong>
+<strong>width=comprimento_em_%_da_tela ou pixels</strong> 
 </p>
 
 <h2>As listas</h2>
 <p>
-T�o importante quanto os par�grafos, as listas s�o outro tipo de
-formata��o muito utilizada nos textos.<br>
-Em HTML temos basicamente tr�s tipos de listas:
+Tão importante quanto os parágrafos, as listas são outro tipo de
+formatação muito utilizada nos textos.<br>
+Em HTML temos basicamente três tipos de listas:
 <ol>
-  <li> as listas de defini��o; </li>
-  <li> as listas de t�picos, n�o numerados; e</li>
+  <li> as listas de definição; </li>
+  <li> as listas de tópicos, não numerados; e</li>
   <li> as listas numeradas.</li>
 </ol>
 </p>
 
-<h3>As listas de defini��o</h3>
+<h3>As listas de definição</h3>
 <p>
-Estas listas t�m o seguinte formato:<br>
+Estas listas têm o seguinte formato:<br>
 <pre>&lt;dl&gt;
 &lt;dt&gt;termo a ser definido (<em>definition term</em>)&lt;/dt&gt;
-&lt;dd&gt;defini��o&lt;/dd&gt;
+&lt;dd&gt;definição&lt;/dd&gt;
 &lt;dt&gt;termo a ser definido&lt;/dt&gt;
-&lt;dd&gt;defini��o&lt;/dd&gt;
+&lt;dd&gt;definição&lt;/dd&gt;
 &lt;/dl&gt;</pre>
 </p>
 
@@ -189,7 +189,7 @@ Que produz:
 </dl>
 </p>
 
-<h3>As listas n�o numeradas - Listas de t�picos</h3>
+<h3>As listas não numeradas - Listas de tópicos</h3>
 <p>
 Vejam o exemplo abaixo:<br>
 <code>
@@ -200,9 +200,9 @@ Vejam o exemplo abaixo:<br>
   <dt>&lt;/ul&gt;
 </dl>
 </code>
-O c�digo
-&lt;<strong>ul</strong>&gt; � mnem�nico para <em>unumbered list</em>. Assim,
-conhecendo o mnem�nico fica mais f�cil memorizar.
+O código
+&lt;<strong>ul</strong>&gt; é mnemônico para <em>unumbered list</em>. Assim,
+conhecendo o mnemônico fica mais fácil memorizar.
 </p>
 
 <p>
@@ -224,8 +224,8 @@ Vejam novamente um exemplo abaixo:<br>
   <dt>&lt;/ol&gt;
 </dl>
 </code>
-O c�digo
-&lt;<strong>ol</strong>&gt; � mnem�nico para <em>ordered list</em>.
+O código
+&lt;<strong>ol</strong>&gt; é mnemônico para <em>ordered list</em>.
 </p>
 
 <p>
@@ -236,12 +236,12 @@ Produzem o resultado abaixo:
 <li>terceiro item</li>
 </ol>
 
-<h3><a name="ligac">Liga��es - links</a></h3>
+<h3><a name="ligac">Ligações - links</a></h3>
 <p>
-As liga��es, ou <em>links</em>, s�o a essencia dos documentos hipertexto.
-S�o os
+As ligações, ou <em>links</em>, são a essencia dos documentos hipertexto. 
+São os
 <em>links</em> que promovem o direcionamento de um texto para outro
-documento, outra localiza��o, ou mais tecnicamente, outro URL.</p>
+documento, outra localização, ou mais tecnicamente, outro URL.</p>
 
 <p>Esta etiqueta de links tem o seguinte formato:
 
@@ -254,71 +254,71 @@ documento, outra localiza��o, ou mais tecnicamente, outro URL.</p>
 onde:
 <dl>
 <dt><strong>URL_destino</strong></dt>
-<dd> � a URL do documento de destino;</dd>
-<dt><strong>�ncora</strong></dt>
-<dd> � o texto que servir� de liga��o para a URL informada.</dd>
+<dd> é a URL do documento de destino;</dd>
+<dt><strong>âncora</strong></dt>
+<dd> é o texto que servirá de ligação para a URL informada.</dd>
 </dl>
 </p>
 
 <p>
 Vejamos um exemplo:<br>
 &lt;<strong>a href="http://www.usp.br"</strong>&gt;Link para USP&lt;<strong>/a</strong>&gt;<br>
-� equivalente �: <a href="http://www.usp.br">Link para USP</a>.
+É equivalente à: <a href="http://www.usp.br">Link para USP</a>. 
 </p>
 <p>
-Agora retome ao seu documento de edi��o, ou melhor, � p�gina que voc�
+Agora retome ao seu documento de edição, ou melhor, à página que você
 estava editando e insira <em>links</em> para locais citados, por exemplo,
-para a cidade que nasceu e para a Unidade onde est� fazendo a sua gradua��o.
+para a cidade que nasceu e para a Unidade onde está fazendo a sua graduação.
 </p>
 
-<h3>Links para dentro do pr�prio documento</h3>
+<h3>Links para dentro do próprio documento</h3>
 <p>
-Ao contr�rio dos links anteriores, chamados <em>links absolutos</em>,
-podemos ter links <em>relativos</em> ao mesmo documento que se est�
-visualizando, ou seja, <em>links</em> para a mesma p�gina.<br>
-Para tal devemos definir e nomear uma �ncora onde o link com aquele
-nome ser� apontado e, definir o link de maneira an�loga acima.
+Ao contrário dos links anteriores, chamados <em>links absolutos</em>,
+podemos ter links <em>relativos</em> ao mesmo documento que se está
+visualizando, ou seja, <em>links</em> para a mesma página.<br>
+Para tal devemos definir e nomear uma âncora onde o link com aquele
+nome será apontado e, definir o link de maneira análoga acima.
 Vejamos:<br>
 <pre>
-Veja o assunto &lt;<font color=#ff0000>a</font> <strong>href</strong>=<font color=#0000ff>"#relativo"</font>&gt;Liga��es - links&lt;<font color=#ff0000>/a</font>&gt;.
+Veja o assunto &lt;<font color=#ff0000>a</font> <strong>href</strong>=<font color=#0000ff>"#relativo"</font>&gt;Ligações - links&lt;<font color=#ff0000>/a</font>&gt;.
 </pre>
-teremos uma liga��o hipertexto para um trecho deste
+teremos uma ligação hipertexto para um trecho deste
 mesmo documento:
 </p>
 
 <p>
 Por exemplo:
-leia novamente sobre <a href="#ligac">Liga��es - links</a>.
+leia novamente sobre <a href="#ligac">Ligações - links</a>.
 </p>
 
 <p>
-Outros arquivos do mesmo diret�rio, ou de outro diret�rio relativo
-ao documento atual, tamb�m podem ser referenciados como link.
+Outros arquivos do mesmo diretório, ou de outro diretório relativo
+ao documento atual, também podem ser referenciados como link.
 Basta seguir a receita para link absoluto e colocar o nome do arquivo
 no lugar de uma URL. Vejamos o exemplo<br>
 &lt;<font color=#ff0000>a</font> href</strong>=<font color=#0000ff>"arquivo_destino"</font>&gt;Link para arquivo&lt;<font color=#ff0000>/a</font>&gt;.<br>
 </p>
 
 <p>
-Edite outro arquivo HTML com informa��es adicionais suas,
+Edite outro arquivo HTML com informações adicionais suas, 
 chameo de <code>mais_bio.html</code>. Edite o arquivo <code>index.html</code>
-de modo a inserir uma liga��o para este arquivo.
+de modo a inserir uma ligação para este arquivo.
 </p>
 
 <p>
-Na pr�xima aula veremos mais sobre formata��o de caracteres e inser��o de
-imagens. Por hoje � s�, pessoal.
+Na próxima aula veremos mais sobre formatação de caracteres e inserção de
+imagens. Por hoje é só, pessoal.
 </p>
 <hr>
 
 
-<h3>Inser��o de imagens</h3>
+<h3>Inserção de imagens</h3>
 <p>
-Como em todo texto multim�dia as imagens n�o devem faltar num documento
-HTML. Para inser��o de imagens devemos proceder de modo an�logo
-as liga��es absolutas, com a diferen�a do elemento <em>img</em>.<br>
-Vejamos como inserir uma imagem que est� neste mesmo
-diret�rio:
+Como em todo texto multimídia as imagens não devem faltar num documento
+HTML. Para inserção de imagens devemos proceder de modo análogo
+as ligações absolutas, com a diferença do elemento <em>img</em>.<br>
+Vejamos como inserir uma imagem que está neste mesmo
+diretório:
 </p>
 
 <p><code>
@@ -327,12 +327,12 @@ diret�rio:
 </code></p>
 
 <p>
-No par�grafo acima, <em>src</em> significa <em>source</em>, ou seja,
-o arquivo fonte, a imagem e sua localiza��o, que dever�
-ser fornecido para o navegador encontar a imagem. J� <em>URL</em>
-significa <em>Uniform Resource Locator</em> que � o endere�o
+No parágrafo acima, <em>src</em> significa <em>source</em>, ou seja,
+o arquivo fonte, a imagem e sua localização, que deverá
+ser fornecido para o navegador encontar a imagem. Já <em>URL</em>
+significa <em>Uniform Resource Locator</em> que é o endereço
 Internet do objeto (imagem) que se deseja mostrar, caso esta imagem
-n�o estaja no seu disco local.
+não estaja no seu disco local.
 </p>
 
 <p>
@@ -341,48 +341,48 @@ Vejamos um exemplo: <br>
 </p>
 
 <p>
-A figura acima surgiu da digita��o do seguinte
+A figura acima surgiu da digitação do seguinte
 comando:
 <br><code>&lt;img src= "http://www.ffclrp.usp.br/imagens/logo.png"></code><br>
-j� que <code>logo.png</code> � um arquivo que se encontra
+já que <code>logo.png</code> é um arquivo que se encontra
 na URL da FFCLRP.
 </p>
 
 <p>
-Podemos inserir nas p�ginas HTML arquivos nos formatos
+Podemos inserir nas páginas HTML arquivos nos formatos
 <code>*.jpg</code>, <code>*.gif</code> e <code>*.png</code>.
-Isto, �bviamente, at� este momento. No futuro esperamos
+Isto, óbviamente, até este momento. No futuro esperamos
 que os navegadores aceitem outros formatos de arquivos
 de imagens.
 </p>
 
-<h3>Atributos do comando de inser��o de imagens</h3>
+<h3>Atributos do comando de inserção de imagens</h3>
 <p>
-Existem uma s�rie de atributos que podem ser adicionados
-ap�s o nome da figura, ou imagem, inserida. Entre estes
+Existem uma série de atributos que podem ser adicionados
+após o nome da figura, ou imagem, inserida. Entre estes
 atributos destacamos:
 </p>
 
 <dl>
-<dt> alt </dt>
-<dd> descreve um texto que ser� exibido quando a imagem
-     n�o for carragada pelo <em>browser</em>, em casos de navegadores tipo
+<dt> alt </dt> 
+<dd> descreve um texto que será exibido quando a imagem
+     não for carragada pelo <em>browser</em>, em casos de navegadores tipo
      texto ou com o carragemento de imagens desligado; </dd>
 <dt> width e height </dt>
 <dd> especificam a largura e a altura da imagem; </dd>
 <dt> border </dt>
-<dd> especifica a exist�ncia e a espessura da borda da figura; </dd>
+<dd> especifica a existência e a espessura da borda da figura; </dd>
 <dt> align </dt>
-<dd> especifica o alinhamento da imagem dentro do par�grafo. </dd>
+<dd> especifica o alinhamento da imagem dentro do parágrafo. </dd>
 <dt> </dt>
 </dl>
 
 <p>
-No modelo gen�rico espec�ficamos o atributo da seguinte forma:
+No modelo genérico específicamos o atributo da seguinte forma:
 </p>
 
-<p><code>&lt;<font COLOR="#FF0000">img</font>
-  <strong>src</strong>=<font COLOR="#0000FF">"<i>URL_imagem</i>"</font>
+<p><code>&lt;<font COLOR="#FF0000">img</font> 
+  <strong>src</strong>=<font COLOR="#0000FF">"<i>URL_imagem</i>"</font> 
   <strong>atributo</strong>=<font COLOR="#0000FF">"<i>valor_atributo</i>"
   </font>&gt;
 </code></p>
@@ -390,8 +390,8 @@ No modelo gen�rico espec�ficamos o atributo da seguinte forma:
 <p>
 Vejamos para o caso de <em>alt</em>
 </p>
-<p><code>&lt;<font COLOR="#FF0000">img</font>
-  <strong>src</strong>=<font COLOR="#0000FF">"<i>URL_imagem</i>"</font>
+<p><code>&lt;<font COLOR="#FF0000">img</font> 
+  <strong>src</strong>=<font COLOR="#0000FF">"<i>URL_imagem</i>"</font> 
   <strong>alt</strong>=<font COLOR="#0000FF">"<i>texto_explicativo</i>"
   </font>&gt;
 </code></p>
@@ -402,7 +402,7 @@ Vejamos um exemplo: <br>
 </p>
 
 <p>
-A figura acima surgiu da digita��o do seguinte
+A figura acima surgiu da digitação do seguinte
 comando:
 <br><code>&lt;img src="http://www.ffclrp.usp.br/imagens/logo.png" alt="Logotipo da FFCLRP."></code><br>.
 </p>
@@ -413,12 +413,12 @@ Vejamos outros exemplos com os atributos exemplo: <br>
 </p>
 
 <p>
-A figura acima surgiu da digita��o do seguinte
+A figura acima surgiu da digitação do seguinte
 comando:
 <br><code>&lt;img src= "http://www.ffclrp.usp.br/imagens/logo.png" width="50"></code><br>
-que � a largura da imagem em pixels, pontos de imagem.
+que é a largura da imagem em pixels, pontos de imagem.
 No lugar da medida em pixels pode ser usada a medida em porcentagem,
-como <code>"50%"</code> que significa metade da dimens�o especificada
+como <code>"50%"</code> que significa metade da dimensão especificada
 da tela, ou seja, da sua largura ou altura.
 </p>
 
@@ -428,119 +428,119 @@ Vejamos outros exemplos com os atributos exemplo: <br>
 </p>
 
 <p>
-Adicionamos uma borda de dimens�o de dois pixels,
+Adicionamos uma borda de dimensão de dois pixels,
 fazendo:
 <br><code>&lt;img src="http://www.ffclrp.usp.br/imagens/logo.png" border=2></code><br>
 </p>
 
 <p>
 <img src="http://www.ffclrp.usp.br/imagens/logo.png" align="top" border=1>
-Texto adjacente  alinhado com em rela��o a linha que passa pelo
-topo da imagem. Com textos longos o resultado n�o � muito bom.
+Texto adjacente  alinhado com em relação a linha que passa pelo
+topo da imagem. Com textos longos o resultado não é muito bom.
 </p>
 
 <p>
 <img src="http://www.ffclrp.usp.br/imagens/logo.png" align="bottom" border=1>
-Texto adjacente  alinhado com em rela��o a linha que passa abaixo
- da imagem. Os resultados assim parecem melhores. Este �
-o padr�o caso n�o especifiquemos o alinhamento.
+Texto adjacente  alinhado com em relação a linha que passa abaixo
+ da imagem. Os resultados assim parecem melhores. Este é
+o padrão caso não especifiquemos o alinhamento.
 </p>
 
 
 <p>
 <img src="http://www.ffclrp.usp.br/imagens/logo.png" align="middle" border=1>
-Texto adjacente  alinhado com em rela��o a linha que passa pelo
-meio da imagem. Os resultados com textos longos tamb�m
-n�o s�o bons.
+Texto adjacente  alinhado com em relação a linha que passa pelo
+meio da imagem. Os resultados com textos longos também
+não são bons.
 </p>
 
-<h3>Formata��o l�gica de caracteres</h3>
+<h3>Formatação lógica de caracteres</h3>
 <p>
-A formata��o l�gica de caracteres permite especificar
+A formatação lógica de caracteres permite especificar
 etiquetas que discriminen os caracteres quanto a sua
-especificidade e n�o somente quanto a sua apar�ncia.
-Portanto, a apresenta��o caracter marcado poder� depender
-da implementa��o ou do ambiente j� que n�o � descrita
+especificidade e não somente quanto a sua aparência.
+Portanto, a apresentação caracter marcado poderá depender
+da implementação ou do ambiente já que não é descrita
 pela etiqueta.
 </p>
 
 <p>
-Alguns dos pricipais marcadores l�gicos s�o:
+Alguns dos pricipais marcadores lógicos são:
 </p>
 
 <dl>
   <dt> &lt;pre&gt;</dt>
   <dd> Apresenta o texto da mesma forma que foi digitado, mantendo
-  as quebras de linhas e os espa�amentos. Por exemplo:
-<pre>&lt;<font COLOR="#FF0000">pre</font>&gt este � um
+  as quebras de linhas e os espaçamentos. Por exemplo:
+<pre>&lt;<font COLOR="#FF0000">pre</font>&gt este é um
                 texto pre - f o r m  a   t   a   do
-            um,	dois,                          tr�s.&lt;<font COLOR="#FF0000">/pre</font>&gt;</pre>
+            um,	dois,                          três.&lt;<font COLOR="#FF0000">/pre</font>&gt;</pre>
 </pre>
 
  <dt> &lt;blockquote&gt;</dt>
- <dd> � usada para cita��es de trechos longos, com
- diagrama��o esperada como em livros, par�grafos mais
+ <dd> É usada para citações de trechos longos, com
+ diagramação esperada como em livros, parágrafos mais
  compactos normalmente centralizados, Por exemplo: vejamos
- este t�pico texto Machadiano em <cite>Obra Completa</cite>, Um
- Capit�o de Volunt�rios:
+ este típico texto Machadiano em <cite>Obra Completa</cite>, Um
+ Capitão de Voluntários:
  <blockquote>
  &lt;<font COLOR="#FF0000">blockquote</font>&gt;
- Quando eu entrava, j� ele estava na cadeira de balan�o.
- Os m�veis da sala eram poucos, os ornatos raros, tudo simples. X...
- estendia-me a m�o larga e forte; eu ia sentar-me ao p� da janela,
- olho na sala, olho na rua. Maria, ou j� estava ou vinha de dentro.
- �ramos nada um para o outro; ligava-nos unicamente a afei��o de X...
- Convers�vamos; eu sa�a para casa ou ia passear, eles ficavam e iam dormir.
- Algumas vezes jog�vamos cartas, �s noites, e, para o fim do tempo,
+ Quando eu entrava, já ele estava na cadeira de balanço. 
+ Os móveis da sala eram poucos, os ornatos raros, tudo simples. X... 
+ estendia-me a mão larga e forte; eu ia sentar-me ao pé da janela, 
+ olho na sala, olho na rua. Maria, ou já estava ou vinha de dentro.
+ Éramos nada um para o outro; ligava-nos unicamente a afeição de X...
+ Conversávamos; eu saía para casa ou ia passear, eles ficavam e iam dormir.
+ Algumas vezes jogávamos cartas, às noites, e, para o fim do tempo, 
  era ali que eu passava a maior parte destas
  &lt;<font COLOR="#FF0000">blockquote</font>&gt;
  </blockquote>
 
  <dt> &lt;address&gt;</dt>
  <dd> Bem auto-explicativo estas etiquetas podem ser
- usadas dentro de uma p�gina, como: para maiores
- informa��es ler
+ usadas dentro de uma página, como: para maiores
+ informações ler 
  &lt;<font COLOR="#FF0000">address</font>&gt;http://www.icmc.sc.usp.br/manuals/HTML/textos.html&lt;<font COLOR="#FF0000">address</font>&gt;
  que apareceria como sendo
  <address>http://www.icmc.sc.usp.br/manuals/HTML/textos.htm</address>
  </dd>
 
  <dt>&lt;cite&gt;</dt>
- <dd> Para cita��es bibliogr�ficas, de obras, textos, como a que
-  fiz sobre Machado de Assis acima, ou como: Ver
-  <cite>Obras po�ticas de Gon�alves Dias, por Manuel Bandeira</cite>
+ <dd> Para citações bibliográficas, de obras, textos, como a que
+  fiz sobre Machado de Assis acima, ou como: Ver 
+  <cite>Obras poéticas de Gonçalves Dias, por Manuel Bandeira</cite>
   </dd>
 
  <dt>&lt;em&gt;</dt>
- <dd> A �nfase de textos pode ser obtida com esta etiqueta.
+ <dd> A ênfase de textos pode ser obtida com esta etiqueta.
  Produz textos tipo: <em>enfatizados</em>. </dd>
 
  <dt>&lt;strong&gt;</dt>
- <dd> Os textos em <strong>negrito</strong> s�o normalmente produzidos
+ <dd> Os textos em <strong>negrito</strong> são normalmente produzidos
  por esta etiqueta.</dd>
 </dl>
 
 
-<h3>Formatadores f�sicos</h3>
+<h3>Formatadores físicos</h3>
 </p>
-Estes sim especificam e marcam a apar�nccia da seq��ncia de
+Estes sim especificam e marcam a aparênccia da seqüência de
 caracteres no navegador. Vejamos alguns:
 </p>
 
 <dl>
 <dt><code><strong>&lt;i&gt;</strong></code></dt>
-<dd><i>It�lico</i>, ou melhor, caracteres levemente inclinados, na pr�tica.
-Normalmente n�o s�o fontes especiais tipo it�lico e se confundem com
+<dd><i>Itálico</i>, ou melhor, caracteres levemente inclinados, na prática.
+Normalmente não são fontes especiais tipo itálico e se confundem com
 as enfatizadas. </dd>
 
 <dt><code><strong>&lt;tt&gt;</strong></code></dt>
-<dd>Conhecido como tipo fixo (de espa�amento fixo), a abrevia��o
+<dd>Conhecido como tipo fixo (de espaçamento fixo), a abreviação
   significa <tt>teletype</tt>.
 </dd>
 
 
 <dt><code><strong>&lt;u&gt;</strong></code></dt>
-<dd> � o <u>Sublinhado</u>. Cuidado para n�o confundir com
+<dd> É o <u>Sublinhado</u>. Cuidado para não confundir com
   os <i>links</i>.
 </dd>
 
@@ -559,22 +559,22 @@ as enfatizadas. </dd>
 
 
 <dt><code><strong>&lt;sub&gt;</strong></code></dt>
-<dd>Constru��o em estilo <sub>�ndice</sub>, como em H<sub>2</sub>O.
+<dd>Construção em estilo <sub>índice</sub>, como em H<sub>2</sub>O.
 </dd>
 
 <dt><code><strong>&lt;sup&gt;</strong></code></dt>
-<dd>Constru��o em estilo <sup>expoente</sup>, como em Km<sup>2</sup>.
+<dd>Construção em estilo <sup>expoente</sup>, como em Km<sup>2</sup>.
 </dd>
 
 <p>
 E com isso terminamos este pequeno tutorial. Espero que
-o c�digo fonte deste documento tamb�m sirva como
-modelo para sua inici��o na elabora��o de textos  HTML.
+o código fonte deste documento também sirva como
+modelo para sua inicição na elaboração de textos  HTML.
 </p>
 <hr>
 
 <p font-family: arial, 'sans serif'; font-size: 50%, color:DarkBlue,>
-�ltima modifica��o feita em: 12 de mar�o de 2014<br>
+Última modificação feita em: 12 de março de 2014<br>
 Evandro Eduardo Seron Ruiz, PhD <code>(evandro at usp ponto br)</code> <br>
 
 <!--<a href="http://www.imagcom.org/evandro/basics/htmlBasico/aula_html.html">
@@ -583,3 +583,4 @@ www.imagcom.org/evandro/basics/htmlBasico/aula_html.html</a>-->
 
 
 </html>
+
