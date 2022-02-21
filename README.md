@@ -6,7 +6,7 @@ Repositório didático da disciplina **5954024 Introdução ao Desenvolvimento W
 - Processamento cliente e servidor com Javascript.
 - Desenvolvimento de trabalhos práticos.
 
-<h2>Tópicos</h2>
+<h4>Tópicos</h4>
 
 - HTML <a href="http://evandro-ruiz.github.io/webDev/aula_html.html">essencial</a>
 <!---
