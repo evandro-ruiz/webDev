@@ -13,6 +13,6 @@ Repositório didático da disciplina **5954024 Introdução ao Desenvolvimento W
 - HTML <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/varias_form.html">teste de formulário</a>
 
 <!---
-evandro-ruiz/evandro-ruiz is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+evandro-ruiz/webDev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
