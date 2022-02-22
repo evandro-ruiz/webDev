@@ -15,31 +15,13 @@
 <h1>Introdução a linguagem HTML</h1>
 
 <p>
-Vejamos um exemplo: <br>
-<img src="https://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.jpg">
-</p>
-
-<p>
-Vejamos um exemplo2: <br>
-<img src="logo_usp.jpg">
-</p>
-
-
-<p>
-A figura acima surgiu da digitação do seguinte
-comando:<br>
-<code>&lt;img src= "htmlBasico/logo_usp.jpg"></code><br>
-já que <code>logo_usp.png</code> é um arquivo que se encontra
-nesta URL.
-</p>
-
-<p>
 HTML é uma linguagem de marcação de documentos. HTML significa
 <dfn>HyperText Markup Language</dfn>, ou seja, uma linguagem de marcação
 para hipertextos. Uma linguagem de marcação, como o próprio nome diz, marca
 partes do texto para serem trabalhadas. Em HTML as partes de texto marcadas
 indicam como fazer a formatação de um texto.
 </p>
+<p>Notem que HTML não é uma linguagem de programação.</p>
 
 <p>
 Todo documento HTML é marcado usando-se etiquetas, também chamadas
@@ -65,11 +47,10 @@ edição de conteúdos para Internet.
 </p>
 
 <p>
-Normalmente quando solicitamos um
+Normalmente, quando solicitamos um
 endereço Internet (URL - <dfn>Uniform Resource Locator</dfn>)
 este aponta para um computador servidor, mais especificamente para
-um diretório nele e, por padronização, de todos os arquivos
-neste diretório (pasta) a página chamada e a página que é apresentada
+um diretório nele. Por padronização, a página chamada, ou seja, a página que é apresentada
 para o usuário é a página
 <strong>index.html</strong>.
 </p>
@@ -79,11 +60,11 @@ Este documento que você está lendo
 foi todo escrito em HTML. Ele foi escrito
 num editor de programas, usando apenas caracteres do teclado e
 nenhuma ferramenta de edição, para que ele pudesse ser usado também
-como meio de aprendizado da linguagem.
+como meio de aprendizado desta linguagem de marcação.
 </p>
 
 <p>
-Linguagens marcadoras simples com esta são uma boa opção para edição
+Linguagens marcadoras simples, com esta, são uma boa opção para edição
 de relatórios ou documentos curtos que podem ser visualizados com
 ajuda de qualquer navegador. Estes documentos podem ser escritos com editores
 simples de texto, como o <em>Bloco de Notas</em>
@@ -358,14 +339,14 @@ não estaja no seu disco local.
 
 <p>
 Vejamos um exemplo: <br>
-<img src="htmlBasico/logo_usp.png">
+<img src="brasil5.png">
 </p>
 
 <p>
 A figura acima surgiu da digitação do seguinte
 comando:
-<br><code>&lt;img src= "htmlBasico/logo_usp.png"></code><br>
-já que <code>logo_usp.png</code> é um arquivo que se encontra
+<br><code>&lt;img src= "brasil5.png"></code><br>
+já que <code>brasil5.png</code> é um arquivo que se encontra
 nesta URL.
 </p>
 
@@ -419,24 +400,24 @@ Vejamos para o caso de <em>alt</em>
 
 <p>
 Vejamos um exemplo: <br>
-<img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" alt="Logotipo da USP.">
+<img src="brasil5.png" alt="Logotipo da USP.">
 </p>
 
 <p>
 A figura acima surgiu da digitação do seguinte
 comando:
-<br><code>&lt;img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" alt="Logotipo da USP."></code><br>.
+<br><code>&lt;img src="brasil5.png" alt="Logotipo da USP."></code><br>.
 </p>
 
 <p>
 Vejamos outros exemplos com os atributos exemplo: <br>
-<img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" width="50">
+<img src="brasil5.png" width="50">
 </p>
 
 <p>
 A figura acima surgiu da digitação do seguinte
 comando:
-<br><code>&lt;img src= "http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" width="50"></code><br>
+<br><code>&lt;img src= "brasil5.png" width="50"></code><br>
 que é a largura da imagem em pixels, pontos de imagem.
 No lugar da medida em pixels pode ser usada a medida em porcentagem,
 como <code>"50%"</code> que significa metade da dimensão especificada
@@ -445,23 +426,23 @@ da tela, ou seja, da sua largura ou altura.
 
 <p>
 Vejamos outros exemplos com os atributos exemplo: <br>
-<img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" border=2>
+<img src="brasil5.png" border=2>
 </p>
 
 <p>
 Adicionamos uma borda de dimensão de dois pixels,
 fazendo:
-<br><code>&lt;img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" border=2></code><br>
+<br><code>&lt;img src="brasil5.png" border=2></code><br>
 </p>
 
 <p>
-<img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" align="top" border=1>
+<img src="brasil5.png" align="top" border=1>
 Texto adjacente  alinhado com em relação a linha que passa pelo
 topo da imagem. Com textos longos o resultado não é muito bom.
 </p>
 
 <p>
-<img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" align="bottom" border=1>
+<img src="brasil5.png" align="bottom" border=1>
 Texto adjacente  alinhado com em relação a linha que passa abaixo
  da imagem. Os resultados assim parecem melhores. Este é
 o padrão caso não especifiquemos o alinhamento.
@@ -469,7 +450,7 @@ o padrão caso não especifiquemos o alinhamento.
 
 
 <p>
-<img src="http://evandro-ruiz.github.io/webDev/htmlBasico/logo_usp.png" align="middle" border=1>
+<img src="brasil5.png" align="middle" border=1>
 Texto adjacente  alinhado com em relação a linha que passa pelo
 meio da imagem. Os resultados com textos longos também
 não são bons.
