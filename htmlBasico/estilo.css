@@ -2,9 +2,24 @@
 /* estilo.css, definicao simples de estilo */
 /* define cores para partes do documento   */
 
-body
-{
-  background: #E0FFFF;
+body {
+  background-color: #2F4F4F;
+  /* DarkSlateGrey */}
+
+#purple {
+  background-color: #893AA4;
+}
+/* outra cor de fundo nas div */
+div {
+  width: 500px;
+  height: 100px;
+}
+
+p {
+  padding: .5em;
+  color: white;
+  font-family: Helvetica;
+  font-size: 1.5em;
 }
 
 /* Altera forma dos links */
@@ -25,10 +40,23 @@ a:hover
 p {
   font-style:italic; font-size:18px;
 }
-blue {
-  color:#0000FF;
-}
-/* Borda das imagens */
+
 img {
-  border-color: #000000; border:thick; border-style:ridge;
+  width: 200px;
+  border: 3px solid black;
 }
+
+.box {
+  background:#eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 17%;
+  height: 100px;
+  margin-bottom: 1em;
+}
+
+.box-4 {
+  border: 5px dashed Orange;
+}
+/* fim do .css */
