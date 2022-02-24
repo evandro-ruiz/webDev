@@ -6,11 +6,13 @@ Repositório didático da disciplina **5954024 Introdução ao Desenvolvimento W
 - Processamento cliente e servidor com Javascript.
 - Desenvolvimento de trabalhos práticos.
 
-<h4>Tópicos</h4>
+<h4>HTML</h4>
 
-- HTML <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/aula_html.html">essencial</a>
-- HTML <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/tst_estilo.html">teste de estilo</a>
-- HTML <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/varias_form.html">teste de formulário</a>
+- HTML <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/aula_html.html">Essencial</a>
+- <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/tst_estilo.html">Teste de estilo</a>
+- <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/varias_form.html">Teste de formulário</a>
+- Para fazer <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/cv_pleno.html">Resume</a>
+- Resume <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/cv_estilo.html">
 
 <!---
 evandro-ruiz/webDev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
