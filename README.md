@@ -9,9 +9,13 @@ Repositório didático da disciplina **5954024 Introdução ao Desenvolvimento W
 <h4>HTML</h4>
 
 - HTML <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/aula1.html">Essencial</a>
-- <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/tst_estilo.html">Teste de estilo</a>
+
 - <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/varias_form.html">Teste de formulário</a>
+
+- <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/tst_estilo.html">Teste de estilo</a>
+
 - Para fazer <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/cv_pleno.html">Resume</a>
+
 - Resume <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/cv_estilo.html">com estilo</a>
 
 <!---
