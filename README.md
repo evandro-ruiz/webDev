@@ -4,10 +4,10 @@ Para a página raíz veja o <a href="https://sites.google.com/usp.br/webdev/">li
 
 <h3>Programa</h3>
 
-- Histórico sobre desenvolvimento de aplicações web.
-- Infraestrutura básica para o desenvolvimento de aplicações Web: requisições HTTP, linguagens de marcação (HTML, CSS).
-- Processamento cliente e servidor com Javascript.
-- Desenvolvimento de trabalhos práticos.
+- Histórico sobre desenvolvimento de aplicações web
+- Infraestrutura básica para o desenvolvimento de aplicações Web: requisições HTTP, linguagens de marcação (HTML, CSS)
+- Processamento cliente e servidor com Javascript
+- Desenvolvimento de trabalhos práticos
 
 Vejam a seguir os links para as páginas locais deste repositório.
 <h4>HTML</h4>
