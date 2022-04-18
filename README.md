@@ -23,9 +23,11 @@ Vejam a seguir os links para as páginas locais deste repositório.
 - Resume <a href="http://evandro-ruiz.github.io/webDev/htmlBasico/cv_estilo.html">com estilo</a>
 
 <h4>CSS3</h4>
+
 - Teste do <a href="http://evandro-ruiz.github.io/webDev/css/pato.html">Patinho</a>
 
 <h4>JavaScript</h4>
+
 - Uma breve <a href="http://evandro-ruiz.github.io/webDev/javaScript/intro.html">introdução</a>
 
 - Um teste com <a href="https://evandro-ruiz.github.io/webDev/javaScript/code02Botao.html">botão</a>
