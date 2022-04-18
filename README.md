@@ -27,6 +27,8 @@ Vejam a seguir os links para as páginas locais deste repositório.
 
 <h4>JavaScript</h4>
 - Uma breve <a href="http://evandro-ruiz.github.io/webDev/javaScript/intro.html">introdução</a>
+- Um teste com <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/code02Botao.html">botão</a>
+
 
 <!---
 evandro-ruiz/webDev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
