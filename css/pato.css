@@ -20,12 +20,12 @@ h1 {
   text-shadow: 1px 1px 1px black;
 }
 
+li {
+  line-height: 1.5;
+}
+
 img {
   display: block;
   width:300px;
   margin: 0 auto;
-}
-
-li {
-  line-height: 1.5;
 }

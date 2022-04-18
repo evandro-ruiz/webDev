@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplo rótulo JavaScript</title>
+    <!-- fonte https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript -->
+    <style>
+      .special {
+        font-family: 'helvetica neue', helvetica, sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        border: 2px solid rgba(0,0,200,0.6);
+        background: rgba(0,0,200,0.3);
+        color: rgba(0,0,200,0.6);
+        box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+        border-radius: 10px;
+        padding: 3px 10px;
+        display: inline-block;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Uma introdução ao JavaScript</h2>
+
+    <h3>O que é JavaScript</h3>
+    <p>JavaScript é uma linhguagem de programação para elaborar página
+      web dinâmicas. Mais especificamente, JavaScript permite a criação de
+      de elementos complexos em páginas web, como por exemplo, atualizar dados
+      dinamicamente, mostrar dados de modo interativo, fazer animações
+      plotar gráficos animados, entre outras tarefas.</p>
+    <p>JavaScrip
+
+    <div>
+    <p class="special">Jogador 1: Etevaldo</p>
+
+    <script>
+      var para = document.querySelector('p');
+
+      para.addEventListener('click', atualizarNome);
+
+      function atualizarNome() {
+        var nome = prompt('Insira um novo nome');
+        para.textContent = 'Jogador 1: ' + nome;
+      }
+    </script>
+  </div>
+  </body>
+</html>
