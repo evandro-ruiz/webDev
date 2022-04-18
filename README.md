@@ -26,7 +26,7 @@ Vejam a seguir os links para as páginas locais deste repositório.
 - Teste do <a href="http://evandro-ruiz.github.io/webDev/css/pato.html">Patinho</a>
 
 <h4>JavaScript</h4>
-- Uma breve <a href="http://evandro-ruiz.github.io/webDev/javaScript/intro.html"
+- Uma breve <a href="http://evandro-ruiz.github.io/webDev/javaScript/intro.html">introdução</a>
 
 <!---
 evandro-ruiz/webDev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
