@@ -1,35 +1,181 @@
+<!DOCTYPE html>
+<html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset="utf-8">
   <link rel="stylesheet" type="text/css" href="styles.css" />
-  <title>Introduçãoo ao JavaScript</title>
+  <title>Introdução ao JavaScript</title>
 
 </head>
 <body>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <div id="container">
-  <div id="header"><h1>Uma introdução ao JavaScript</h1>
+  <div id="header"><h1>Uma introdução ao JavaScript</h1></div>
 
   <h3>O que é JavaScript</h3>
-  <p>Um script é um código fonte que não precisa de pré-processamento com,
+  <p>Um script é um código fonte que não precisa de pré-processamento como,
     por exemplo, uma etapa de compilação, antes de ser executado.
     No contexto da Web, o script geralmente se refere a um código
     escrito em JavaScript. Este código é executado pelo navegador quando uma
-    página é baixada ou é executado  em resposta a um evento acionado pelo
-    usuário.</p>
+    página é baixada ou é executado  em resposta a um evento acionado, comandado,
+    pelo usuário.</p>
 
   <p>JavaScript é uma linguagem de programação para elaborar página
     web dinâmicas. Mais especificamente, JavaScript permite a criação de
-    de elementos complexos em páginas web, como por exemplo, atualizar dados
-    dinamicamente, mostrar dados de modo interativo, fazer animações
-    plotar gráficos animados, entre outras tarefas.</p>
+     elementos complexos em páginas web, como por exemplo, atualizar dados
+    dinamicamente, mostrar dados de modo interativo, fazer animações,
+    plotar gráficos animados, entre outras tarefas.<br>
+  JavaScript é uma linguagem interpretada e executada localmente
+  no lado cliente de uma arquiterura cliente-servidor.</p>
 
   <p>ECMAscript é a linguagem script que é a base de JavaScript. Essa
   linguagem script genérica foi desenvolvida pela
-  <a href="https://www.ecma-international.org/">Ecma International</a> e hoje
+  <a href="https://www.ecma-international.org/">Ecma International</a> e
   é padronizada, formando um padrão JavaScript para o consórcio W3C.</p>
 
+  <p>Considerando uma página na web complexa, a linguagem JavaScript pode ser vista
+  uma camada superior ao HTML e ao CSS. Veja imagem a seguir:</p>
+
+  <img src="cake.png" alt="As camadas HTML, CSS e javaScript" class="center">
+  <p>Fonte: <code>https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript</code></p>
   <p>Veja neste
     <a href="http://evandro-ruiz.github.io/webDev/javaScript/code01Rotulo.html">link</a>
-    uma simples apresentação de JavaScrip.</p>
+    uma simples apresentação de JavaScript.</p>
+
+  <p>Este é o código responsável pelo dinaminsmo apresentado por esse botão.</p>
+
+  <pre class="prettyprint">
+    const para = document.querySelector('p');
+
+    para.addEventListener('click', atualizarNome);
+
+    function atualizarNome() {
+      var nome = prompt('Insira um novo nome');
+      para.textContent = 'Jogador 1: ' + nome;
+    }
+  </pre>
+
+  <p>No código acima podemos ver as seguintes situações:</p>
+  <ul>
+    <li>Definimos uma constante <kbd>para</kbd> que recupera o elemento documento
+    HTML a ser trabalhado, ou seja, um parágrafo;</li>
+
+    <li>O código responde a um evento na página web.
+    Foi usado o <em>click</em> que é o evento provocado pelo mouse
+    que dispara a função;</li>
+
+    <li>Neste exemplo um novo nome será inserido e armazenamos o
+      nome em uma variável chamada <kbd>nome</kbd>;
+    <li>Perceba que há uma concatenação de strings.</li>
+  </ul>
+
+  <h3>API</h3>
+  <p>As APIs (<em>Application Programming Interfaces</em>, ou Interface de Programação
+    de Aplicativos) são um recurso extra de JavaScript
+    e estão no topo do núcleo da linguagem. Existem diversas APIs
+    para os mais diversos fins, tais como:
+    <ul>
+      <li>As API DOM
+    (Document Object Model) que permitem manipular HTML e CSS,
+    criando, removendo e alterando etiquetas HTML e
+    aplicando dinamicamente novos estilos para a sua página; </li>
+      <li>APIs de Geolocalização que recuperam informações geográficas,
+        como é o caso da API do Google Maps; </li>
+      <li>APIs Canvas e WebGL permitem criar gráficos 2D e 3D animados;</li>
+      <li>APIs de áudio e vídeo que permitem maniputar elementos multimídia,
+        tais como tocar música e mostrar vídeos em uma página da web,
+        como capturar vídeos com a sua câmera, entre outras;</li>
+    </ul>
+
+  <h3>Mais um teste</h3>
+
+  <p>Agora vamos abrir um editor de programa, e vamos criar e testar o seguinte
+    código HTML</p>
+    <PRE class="prettyprint">
+    &lt;<font color=#aa0000>!DOCTYPE html</font>&gt;
+    &lt;<font color=#aa0000>html</font>&gt;
+    &lt;<font color=#ff0000>head</font>&gt;&lt;<font color=#aa0000>title</font>&gt;<strong>Exemplo aplicando JavaScript</strong>&lt;<font color=#aa0000>/title</font>&gt;&lt;<font color=#ff0000>/head</font>&gt;
+    &lt;<font color=#ff0000>body</font>&gt;
+
+    &lt;<font color=#ff0000>button</font>&gt;Clique em mim&lt;<font color=#aa0000>/button</font>&gt;
+
+    &lt;<font color=#ff0000>/body</font>&gt;
+    &lt;<font color=#aa0000>/html</font>&gt;
+    </PRE>
+  <p>Teste o código acima.</p>
+
+  <p>Agora, adicione este código JavaScript abaixo entre duas
+    estiquetas &lt;<font color=#ff0000>script</font>&gt;
+    e &lt;<font color=#ff0000>/script</font>&gt;. </p>
+
+  <pre class="prettyprint">
+    function criarParagrafo() {
+      let para = document.createElement('p');
+      para.textContent = 'Você clicou no botão!';
+      document.body.appendChild(para);
+    }
+
+    const botoes = document.querySelectorAll('button');
+
+    for(var i = 0; i < botoes.length ; i++) {
+      botoes[i].addEventListener('click', criarParagrafo);
+    }
+  </pre>
+
+  <p>Na dúvida, veja o código fonte
+    <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/code02Botao.html">aqui</a>.</p>
+
+  <p>O código em execução encontra-se
+    <a href="https://evandro-ruiz.github.io/webDev/javaScript/code02Botao.html">aqui</a>
+
+  <h3>Código JavaScript externo a página HTML</h3>
+
+  <p>Embora possamos deixar códigos JavaScript internos numa página HTML é
+    mais comum invocar uma certa independência entre códigos deixando
+    os códigos JavaScript num arquivo a parte.</p>
+  <p>Como fazer:</p>
+  <ol>
+    <li>Crie um arquivo fonte chamado <kbd>jscrip.js</kbd> no mesmo diretório
+      do seu arquivo HMTL;</li>
+    <li>Nesse arquivo acrescente o seguinte código fonte:
+    <pre class="prettyprint">
+      function createParagraph() {
+        let para = document.createElement('p');
+        para.textContent = 'Você clicou no botão!';
+        document.body.appendChild(para);
+      }
+
+      const buttons = document.querySelectorAll('button');
+
+      for(let i = 0; i < buttons.length ; i++) {
+        buttons[i].addEventListener('click', createParagraph);
+      }
+    </pre>
+    </li>
+
+    <li>No arquivo HTML retire as etiquetas
+      &lt;<font color=#ff0000>script</font>&gt; e os códigos, substituindo
+      pelo seguinte comandado
+
+      &lt;<font color=#ff0000>script</font> src="jscript.js" defer&gt;&lt;<font color=#ff0000>/script</font>&gt;
+    </li>
+
+
+      <script src="script.js" defer></script>
+      </li>
+  </ol>
+
+  <p>Na dúvida, veja o código fonte
+    <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/code03.html">aqui</a>.</p>
+
+  <p>O código em execução encontra-se
+    <a href="https://evandro-ruiz.github.io/webDev/javaScript/code03.html">aqui</a>
+
+
+
+
+  <h3>Agradecimentos</h3>
+  <p>Notas de aula baseadas no site da
+    <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript">Mozilla</a></p>
 
     <div id="footer">
       Copyright &copy; 2022 EESR
