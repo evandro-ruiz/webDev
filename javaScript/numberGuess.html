@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jogo da advinhação</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+
+      .parUltimo {
+        color: white;
+        padding: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Jogo da advinhação</h1>
+
+    <p>O sistema selecionou um número entre 1 e 100.
+      Você tem 10 chances para acertar qual é esse número.
+      O sistema avisará se a sua escolha for maior ou menor que o número escolhido.</p>
+
+      <div class="form">
+         <label for="escolha">Escolha um número: </label>
+         <input type="text" id="escolha" class="escolha">
+         <input type="submit" value="Enviar" class="escolhaEnviada">
+       </div>
+
+       <div class="avisos">
+         <p class="parEscolha"></p>
+         <p class="parUltimo"></p>
+         <p class="menorMaior"></p>
+       </div>
+
+       <script>
+         let aleatorio = Math.floor(Math.random() * 100) + 1;
+         const parEscolha = document.querySelector('.parEscolha');
+         const parUltimo = document.querySelector('.parUltimo');
+         const menorMaior = document.querySelector('.menorMaior');
+         const escolhaEnviada = document.querySelector('.escolhaEnviada');
+         const escolha = document.querySelector('.escolha');
+         let numChutes = 1;
+         let resetButton;
+
+         function checkGuess() {
+           const escolhido = Number(escolha.value);
+           if (numChutes === 1) {
+             parEscolha.textContent = 'Números anteriores: ';
+           }
+
+           parEscolha.textContent += escolhido + ' ';
+
+           if (escolhido === aleatorio) {
+             parUltimo.textContent = 'Parabéns! Você acertou!';
+             parUltimo.style.backgroundColor = 'green';
+             menorMaior.textContent = '';
+             setGameOver();
+           } else if (numChutes === 10) {
+             parUltimo.textContent = '!!!GAME OVER!!!';
+             menorMaior.textContent = '';
+             setGameOver();
+           } else {
+             parUltimo.textContent = 'Errou!';
+             parUltimo.style.backgroundColor = 'red';
+             if(escolhido < aleatorio) {
+               menorMaior.textContent = 'Chutou baixo!' ;
+             } else if(escolhido > aleatorio) {
+               menorMaior.textContent = 'Chutou alto!';
+             }
+           }
+
+           numChutes++;
+           escolha.value = '';
+           escolha.focus();
+         }
+
+         escolhaEnviada.addEventListener('click', checkGuess);
+
+         function setGameOver() {
+           escolha.disabled = true;
+           escolhaEnviada.disabled = true;
+           resetButton = document.createElement('button');
+           resetButton.textContent = 'Novo jogo';
+           document.body.appendChild(resetButton);
+           resetButton.addEventListener('click', resetGame);
+         }
+
+         function resetGame() {
+           numChutes = 1;
+           const resetParas = document.querySelectorAll('.avisos p');
+           for (const resetPara of resetParas) {
+             resetPara.textContent = '';
+           }
+
+           resetButton.parentNode.removeChild(resetButton);
+           escolha.disabled = false;
+           escolhaEnviada.disabled = false;
+           escolha.value = '';
+           escolha.focus();
+           parUltimo.style.backgroundColor = 'white';
+           aleatorio = Math.floor(Math.random() * 100) + 1;
+         }
+       </script>
+     </body>
+   </html>

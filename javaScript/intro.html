@@ -166,8 +166,39 @@
   <p>O código em execução encontra-se
     <a href="https://evandro-ruiz.github.io/webDev/javaScript/code03.html">aqui</a>
 
+  <p>O JavaScript, como uma linguagem interpretada e dependente das camadas
+    anteriores (HTML e CSS) depende do carregamento prévio dos elementos
+    que serão manipulados. Por isso é importante não apenas a ordem
+    dos comandos, como também a ordem das etiquetas HTML e CSS.<br>
+    No exemplo acima, vemos a palavra chave <kbd>defer</kbd> que
+    informa ao navegador para continuar renderizando o conteúdo HTML
+    até que a etiqueta &lt;<font color=#ff0000>script</font>&gt; seja atingida.
+  </p>
 
+  <p>Caso precisemos carregar diversos scripts Scripts
+     atributo <kbd>defer</kbd> garantirá a o carregamento dos scripts
+     na ordem em que aparecem na página e serão executados assim que o script
+     e o conteúdo for baixado.</p>
+  <p>Veja um exemplo a seguir:</p>
 
+    <pre class="prettyprint">
+       &lt;<font color=#ff0000>script</font> defer src="script1.js"> &lt;<font color=#ff0000>script</font>&gt;
+
+       &lt;<font color=#ff0000>script</font> defer src="script2.js"> &lt;<font color=#ff0000>script</font>&gt;
+
+       &lt;<font color=#ff0000>script</font> defer src="script3.js"> &lt;<font color=#ff0000>script</font>&gt;
+  </pre>
+
+  <p>Os comandos <kbd>defer</kbd> e <kbd>async</kbd> comandam o navegador a baixar e executar
+    os scripts numa thread distinta, enquanto o resto da página
+    está sendo baixado e disponibilizado. A execução dos scripts não bloqueia
+    a página HTML.
+    O comando <kbd>async</kbd> é usado se os seus scripts podem ser
+    executados imediatamente, independentemente uns dos outros.
+  </p>
+  <p>Caso os scripts precisem ser executados numa ordem particular ou a página
+    HTML precise estar disponível antes da execução do script, use
+    <kbd>defer</kbd>.</p>
 
   <h3>Agradecimentos</h3>
   <p>Notas de aula baseadas no site da
