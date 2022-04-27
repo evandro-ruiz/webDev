@@ -22,28 +22,26 @@
   <p>Primeiramente vamos iniciar o jogo criando uma página HTML que suporte
     o JS. Está página terá o layout básico do jogo, as instruções e um
     campo para a inserção do número sugerido pelo usuário.</p>
-  <p>Veja o código HTML a seguir: </p>
+  <p>Veja o código HTML
+    <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/numberGuess_zero.html">aqui</a>.</p>
+  <p>Na linha 32 iniciamos a criação de um formulário HTML chamado
+    <kbd>escolha</kbd> e que irá enviar o número escolhido por meio da
+    variável <kbd>escolhaEnviada</kbd>.</p>
 
-  <PRE class="prettyprint">
-    <body>
-      <h1>Jogo da advinhação</h1>
+  <p>Logo abaixo deixamos preparados 3 parágrafos que irão mostrar
+    mensagens ao usuário, que são:
+    <ol>
+      <li>Um parágrafo citando os números já sugeridos;</li>
+      <li>Em seguida, um parágrafo com cores de fundo que sinaliza o acerto ou
+        o erro do número sugerido; e</li>
+      <li>Um último parágrafo que aponta se a escolha foi de um número menor
+        ou maior que o sorteado pelo sistema.</li>
+    </ol>
 
-      <p>O sistema selecionou um número entre 1 e 100.
-        Você tem 10 chances para acertar qual é esse número.
-        O sistema avisará se a sua escolha for maior ou menor que o número escolhido.</p>
+    Veja abaixo uma imagem da tela deste jogo com os 3 parágrafos citados.</p>
 
-        <div class="form">
-           <label for="escolha">Escolha um número: </label>
-           <input type="text" id="escolha" class="escolha">
-           <input type="submit" value="Enviar" class="escolhaEnviada">
-         </div>
-
-         <div class="avisos">
-           <p class="parEscolha"></p>
-           <p class="parUltimo"></p>
-           <p class="menorMaior"></p>
-         </div>
-  </pre>
+    <img src="telaPar.png" alt="Outra imagem da tela do Jogo da advinhação"
+     class="center">
 
   <h3>Agradecimentos</h3>
   <p>Notas de aula baseadas no site da
