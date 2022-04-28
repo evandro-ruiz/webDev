@@ -16,14 +16,14 @@
     número aleatório escolhido pelo próprio JS.<br>
     Veja abaixo uma imagem da tela deste jogo.</p>
 
-    <img src="telaJogo.png" alt="Uma imagem da tela do Jogo da advinhação"
+    <img src="images/telaJogo.png" alt="Uma imagem da tela do Jogo da advinhação"
      class="center">
 
   <p>Primeiramente vamos iniciar o jogo criando uma página HTML que suporte
     o JS. Está página terá o layout básico do jogo, as instruções e um
     campo para a inserção do número sugerido pelo usuário.</p>
   <p>Veja o código HTML
-    <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/numberGuess_zero.html">aqui</a>.</p>
+    <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/numberGuess_zero.html" target="_blank">aqui</a>.</p>
   <p>Na linha 32 iniciamos a criação de um formulário HTML chamado
     <kbd>escolha</kbd> e que irá enviar o número escolhido por meio da
     variável <kbd>escolhaEnviada</kbd>.</p>
@@ -40,8 +40,56 @@
 
     Veja abaixo uma imagem da tela deste jogo com os 3 parágrafos citados.</p>
 
-    <img src="telaPar.png" alt="Outra imagem da tela do Jogo da advinhação"
+    <img src="images/telaPar.png" alt="Outra imagem da tela do Jogo da advinhação"
      class="center">
+
+  <h2>O script passo-a-passo</h2>
+  <p>Mostraremos a seguir os principais elementos do JS que implementa
+    esse jogo.</p>
+  <p>Se estiver apressado, veja o código fonte
+    <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/numberGuess.html"
+    target="_blank">aqui</a>.</p>
+
+  <h3>Variáveis e constantes em JS</h3>
+  <p>O tratamento de escopo de variável em JS é bem diferente de algumas
+    linguagens convencionais.<br>
+    Vejamos, por exemplo, o código representado na imagem abaixo:</p>
+    <img src="images/escopo.png" alt="Escopo de variáveis em JS"
+     class="center">
+
+  <p>Vemos logo uma variável (<kbd>foraIf</kbd>) com valor atribuído, mas
+    ainda não declarada. Isso porque JS aplica o conceito de <em>hoisting</em>,
+    ou seja, toda variável é elevada, içada, (hoisted) até o topo do seu
+    contexto de execução.<br>
+    Assim, a execução deste código não apenas permite a declaração após
+    a definição do valor da variável (o que é um perigo!), mas também,
+    contrariando a maioria da linguagens de programação, faz variáveis
+    serem conhecidas fora de seu escopo.</p>
+
+    <p>Veja o código fonte
+      <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/tstEscopo.html"
+      target="_blank">aqui</a>.</p>
+
+  <p>Veja abaixo um trecho com declarações e definições de variáveis e
+    constantes em JS.</p>
+  <img src="images/variaveis.png" alt="Constantes e variáveis em JS"
+   class="center">
+
+  <p>Em JS as variáveis são precedidas pela palavra chave <kbd>let</kbd> e
+    as constantes por <kbd>const</kbd>. A primeira variável corresponde
+    ao número escolhido pelo sistema. Pela função <kbd>floor</kbd> percebemos
+    a abordagem de orientação a objetos de JS (classe <kbd>Math</kbd>).</p>
+
+    <h4>querySelector</h4>
+
+    <p>Antes de alterar uma página,	 precisamos	acessar	o elemento a ser
+      alterado. Isso se faz usando o comando <kbd>querySelector</kbd>.
+    Note  que são reservados
+    identificadores para os 3 parágrafos mencionados acima, bem como
+    para os valores inseridos na caixa de diálogo. <kbd>escolhaEnviada</kbd> é
+    o identificador para o botão.</p>
+
+
 
   <h3>Agradecimentos</h3>
   <p>Notas de aula baseadas no site da
