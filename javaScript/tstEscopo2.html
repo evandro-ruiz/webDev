@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Teste de escopo de variável</title>
+  </head>
+
+  <body>
+       <script>
+
+         var foraIf = 'estou fora do if';
+         window.alert(foraIf);
+         if(true) {
+              let dentroIf = 'dentro do if';
+              window.alert(dentroIf);
+          }
+          window.alert(">> "+foraIf);
+          window.alert(">> "+dentroIf);
+
+       </script>
+       <h3>Fora do teste!</h3>
+  </body>
+</html>
