@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../styles.css" />
+  <title>Eventos em JavaScript</title>
+
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <div id="container">
+  <div id="header"><h1>Eventos em JavaScript</h1></div>
+
+  <h3>Sobre eventos em páginas web</h3>
+  <p>Quando comentamos sobre eventos, estamos nos referindo a eventos
+    que ocorrem na janela do naveagador. Esses eventos podem ser:</p>
+  <ul>
+    <li>Movimentações ou clicks no mouse;</li>
+    <li>Uso do teclado;</li>
+    <li>Envio de formulário (como visto na aula anterior);</li>
+    <li>Reprodução de um áudio ou vídeo; entre outros.</li>
+  </ul>
+
+  <p>JavaScript não é a única linguagem
+  que trata eventos, outras linguagens são responsáveis por manipular
+  eventos e todos fazem essa tarefa de um modo particular
+  (incluindo aqui o Node.js), ou seja, a
+  forma de manipular os eventos (as chamadas de funções)
+  não são necessariamente as mesmas.</p>
+  <p>Basicamente cada evento possui uma função associada
+    (<kbd>event handler</kbd>) ou (<kbd>event listener</kbd>)
+    que é executada cada vez que o evento for acionado.</p>
+
+    <p>Veja o código fonte
+      <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula2/evento1.html"
+      target="_blank">aqui</a>.</p>
+
+    <p>O código em execução encontra-se
+      <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula2/evento1.html">aqui</a>
+
+  <p>Nesse exemplo, sabemos que um botão em HTML pode ter um evento
+    associado, o de clicar sobre o botão. Na primeira linha do script
+    o elemento botão foi associado a variável <kbd>btn</kbd>.
+    Logo em seguida, definimos uma função que retorna um valor aleatório
+    entre 1 e 255 (os valores para as coordenadas de cores no padrão RGB).
+    Mais abaixo, na segunda função, associamos o evento já registrado
+    (<kbd>onclick</kbd>) a alteração da cor de fundo da tela.</p>
+
+  <p>No próximo código abaixo reparem que mudamos a função. Foi
+    declarada uma função separada, <kbd>bgChange()</kbd> é essa função
+    é chamada ao evento do botão, <kbd>btn.onclick = bgChange;</kbd></p>
+
+    <p>Veja o código fonte
+      <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula2/evento2.html"
+      target="_blank">aqui</a>.</p>
+
+    <p>O código em execução encontra-se
+      <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula2/evento2.html">aqui</a>
+
+    <h4>Para testar</h4>
+      <p>Como sabemos que existem outros eventos, vamos testar para os
+        seguintes: <kbd>window.onkeypress=bgChange;</kbd> e
+        <kbd>btn.onmouseover=bgChange;</kbd>. Creio que o nome
+      dos eventos é auto explicável.</p>
+      <p>Para estes dois eventos que trabalham conjuntamente
+        <kbd> btn.onfocus=bgChange;
+        btn.onblur=bgChange;</kbd>
+        o foco do mouse é alterado conforme a programação do navegador.
+        Muitas vezes o usuário precisa clicar sobre o botão para
+        trazer o foco para ele, e fora para levar o foco a outro elemento
+        HTML.</p>
+
+
+  <h3>Agradecimentos</h3>
+  <p>Notas de aula baseadas no site da
+    <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+    target="_blank">Mozilla</a></p>
+
+    <div id="footer">
+      Copyright &copy; 2022 EESR
+    </div>
+
+  </div>
+</body>
+</html>

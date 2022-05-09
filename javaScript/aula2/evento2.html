@@ -15,10 +15,12 @@
          return Math.floor(Math.random()*(num+1));
        }
 
-       btn.onclick = function() {
+       function bgChange() {
          var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
          document.body.style.backgroundColor = rndCol;
        }
+       btn.onclick=bgChange;
+
        </script>
   </body>
 </html>
