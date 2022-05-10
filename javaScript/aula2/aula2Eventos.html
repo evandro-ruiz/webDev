@@ -70,10 +70,83 @@
         trazer o foco para ele, e fora para levar o foco a outro elemento
         HTML.</p>
 
+ <h3>Eventos com DOM</h3>
+ <p>O DOM (<em>Document Object Model</em>), ou o Modelo de Documento por Objetos,
+    é uma interface que proporciona a programas e scripts um sistema genérico
+    para gerenciamento de eventos. O modelo DOM foca na representação e
+    interação com objetos em documentos HTML.
+    O DOM é uma convenção multiplataforma e
+    independente de linguagem de programação e é
+    fiscalizada pelo WWW (<em>World Wide Web Consortium</em>).</p>
 
+ <p>Os manipuladores de evento via DOM Nível 2 devem ter preferência
+   de uso sobre o uso das funções de evento via HTML. O modelo DOM
+   tem maior compatibilidade entre os navegadores e são mais
+   poderosos. </p>
+
+ <p>Essas anotações são voltadas para a Especificação de Eventos Nível 2 do
+   DOM e, basicamente iremos tratar das chamadas
+   <kbd>addEventListener()</kbd> e <kbd>removeEventListener()</kbd>.</p>
+
+ <p>Agora iremos rescrever basicamente a última linha do código anterior
+   a acrescentar uma manipulação de evento baseada no modelo DOM. <br>
+   Vamos registrar um evento, um "click", e associa-lo à função
+   que altera a cor de fundo.<br>
+   Essa será a nova linha de código<br>
+   <kbd>btn.addEventListener('click', bgChange);</bkd> </p>
+
+   <p>Veja o código fonte
+       <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula2/evento3.html"
+       target="_blank">aqui</a>.</p>
+
+     <p>O código em execução encontra-se
+       <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula2/evento3.html">aqui</a>
+
+  <p>Reparem que a função <kbd>addEventListener()</kbd> aceita dois
+    parâmetros: o evento que será registrado, e a função que será chamada
+    na ocasião do evento.</br>
+
+  <h4>Separando elementos HTML</h4>
+
+  <p>Também é possível associar eventos diferentes a elemento distintos
+    de HTML. Para isso temos que recordar como atribuir nome a elementos
+    HTML e também como selecionar um elemento pelo seu nome.<br>
+  Veja um exemplo abaixo:</p>
+
+  <p>Veja o código fonte
+      <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula2/evento4.html"
+      target="_blank">aqui</a>.</p>
+
+    <p>O código em execução encontra-se
+      <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula2/evento4.html">aqui</a>
+
+  <h4>Passando objetos de evento</h4>
+  <p> No exemplo a
+      <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula2/evento5.html"
+      target="_blank">seguir</a>
+    vemos que a função <kbd>function bgChange(e)</kbd>  recebe um parâmetro.
+    Esse parâmetro, nomeado aqui por <kbd>e</kbd> (mas que poderia
+    ser outro nome) em referência a evento, é um <b>objeto de vento</b>,
+    ou um <em>event object</em> que foi passado pela função que
+    o chamou, <kbd>btn.addEventListener('click', bgChange)</kbd>.<br>
+    Note que foi <kbd>btn</kbd>, um botão, que mandou o objeto evento.</p>
+
+    <p>
+    No comando <kbd>e.target.style.backgroundColor = rndCol;</kbd> o
+    alvo do evento, ou seja, <kbd>target</kbd>, é o próprio botão e,
+    assim, é ele quem muda de cor.
+  </p>
+  <p>Perceba também que é enviado para a console uma mensagem sobre o evento.
+    Você só conseguirá ver essa mensagem se a janela da console do navegador estiver
+    visível. Perceba que cada evento possui dezenas de parâmetros que vão
+    desde a localização do mouse,  até a pressão colocada sobre o dispositivo.</p>
+    <p>Veja código em execução
+      <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula2/evento5.html">aqui</a>
+
+      
   <h3>Agradecimentos</h3>
   <p>Notas de aula baseadas no site da
-    <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+    <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events"
     target="_blank">Mozilla</a></p>
 
     <div id="footer">

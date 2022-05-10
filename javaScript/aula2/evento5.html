@@ -2,24 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Altera cor da tela</title>
+    <title>Altera cor do botão</title>
   </head>
 
   <body>
-       <button>Muda cor 2</button>
+       <button id="m">Muda cor 5</button>
+
 
        <script>
-       var btn = document.querySelector('button');
+       var btn = document.querySelector("[id='m']");
 
        function random(num) {
          return Math.floor(Math.random()*(num+1));
        }
 
-       function bgChange() {
+       function bgChange(e) {
          var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
-         document.body.style.backgroundColor = rndCol;
+         e.target.style.backgroundColor = rndCol;
+         console.log(e);
        }
-       btn.onclick=bgChange;
+
+       btn.addEventListener('click', bgChange);
 
        </script>
   </body>

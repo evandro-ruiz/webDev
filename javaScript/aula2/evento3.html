@@ -6,7 +6,8 @@
   </head>
 
   <body>
-       <button>Muda cor 2</button>
+       <button>Muda cor 3</button>
+
 
        <script>
        var btn = document.querySelector('button');
@@ -19,7 +20,8 @@
          var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
          document.body.style.backgroundColor = rndCol;
        }
-       btn.onclick=bgChange;
+
+       btn.addEventListener('click', bgChange);
 
        </script>
   </body>

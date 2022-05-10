@@ -6,10 +6,13 @@
   </head>
 
   <body>
-       <button>Muda cor 2</button>
+       <button id="muda">Muda cor 4</button>
+       <button id="cinza">Cinza</button>
 
        <script>
-       var btn = document.querySelector('button');
+       var btn1 = document.getElementById("muda")
+       var btn2 = document.getElementById('cinza');
+       //var btn2 = document.querySelector("[id='remove']");
 
        function random(num) {
          return Math.floor(Math.random()*(num+1));
@@ -19,7 +22,13 @@
          var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
          document.body.style.backgroundColor = rndCol;
        }
-       btn.onclick=bgChange;
+
+       function remover() {
+         document.body.style.backgroundColor = "gray";
+       }
+
+       btn1.addEventListener('click', bgChange);
+       btn2.addEventListener('click',remover)
 
        </script>
   </body>
