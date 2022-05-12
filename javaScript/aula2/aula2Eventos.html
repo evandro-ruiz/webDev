@@ -126,7 +126,8 @@
       target="_blank">seguir</a>
     vemos que a função <kbd>function bgChange(e)</kbd>  recebe um parâmetro.
     Esse parâmetro, nomeado aqui por <kbd>e</kbd> (mas que poderia
-    ser outro nome) em referência a evento, é um <b>objeto de vento</b>,
+    ser outro nome, como <kbd>event</kbd>, que é muito usado) em referência a
+    evento, é um <b>objeto de vento</b>,
     ou um <em>event object</em> que foi passado pela função que
     o chamou, <kbd>btn.addEventListener('click', bgChange)</kbd>.<br>
     Note que foi <kbd>btn</kbd>, um botão, que mandou o objeto evento.</p>
@@ -143,7 +144,23 @@
     <p>Veja código em execução
       <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula2/evento5.html">aqui</a>
 
-      
+  <h4>Manipulando vários objetos com um mesmo evento</h4>
+  <p>Podemos usar o <kbd>e.target</kbd> como um único manipulador
+    evento que pode ser aplicado a vários elementos HTML. Podemos, por exemplo,
+    fazer que cada bloco de um conjunto de 16 blocos possa assumir uma cor
+    diferente ao chamarmos um único manipulador de eventos.</p>
+
+    <p>Veja o código em execução
+      <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula2/tiles.html">aqui</a>.
+      Clique sobre a parte superior da área clara para ver retângulos
+      coloridos surgirem. Ao todo serão 16 retângulos num arranjo 4x4.</p>
+
+    <p>Veja o código fonte
+          <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula2/tiles.html"
+          target="_blank">aqui</a>.</p>
+
+
+
   <h3>Agradecimentos</h3>
   <p>Notas de aula baseadas no site da
     <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events"
