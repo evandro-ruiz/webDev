@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplo de de uso do formulário</title>
+  </head>
+  <body>
+
+  <form>
+    <div>
+      <label for="fname">Prenome: </label>
+      <input id="fname" type="text">
+    </div>
+    <div>
+      <label for="lname">Sobrenome: </label>
+      <input id="lname" type="text">
+    </div>
+    <div>
+     <input id="submit" type="submit" value="Enviar">
+    </div>
+  </form>
+  <p></p>
+
+    <script>
+    var form = document.querySelector('form');
+    var fname = document.getElementById('fname');
+    var lname = document.getElementById('lname');
+    var submit = document.getElementById('submit');
+    var para = document.querySelector('p');
+
+    form.onsubmit = function(e) {
+      if (fname.value === '' || lname.value === '') {
+        e.preventDefault();
+        para.textContent = 'Preencha ambos os campos!';
+      }
+      else{
+        window.alert(lname.value+", "+fname.value);
+      }
+    }
+    </script>
+  </body>
+</html>
