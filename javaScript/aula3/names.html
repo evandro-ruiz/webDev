@@ -19,6 +19,7 @@
        let image = images[i];
        if (image.alt) {
          let text = document.createTextNode(image.alt);
+         console.log(text);
          image.parentNode.replaceChild(text, image);
        }
      }
