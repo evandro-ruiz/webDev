@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Teste de caixas HTML</title>
+  </head>
+
+  <body>
+    <div class="container" id="myContainer">
+  		<div class="fake-header">
+  		  <h2>Fake Header 1</h2>
+  		</div>
+  		<div class="fake-header">
+  		  <h2>Fake Header 2</h2>
+  		</div>
+  		<div class="fake-header">
+  		  <h2>Fake Header 3</h2>
+  		</div>
+  		<div class="fake-header">
+  		  <h2>Fake Header 4</h2>
+  		</div>
+  	</div>
+
+    <script>
+    const fakes = document.querySelectorAll(".fake-header");
+    // primeiro loop
+    for (var i = 0; i < fakes.length; i++) {
+      console.log('fakeHeader: ', fakes[i]);
+
+    }
+    console.log("segundo loop");
+    // segundo loop
+    const listArray = Array.from(fakes);
+    listArray.forEach((item) => {console.log(item)});
+
+    console.log("terceiro loop");
+
+    // terceiro
+    var cont = document.getElementById("myContainer");
+    var children = cont.children;
+    for (c of children) {
+      console.log(c);
+      window.alert(c);
+    }
+    </script>
+  </body>
+</html>

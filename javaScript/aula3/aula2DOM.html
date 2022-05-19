@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../styles.css" />
+  <title>DOM - Document Object Model</title>
+
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <div id="container">
+  <div id="header"><h1>DOM - <i>Document Object Model</i></h1></div>
+
+  <h3>A estrutura de um documento HTML</h3>
+  <p>Ao abrirmos um documento HTML num browser, o primeiro evento que ocorre
+    é uma análise sintática sobre a linguagem HTML (um <i>parsing</i>) para
+    avaliar como será sua renderização. Se o resultado do <i>parser</i> for OK,
+    o documento HTML é transformado num tipo abstrato de dado (TAD) interno
+    para ser manupilado. Este TAD é o que chamamos de DOM
+    - <i>Document Object Model</i>.</p>
+  <p>Seja o arquivo HTML abaixo:</p>
+
+  <img src="../images/htmlCodigo.png" alt="Um exemplo de código HTML." class="center">
+
+  <p>Podemos imaginar que esse documento como uma série de "caixas" contendo
+    os elementos HTML em seu interior. Esses elementos são os parágrafos,
+    os <i>headers</i>, as imagens, entre outros. Esse documento acima
+    poderia ser visto como estas "caixas" na imagem a seguir:</p>
+
+    <img src="../images/htmlBoxes.png" alt="Representação de um código HTML." class="center">
+<p>Cada "caixa" corresponde a um elemento HTML, indiretamente a uma <i>tag</i>.<br>
+  DOM é o TAD que representa toda essa estrutura. Nesta estrutura cada
+  elemento é representado por um objeto DOM.</p>
+
+<p>Internamente esses elementos HTML são representados numa estrutura arbórea em
+  que cada elemento é um nó desta árvore. Essa árvore tem um elemento principal
+  que é o elemento raíz, o <kbd>document</kbd>, e este as suas folhas, ou seja,
+  os demais elementos no documento. </p>
+<p>Veja uma representação do documento DOM já mencionado anteriormente na
+  figura a seguir:</p>
+<img src="../images/htmlTree.png" alt="Representação arbórea de um código HTML." class="center">
+
+<p>Para "caminhar" nesta estrutura arbórea, o DOM proporciona algumas
+  facilitades, tais como conhecer os elementos HTML pelos seus
+  pais e filhos, <kbd>parentNode</kbd> e <kbd>childNodes</kbd>. </p>
+
+  <p>Veja a ficura abaixo:</p>
+
+  <img src="../images/htmlMoveTree.png" alt="Representação arbórea detalhada de um código HTML em DOM." class="center">
+<p>JavaScript também oferece algumas conveniências e facilidades, tais como
+  acessar diretamente o <kbd>firstChild</kbd> e o  <kbd>lastChild</kbd>,
+  que apontam para o primeiro e último filho, respectivamente.
+  Na ausência de um deles, o valor <kbd>null</kbd> é retornado.
+  Além destes, podemos ter acesso aos irmãos <kbd>previousSibling</kbd>
+  e <kbd>nextSibling</kbd>, ou seja, apontadores para nós adjacentes.<br>
+Note também que existe uma estrutura de arranjo que aponta diretamente para
+esses elementos da árvore.
+</p>
+
+<p>No código abaixo vemos três modos de "caminhar" pela estrutura
+  DOM do HTML. Note que o terceiro modo usa o conceito de
+  árvore.</p>
+  
+<p>Veja o código fonte
+  <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula3/nodesHTML.html"
+  target="_blank">aqui</a>.</p>
+
+<p>O código em execução encontra-se
+  <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula3/nodesHTML.html">aqui</a>
+
+  <h3>Agradecimentos</h3>
+  <p>Notas de aula baseadas no site da
+    <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events"
+    target="_blank">Mozilla</a></p>
+
+    <div id="footer">
+      Copyright &copy; 2022 EESR
+    </div>
+
+</html>
