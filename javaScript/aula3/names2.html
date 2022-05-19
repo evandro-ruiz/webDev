@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Alterando nomes 2</title>
+  </head>
+
+  <body>
+  <blockquote id="quote">
+ O mundo é grande e cabe nesta janela sobre o mar.<br>
+ O mar é grande e cabe na cama e no colchão de amar.<br>
+ O amor é grande e cabe no breve espaço de beijar.<br>
+ </blockquote>
+
+ <script>
+  function elt(type, ...children) {
+    let node = document.createElement(type);
+    for (let child of children) {
+      if (typeof child != "string") node.appendChild(child);
+      else node.appendChild(document.createTextNode(child));
+    }
+    return node;
+  }
+
+
+  document.getElementById("quote").appendChild( elt("footer", "—",
+    elt("strong", "Carlos Drummond de Andrade"),
+    ", do livro ",
+    elt("em", "Poesia e prosa"), ", 1983."));
+
+</script>
+</body>
+</html>
