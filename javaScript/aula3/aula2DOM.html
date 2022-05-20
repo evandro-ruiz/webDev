@@ -115,7 +115,52 @@ esses elementos da árvore.
         <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula3/names2.html"
         target="_blank">aqui</a>.</p>
 
+  <h3>Animação usando DOM</h3>
 
+<p>O script abaixo usa a função <kbd>requestAnimationFrame</kbd> para agendar
+  a função </kbd>animate()</kbd> para ser
+  executada sempre que o navegador estiver pronto para repintar a tela.<br>
+  A própria função </kbd>animate()</kbd> chama novamente <kbd>requestAnimationFrame</kbd>
+   para agendar
+  a próxima atualização. Quando a janela do navegador (ou guia) estiver ativa,
+  isso fará com que as atualizações aconteçam a uma taxa de cerca de 60
+  quadros por
+  segundo, o que tende a para produzir uma animação de boa aparência.</p>
+
+  <p>Vejamos o  código em execução
+    <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula3/anima.html">aqui</a>
+
+    <p>Veja o código fonte
+      <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula3/anima.html"
+      target="_blank">aqui</a>.</p>
+
+  <h2>Outros eventos</h2>
+  <p>Vamos agora analisar outros tipos de eventos para complementar
+    os eventos já vistos.</p>
+
+  <h3>Eventos com mouse</h3>
+  <p>Anteriormente vimos alguns eventos com o mouse.
+    Vimos a quantidade de informação que uma pressão sobre uma tecla do
+    mouse pode causar.</p>
+  <p>Para obter informações precisas sobre o local onde ocorreu um evento de
+    mouse, você pode consultar suas propriedades <kbd>clientX</kbd> e
+    <kbd>clientY</kbd>, que contêm as coordenadas do evento (em pixels)
+    relativas ao canto superior esquerdo da janela,
+    ou <kbd>pageX</kbd> e <kbd>pageY</kbd>, que são relativas ao canto superior
+    esquerdo de todo o documento
+    (que pode ser diferente quando a janela foi rolada).</p>
+
+ <p>O script seguinte implementa uma forma de mostrar um desenho
+   simples sobre o posicionamento do mouse.
+   Toda vez que você clica no documento,
+   ele adiciona um ponto sob o ponteiro do mouse.</p>
+
+   <p>Vejas o  código em execução
+     <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula3/anima2.html">aqui</a>
+
+     <p>Veja o código fonte
+       <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula3/anima2.html"
+       target="_blank">aqui</a>.</p>
 
 
   <h3>Agradecimentos</h3>
