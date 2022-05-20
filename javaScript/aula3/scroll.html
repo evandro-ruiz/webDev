@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scroll</title>
+  </head>
+
+  <style>
+   #progress {
+     border-bottom: 5px solid blue;
+     width: 0;
+     position: fixed;
+     top: 0; left: 0;
+   }
+ </style>
+ <div id="progress"></div>
+ <script>
+   // crie algo
+   document.body.appendChild(document.createTextNode(
+     "pneumoultramicroscopicossilicovulcanoconiótico ".repeat(1000)));
+
+   let bar = document.querySelector("#progress");
+   window.addEventListener("scroll", () => {
+   let max = document.body.scrollHeight - innerHeight;
+   bar.style.width = `${(pageYOffset / max) * 100}%`; });
+  </script>
+
+</body>
+</html>

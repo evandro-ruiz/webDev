@@ -162,6 +162,65 @@ esses elementos da árvore.
        <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula3/anima2.html"
        target="_blank">aqui</a>.</p>
 
+  <h3>Movimento do mouse</h3>
+  <p>Toda vez que o ponteiro do mouse se move, um evento <kbd>mousemove</kbd>
+    é acionado.
+    Este evento pode ser usado para rastrear a posição do mouse.</p>
+
+  <p>Observe que o manipulador <kbd>mousemove</kbd> está registrado em toda a
+    janela. Mesmo que o mouse saia da barra durante o redimensionamento,
+    enquanto o botão estiver pressionado, ainda devemos atualizar seu tamanho.
+    Assim, deve-se parar de redimensionar a barra quando o botão do mouse é liberado.
+    Para isso,  usamos a propriedade <kbd>buttons</kbd> (observe o plural),
+    que nos informa sobre os botões que estão pressionados no momento.
+    Quando essa propriedade é zero, nenhum botão está para baixo.
+    Quando os botões são
+    pressionados, seu valor é a soma dos códigos desses
+    botões, ou seja, o botão esquerdo tem código 1, o botão direito tem código 2
+    e, o do meio, código 4.
+    Com os botões esquerdo e direito pressionados, por exemplo, o valor da
+    propriedade será 3.</p>
+
+    <p>Vejas o  código em execução
+      <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula3/mouse2.html">aqui</a>
+
+      <p>Veja o código fonte
+        <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula3/mouse2.html"
+        target="_blank">aqui</a>.</p>
+
+  <h3>Scroll</h3>
+  <p>Sempre que um elemento é rolado, um evento <kbd>scroll</kbd> é acionado nele.
+    Esse evento pode levar a vários usos, como saber o que o usuário está vendo
+    no momento
+    ou mostrar alguma indicação de progresso. O exemplo a seguir desenha uma
+    barra de progresso acima do documento e a
+    atualiza para preenchê-la conforme você rola para baixo.</p>
+
+    <p>Vejas o  código em execução
+      <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula3/scroll.html">aqui</a>
+
+      <p>Veja o código fonte
+        <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula3/scroll.html"
+        target="_blank">aqui</a>.</p>
+
+
+    <p>Dar a um elemento uma posição fixa (<kbd>fixed</kbd>) funciona como uma posição absoluta,
+      mas também impede que ele role junto com o restante do documento.
+      O efeito é fazer com que nossa barra de progresso fique no topo.
+      Sua largura é alterada para indicar o progresso atual.
+      Usamos %, em vez de px, como unidade ao definir a largura para que o
+      elemento seja dimensionado em relação à largura da página.</p>
+
+  <p>A variável global <kbd>innerHeight</kbd> nos dá a altura da janela,
+    que temos que subtrair da altura total rolável.
+    A variável <kbd>innerWidth</kbd> fornece a largura da janela.
+    Ao dividir <kbd>pageYOffset</kbd>, a posição de rolagem atual,
+    pela posição de rolagem máxima e multiplicando por 100, obtemos a porcentagem
+    da barra de progresso.</p>
+
+  <p>Chamando </kbd>preventDefault</kbd> num evento de rolagem não impede
+    que a rolagem aconteça. Na verdade, o manipulador de eventos é
+    chamado somente após a rolagem.</p>
 
   <h3>Agradecimentos</h3>
     <p>Notas de aula baseadas no site da
