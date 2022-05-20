@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Testando o focus</title>
+  </head>
+
+  <body>
+  <p>Nome: <input type="text" data-help="Seu nome"></p>
+  <p>Idade: <input type="text" data-help="Sua idade"></p>
+  <p id="ajuda"></p>
+
+  <script>
+  let help = document.querySelector("#ajuda");
+  let fields = document.querySelectorAll("input");
+  for (let field of Array.from(fields)) {
+    field.addEventListener("focus", event => {
+      let text = event.target.getAttribute("data-help");
+      help.textContent = text;
+    });
+
+    field.addEventListener("blur", event => {
+      help.textContent = ""; });
+    }
+  </script>
+</body>
+</html>
