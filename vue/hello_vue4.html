@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Listas em app Vue</title>
+  <!-- versão de produção, otimizada para tamanho e velocidade -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+  </div>
+
+  <div id="app-4">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+  </div>
+
+  <script src="hello_vue4.js"></script>
+
+</body>
+</html>

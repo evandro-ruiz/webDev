@@ -9,7 +9,7 @@
 <body>
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <div id="container">
-  <div id="header"><h1>DOM - <i>Document Object Model</i></h1></div>
+  <div id="header"><h1>Vue, um framework JS</h1></div>
 
   <h3>Apresentação</h3>
   <p>Vue.js (Vue (pronuncia-se /vjuː/, como <i>view</i>, em inglês)
@@ -67,6 +67,9 @@
   O CLI proporciona a criação de pacotes usando o  <kbd>vue create</kbd>
   e pode também ser usado para gerenciar os pacotes via interface
   gráfica, <kbd>vue ui</kbd>.
+  <p>Não usaremos o CLI agora, mas se tiver interesse,
+    consulte
+    <a href="https://cli.vuejs.org/guide/" target="_blank">aqui</a>.</p>
   </p>
 
   <h3>Nossa primeira aplicação</h4>
@@ -96,6 +99,13 @@
       Veja na imagem abaixo como você pode alterar essa mensagem:
     </p>
     <img src="images/hello2App2.png" alt="Alterando a primeira aplicação." class="center">
+
+    <p>No console, altere a mensagem digitando o seguinte comando:
+      <kbd>app.message="nova mensagem"</kbd>.<br>
+      O mesmo comando
+      pode ser colocado diretamente no script como última linha
+      para um teste.</p>
+
     <p>Assim criamos nossa primeira aplicação Vue.M</p>
 
   <h3>Alterando a primeira aplicação</h3>
@@ -114,13 +124,89 @@
         <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/hello_vue2.js"
         target="_blank">aqui</a>.</p>
 
+  <h3>Alterando via console</h3>
+    <p>Acabamos de criar um código reativo, responsivo. Para verificar essa capacidade,
+      acesse a console de desenvolvimento e mude a mensagem enviada
+      ao aplicativo usando o seguinte comando:<br>
+      <kbd>app.message="escreva sua nova mensagem aqui"</kbd>.<br>
+      Experimente variando as mensagens enviadas.</p>
+    <p>Perceba como mudou o modo de interação com o HTML.
+      Não é mais uma interação direta.
+       Uma aplicação Vue acopla-se a um elemento da DOM, <kbd>app</kbd> e
+       e exerce o controle por meio desta aplicação. O código
+       HTML é o que vemos
+       mas a "mágica" acontece na instância do Vue.</p>
+
+  <h3>Estrutura condicional</h3>
+  <p>Vue quase se aproxima de uma linguagem de programação se considerarmos
+    a possibilidade de termos estruturas repetitivas e estruturas condicionais.<br>
+    No exemplo abaixo vemos a inclusão de uma <b>diretiva</b>
+    <kbd>v-if</kbd>. Neste comando o <kbd>v</kbd> corresponde a uma diretiva
+    enquanto que  o <kbd>if</kbd> a um atributo (um comando, na verdade).
+    Esse conjunto <kbd>v-if="seen"</kbd> faz um teste lógico na variável.</p>
+  <p>Use a console para alterar o valor da variável. Teste os comandos
+    <kbd>app3.seen = false</kbd> e <kbd>app3.seen = true</kbd>.</p>
+
+    <p>Veja código fonte relativo ao <kbd>hello_vue3.js</kbd>
+          <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/hello_vue3.js"
+          target="_blank">aqui</a>.</p>
+    <p>Veja código fonte relativo ao <kbd>hello_vue3.js</kbd>
+          <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/hello_vue3.js"
+          target="_blank">aqui</a>.</p>
+
+
+   <h3>Estrutura repetitiva</h3>
+      <p>Podemos usar diretivas Vue para "caminhar" sobre um tipo abstrato
+        de dado (TAD).
+        Existem diversas diretivas, cada uma com sua própria funcionalidade.
+        Neste exemplo, a diretiva <kbd>v-for</kbd> pode ser usada para exibir uma
+        lista de itens usando dados de um Array, um TAD de JS.</p>
+
+      <p>Veja código fonte relativo ao <kbd>hello_vue4.js</kbd>
+          <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/hello_vue4.js"
+            target="_blank">aqui</a>.</p>
+      <p>Veja código fonte relativo ao <kbd>hello_vue4.js</kbd>
+          <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/hello_vue4.js"
+            target="_blank">aqui</a>.</p>
+
+      <p>Use a console para acrescentar ou retirar itens da lista.<br>
+        Teste os comandos
+        <kbd>app4.todos.push({ text: 'Novo item' })</kbd> e
+        <kbd>app4.todos.pop()</kbd>.</p>
+
+   <h3>Interação via web</h3>
+      <p>Podemos usar diretivas Vue, como a <kbd>v-on</kbd> para anexar
+        escutas a eventos (event listeners) que invocam métodos em
+        nossas instâncias Vue</p>
+
+      <p>Veja código fonte relativo ao <kbd>hello_vue5.js</kbd>
+          <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/hello_vue5.js"
+          target="_blank">aqui</a>.</p>
+      <p>Veja código fonte relativo ao <kbd>hello_vue5.js</kbd>
+          <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/hello_vue5.js"
+          target="_blank">aqui</a>.</p>
+
+      <p>Neste exemplo você pode dispensar a console.</p>
+
+  <h3>Mão-dupla</h3>
+    <p>A diretiva v-model promove uma interligação de mão dupla,
+      neste próximo exemplo, entre a caixa de texto e o estado da aplicação.</p>
+
+      <p>Teste este código fonte <kbd>hello_vue6.js</kbd>
+          <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/hello_vue6.js"
+          target="_blank">aqui</a>.</p>
+      <p>Veja código fonte relativo ao <kbd>hello_vue6.js</kbd>
+          <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/hello_vue6.js"
+          target="_blank">aqui</a>.</p>
+   <p>Na próxima aula veremos mais conceitos e aplicações de Vue.</p>  
+
   <h3>Agradecimentos</h3>
     <p>Notas de aula baseadas no site da
-    <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started/"
-       target="_blank">Mozilla - iniciando com Vue</a>
+      <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started/"
+        target="_blank">Mozilla - iniciando com Vue</a>
         e no site da
-    <a href="https://br.vuejs.org/v2/guide/index.html" target="_blank">Vuejs.org</a>.
-   </p>
+        <a href="https://br.vuejs.org/v2/guide/index.html" target="_blank">Vuejs.org</a>.
+    </p>
 
   <div id="footer">
     Copyright &copy; 2022 EESR
