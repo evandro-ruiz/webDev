@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../JavaScript/styles.css" />
+  <title>Vue - um framework JS</title>
+
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <div id="container">
+  <div id="header"><h1>DOM - <i>Document Object Model</i></h1></div>
+
+  <h3>Apresentação</h3>
+  <p>Vue.js (Vue (pronuncia-se /vjuː/, como <i>view</i>, em inglês)
+    é um framework JavaScript de código-aberto com objetivo mais
+    específico no desenvolvimento de interfaces de usuário, dentre
+    este os aplicativos de página única. É um front-end JavaScript leve.<br>
+    O Vue foi criado pelo desenvolvedor
+    independente Evan You, ex-funcionário Google onde obteve larga
+    experiência na utiliação do AngularJS. O Vue.js foi lançado em 2014.</p>
+
+  <h4>Nos braços de outros</h4>
+  <p>O Vue.js depende de dois outros softwares: o Node.JS e o npm.
+    Node.JS é um software de código aberto, multiplataforma,
+    que permite a execução de códigos JavaScript fora de um navegador web;
+    enquanto o npm (<i>node package manager</i>) é um gerenciador de pacotes
+    para o Node.JS.</p>
+
+  <h4>Na prática</h4>
+  <p>Todo computador do lab já tem o npm inslalado. Caso você não consiga
+    executar o Vue, instále-o usando o comando a seguir:</p>
+    <pre>
+      npm install -g @vue/cli
+    </pre>
+    <p>Verifique os softwares instalados solicitando as suas versões:</p>
+    <pre>
+      node --version
+      vue --version
+    </pre>
+  <p>Para esta atividade, estou usando Node.JS versão 16.15.0LTS, npm versão
+    8.5.5 e Vue.js versão 5.0.4.</p>
+
+  <h4>Criando seu primeiro código Vue.js</h4>
+  <p>Rapidamente...</p>
+  <pre>
+    vue create hello-world
+    //use o preset default
+    cd hello-world
+    npm run serve
+  </pre>
+  <p>Agora podemos abrir um navegador, acessar os endereços sugeridos
+    e ver o projeto criado, <kbd>hello-world</kbd>.</p>
+  <p>Veja nas imagens abaixo algumas etapas deste processo e a
+    aparência final do projeto.</p>
+
+
+  <img src="images/helloPreset.png" alt="Etapa intermediária criação hello-world." class="center">
+  <img src="images/helloCompilado.png" alt="hello-world compilado." class="center">
+  <img src="images/helloFinal.png" alt="Projeto finalizado: hello-world." class="center">
+
+  <h4>Criação de projeto</h4>
+  <p>A criação de projetos é muito vinculada ao CLI.
+    Vue CLI é um sistema para o desenvilvimento rápido de aplicações
+    Vue.js.
+  CLI é um pacote npm que chama o vue pelo terminal.
+  O CLI proporciona a criação de pacotes usando o  <kbd>vue create</kbd>
+  e pode também ser usado para gerenciar os pacotes via interface
+  gráfica, <kbd>vue ui</kbd>.
+  </p>
+
+  <h3>Nossa primeira aplicação</h4>
+  <p>Veja nosso primeiro código fonte
+      <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/aula1Vue.html"
+      target="_blank">aqui</a>.</p>
+    <p>Neste código a linha</p>
+    <img src="images/hello2Script.png" alt="script CDN." class="center">
+    <p>Explica que para trabalhar com Vue.js o usuário pode faze-lo
+      de várias maneiras, uma delas é usando o
+      CDN (<i>Content Delivery Network</i>), como na linha acima.</p>
+
+    <p>A imagem abaixo mostra o núcleo da aplicação:</p>
+    <img src="images/hello2App.png" alt="Núcleo da primeira aplicação." class="center">
+    <p>A <kbd>div</kbd> mostrada acima guarda toda a aplicação. Ela
+      referencia uma aplicação escrita dentro do bloco abaixo que é
+      uma isntância de um objeto Vue. Este objeto, por sua vez, faz chama renderização de
+      um documento DOM por uma template de sintaxe simples, <kbd>message</kbd>.<br>
+      Dentro dos atributos da instância de Vue, <kbd>el</kbd>, especifica
+      o local em que "residirá" que a aplicação Vue, ou seja, qual é
+      o nó do grafo de elementos do DOM. Nesta instância também especificamos os dados que
+      serão passados a esse objeto, a mensagem.
+    </p>
+    <p>Podemos alterar essa mensagem chamando a aplicação indiretamente
+      e enviando uma nova mensagem. Perceba que assim estamos lidando
+      diretamente com um nó DOM através do Vue.js.<br>
+      Veja na imagem abaixo como você pode alterar essa mensagem:
+    </p>
+    <img src="images/hello2App2.png" alt="Alterando a primeira aplicação." class="center">
+    <p>Assim criamos nossa primeira aplicação Vue.M</p>
+
+  <h3>Agradecimentos</h3>
+    <p>Notas de aula baseadas no site da
+    <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started/"
+       target="_blank">Mozilla - iniciando com Vue</a>
+        e no site da
+    <a href="https://br.vuejs.org/v2/guide/index.html" target="_blank">Vuejs.org</a>.
+   </p>
+
+  <div id="footer">
+    Copyright &copy; 2022 EESR
+  </div>
+</html>
