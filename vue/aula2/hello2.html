@@ -2,19 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hello Vue, versão 2</title>
+  <title>Hello Vue, v.2</title>
   <script src="https://unpkg.com/vue@next" defer></script>
   <script src="hello2.js" defer></script>
 </head>
 <body>
 
   <div id="app">
-    <form id="app-form">
-      <input type="text" v-model="input_name" placeholder="Digite seu nome">
-      <input type="submit" value="Enviar" v-on:click="submitForm">
-    </form>
-
-    <p>O meu nome é: {{ nome }}. <!-- data binding --></p>
+    <p>O meu nome é: {{ nome }}. Meu hobby é {{ hobby }}<!-- data binding --> </p>
   </div>
 
 </body>

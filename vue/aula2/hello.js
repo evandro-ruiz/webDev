@@ -1,7 +1,7 @@
 const MeuNomeApp = {
 data() {
   return {
-    nome:"teste"
+    nome: "Evandro"
   }
 }
 }
