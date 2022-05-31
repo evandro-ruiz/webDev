@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../../javaScript/styles.css" />
+  <title>Vue - um framework JS</title>
+
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <div id="container">
+  <div id="header"><h1>Vue versão 3: introdução</h1></div>
+
+  <h3>Apresentação</h3>
+  <p> Recordando ...Vue.js (Vue (pronuncia-se /vjuː/, como <i>view</i>, em inglês)
+    é um framework JavaScript progressivo, tem a construção de páginas
+    dinâmicas baseada toda em componentes de software e está entre os
+    frameworks JS mais utilizados, ao lado do Angular e do react.</p>
+
+    <p> Vue é um front-end JS escrito em código-aberto e é o framework
+    preferido pala aplicações página única. </p>
+
+  <h4>Iniciando na versão 3</h4>
+
+  <p>Vamos já começar pelo nosso primeiro código fonte em Vue 3,
+    que é um HTML que forma a base das páginas dinâmicas: clique
+      <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/aula2/hello.html"
+      target="_blank">aqui</a>.</p>
+  <p>Veja código fonte relativo ao <kbd>hello.js</kbd>
+            <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/aula2/hello.js"
+            target="_blank">aqui</a>.</p>
+
+
+  Veja o que fizemos até aqui:
+  <ul>
+    <li>Na primeira chamada de script, carregamos o Vue via CDN (<i>Content Delivery
+      Network</i>) que é uma maneira prática e rápida de carregar o Vue. Neste caso,
+    o carregamento via CDN não permite a utilização de todos os recursos do Vue,
+    mas é uma opção simples e prática; </li>
+    <li>O segundo script é justamente o código Vue que implementamos. O <kbd>defer</kbd>
+      está como uma solicitação de espera para o HTML, ou seja, o Vue só entrará
+      em ação depois que a página for carregada;</li>
+    <li>Depois elencamos uma div que será o ponto incial de entrada
+    das chamadas Vue;</li>
+    <li>Dentro da div tem uma "variável" que será ligada (<i>binding</i>)
+    ao conteúdo atribuído a ela no código <kbd>hello.js</kbd>;</li>
+    <li>Toda aplicação Vue começa por criar uma instância de aplicação
+      que é executada pela função <kbd>createApp</kbd>;</li>
+    <li>Em <kbd>hello.ja</kbd> criamos uma aplicação (<kbd>MeuNomeApp</kbd>)
+    que será montada na div declarada no arquivo HTML; </li>
+    <li>Essa aplicação, na sua porção de retorno de dados, retorna uma
+      cadeia de caracteres "ligada" a "variável" <kbd>nome</kbd>.
+  </ul>
+  <p>Para ver esse código (bem simples, por sinal) em execução clique
+    <a href="https://evandro-ruiz.github.io/webDev/vue/aula2/hello.html">aqui</a>.
+  </p>
+  <p>Experimente trocar a variável nome via console.</p>
+
+
+  <h3>Agradecimentos</h3>
+    <p>Notas de aula baseadas no site da
+      <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started/"
+        target="_blank">Mozilla - iniciando com Vue</a>
+        e no site da
+        <a href="https://br.vuejs.org/v2/guide/index.html" target="_blank">Vuejs.org</a>.
+    </p>
+
+  <div id="footer">
+    Copyright &copy; 2022 EESR
+  </div>
+</html>
