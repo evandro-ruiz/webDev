@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Vue, data binding direta</title>
+  <script src="https://unpkg.com/vue@next" defer></script>
+  <script src="hello3.js" defer></script>
+</head>
+<body>
+
+  <div id="app">
+    <form id="app-form">
+      <input type="text" v-model="input_name" placeholder="Digite seu nome">
+      <input type="submit" value="Enviar" v-on:click="submitForm">
+    </form>
+    <p>O meu nome é: {{ nome }} <!-- data binding --></p>
+    <p>Usando data binding: {{ input_name }}</p>
+  </div>
+
+</body>
+</html>

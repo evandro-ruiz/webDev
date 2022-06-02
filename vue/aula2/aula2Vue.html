@@ -55,6 +55,15 @@
     <a href="https://evandro-ruiz.github.io/webDev/vue/aula2/hello.html">aqui</a>.
   </p>
 
+<h3>Data binding</h3>
+<p>É importante salientar que muitas das operções que faremos daqui
+  em diante são formas de <i>data binding</i>, ou seja, modos
+  de alteração de valores em tempo de execução.<br>
+  Reparem que esse termo (<i>binding</i>), embora seja uma
+  atribuição de valor, é de fato uma ligação de um valor com uma
+  referência à variável. Pensem nisso!
+</p>
+
   <h4>Alterando o código anterior passando dois valores</h4>
   <p>Faremos agora uma alteração simples com objetivo
     de fixar o conteúdo visto anteiormente. Faremos o
@@ -72,7 +81,11 @@
 
   <h4>Alterando o código anterior e usando diretiva</h4>
   <p>Lembro que a diretiva <kbd>v-model</kbd> promove uma interligação
-    de mão dupla. Neste próximo exemplo, entre a caixa de texto
+    de mão dupla. Na verdade, essa diretiva guarda o valor da variável
+    citada na sequência no ambiente Vue para poder ser
+    acessada mais facilmente. <br>
+    Neste próximo exemplo, a interligação
+      de mão dupla ocorre entre a caixa de texto
     do formulário e um parágrafo da aplicação.</p>
   <p>Para saber mais sobre essa diretiva, veja o
     <a href="https://vuejs.org/guide/essentials/forms.html">link</a>.</p>
@@ -88,6 +101,21 @@
   <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/aula2/hello3.js"
     target="_blank">aqui</a>.</p>
 
+  <p>A figura abaixo mostra como pode ocorrer o <i>binding</i>
+    entre os elementos HTML mesmo com o nome declarado
+    de modo <i>hard coded</i> na classe.<br>
+    Teste essa possibilidade e veja, pela mensagem na console,
+    que o <i>binding</i> foi consolidado.</p>
+  <img src="images/input.png" alt="Nome hard-coded." class="center">
+
+  <h3>Usando data binding diretamente</h3>
+  <p>No próximo código, <kbd>hello4.html</kbd>, usamos uma associação
+    direta entre as referências da variável, ou seja, usamos
+    o <i>binding</i> diretamente, dispensando o recurso de
+    captura do evento.</p>
+  <p>Veja o  código HTML, <kbd>hello4.html</kbd>
+        <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/aula2/hello4.html"
+        target="_blank">aqui</a>.</p>
 
   <h3>Agradecimentos</h3>
     <p>Notas de aula baseadas no site da
