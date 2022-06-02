@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Vue: usando diretiva IF</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <h2>Tabela de preços</h2>
+
+  <div id="app">
+    <div v-if="showPreco">
+      <p>{{ produto }}  {{ preco }}</p>
+    </div>
+    <button @click="setShowPreco">
+      <span v-if=showPreco>Esconde preço</span>
+      <span v-if=!showPreco>Mostra preço</span>
+    </button>
+
+  </div>
+  <script src="show2.js"></script>
+
+</body>
+</html>
