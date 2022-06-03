@@ -21,7 +21,8 @@
     preferido pala aplicações página única. </p>
 
   <h3>Iniciando na Versão 3</h3>
-
+<p>A versão 3 de Vue foi lançada em 7 de fevereiro de 2022 e por isso
+ainda é pouco utilizada.</p>
   <p>Vamos já começar pelo nosso primeiro código fonte em Vue 3,
     que é um HTML que forma a base das páginas dinâmicas: clique
       <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/aula2/hello.html"
@@ -159,6 +160,76 @@
   <p>Esta é a nova página HTML com o botão adicional: clique
         <a href="https://github.com/evandro-ruiz/webDev/blob/main/vue/aula2/show3.html"
         target="_blank">aqui</a>.</p>
+
+  <h3>Exercício</h3>
+  <p>Existe também uma diretiva <kbd>v-else</kbd> que poderia ter sido
+          usada no lugar do segundo <kbd>v-if</kbd>.<br>
+          Como exercício, tente esta diretiva.</p>
+
+  <h3>Iniciando no CLI</h3>
+  <p>Antes de iniciar, como estamos usando o Vue v.3, temos que nos
+    assegurar que a versão do CLI é superir a versão 4.5.<br>
+  Usando o comando <kbd>vue -V</kbd> podemos verificar qual
+versão temos. Se for anterior a 4.5, podemos usar o seguinte
+comando <kbd>vue upgrade --next</kbd>.</p>
+
+  <p>Recorde treinando na aula anterior como criar um projeto
+    simples, um <kbd>hello-world</kbd>, por exemplo.</p>
+
+  <p>Nessa sessão faremos nosso primeiro projeto CLI alterando
+    um projeto inicial. Criarei um projeto, chamado
+    <kbd>projeto-x</kbd>, o qual farei alterações para criar
+    nosso primeiro componente.</p>
+    <p>O projeto será criado por seleção manual quando optaremos
+      por deixar o "Babel", obviamente faremos no padrão da versão 3 e,
+      na configuração de projetos escolheremos a opção de "arquivos dedicados".
+      Manter a opção "Save as preset" como <b>Não</b>.</p>
+  <code> vue create projeto-x </code>
+
+  <h4>O que modificar</h4>
+  <code>cd projeto-x</code>
+
+  <p>Modificaremos dois arquivos apagando muitos comandos e começando
+    "do zero" para poder entender. Serão dois os arquivs a serem alterados: o
+     <kbd>App.vue</kbd> que terá seu conteúdo apagado, e o <kbd>HelloWorld.vue</kbd>
+   que iremos deletar. </p>
+   <p>O <kbd>App.vue</kbd> está no diretório <kbd>src</kbd> e o <kbd>HelloWorld.vue</kbd>
+     está no diretório <kbd>components</kbd>.
+  <p>O <kbd>App.vue</kbd> é um módulo central que irá gerenciar toda a aplicação.
+  </p>
+
+  <p>Tendo apagado todo o conteúdo do <kbd>App.vue</kbd>, deixe-o
+    com o seguinte conteúdo:</p>
+  <img src="images/appv1.png" alt="Primeira versão Vue via CLI." class="center">
+
+  <p>Para executar, vá até o diretório <kbd>projeto-x</kbd> e chame
+    o comando:</p>
+  <code> npm run serve </code>
+
+  <p>Depois, abrindo o navegador, acesse <kbd>http://localhost:8080/</kbd>
+    e veja seu código Vue sendo executado.</p>
+
+  <p>O código em execução deverá ser assim:</p>
+  <img src="images/appv1run.png" alt="Primeira versão Vue via CLI running." class="center">
+
+    <h4>Criando nosso primeiro componente via CLI</h4>
+    <p>Todos os componentes usados pelos usuários devem ficar no diretório
+      <kbd>components</kbd>.</p>
+    <p>Criaremos nosso primeiro componente, um código fonte que chamarei
+      <kbd>PrimoComp.vue</kbd> e que terá esse conteúdo:</p>
+      <img src="images/primocomp.png" alt="Primeiro componente." class="center">
+
+    <p>Criado o primeiro componente, precisamos alterar a <kbd>App.vue</kbd>
+      para utilizar esse componente.<br>
+      O código <kbd>App.vue</kbd> alretado será como na figura a seguir: </p>
+
+      <img src="images/appv2.png" alt="App.vue chamando componente." class="center">
+  <p>Finalmente, teremos nosso primeiro componente sendo executado, como na
+    figura abaixo:</p>
+    <img src="images/final.png" alt="Vue executando componente." class="center">
+  <p>FIM! (por enquanto)</p>
+
+
 
   <h3>Agradecimentos</h3>
     <p>Notas de aula baseadas no site da
