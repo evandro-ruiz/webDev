@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../../javaScript/styles.css" />
+  <title>Vue: seguindo em frente</title>
+
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <div id="container">
+  <div id="header"><h1>Vue: seguindo em frente</h1></div>
+
+  <h3>Mais sobre componentes</h3>
+  <p>Veremos agora, como inserir dados nos componentes, no formato
+    de objetos e como  alterar dados dinâmicamente destes componentes
+    numa página.</p>
+
+  <p>Para iniciar, vamos alterar o código criado na aula passada quando
+    programamos nosso primeiro componente.</p>
+
+  <p>Como vamos continuar no código da aula passada, o
+    <kbd>projeto-x</kbd>, lembro que para executar o Vue sobre sobre este
+    projeto da aula devemos ir até o diretório onde ele está e chamar
+    o comando:
+  <code>
+    npm run serve
+  </code>
+  Depois, abrindo o navegador, acesse <kbd>http://localhost:8080/</kbd>
+    e veja seu código Vue sendo executado.</p>
+
+
+    Vamos alterar o código
+    <kbd>PrimoComp</kbd> para essa versão como na figura abaixo:</p>
+  <img src="images/primo1.png" alt="Entrando dados num componente." class="center">
+
+  <p>Estas são as novidades neste código:
+  <ul>
+    <li>Quando temos mais de dois elementos HTML no template, precisamos
+      encapsulá-los numa div;</li>
+    <li>Dentro do método <kbd>default</kbd> temos a já conhecida porção
+      <kbd>data</kbd> que é a responsável por exportar os dados do método.</li>
+  </ul>
+  o restante do código, como a sintaxe "de bigode" para receber as referências
+  dos dados enviados, já é conhecido.<br>
+  O resultado do código acima é a página dinâmica mostrada abaixo, com
+  os <i>bindings</i> dos dois identificadores, <kbd>nome</kbd> e
+  <kbd>hobby</kbd>.
+</p>
+<img src="images/ola1.png" alt="Primeiro componente via CLI." class="center">
+
+  <h4>Primeira alteração</h4>
+  <p>O arquivo <kbd>App.vue</kbd> também pode ter um "template" e seu
+    método também pode conter uma porção <kbd>data</kbd> que pode
+      fazer <i>binding</i> de referências.<br>
+    Veja e faça você mesmo uma alteração, como a abaixo, no arquivo <kbd>App.vue</kbd>
+    e verifique o resultado. A nova versão do arquivo está nesta imagem
+  abaixo:</p>
+  <img src="images/appVue.png" alt="Alterando a App.vue." class="center">
+
+ <p>Veja na imagem a seguir o resultado destes acréscimos no
+   arquivo <kbd>App.vue</kbd>.</p>
+   <img src="images/ola2.png" alt="Alterando o App.vue." class="center">
+
+<h3>App.vue é o seu único componente</h3>
+<p>Podemos reduzir o código <kbd>App.vue</kbd> para ser o único
+  componente da página. Veja e execute a alteração abaixo para testar.</p>
+  <img src="images/appUnica.png" alt="Tendo só a App.vue." class="center">
+<p>O resultado da página dinâmica pode ser visto nas duas imagens
+  a seguir:</p>
+  <img src="images/appUnica2.png" alt="Tendo só a App.vue." class="center">
+  <img src="images/appUnica3.png" alt="Tendo só a App.vue." class="center">
+
+
+<h3>Lyfe cycles hooks</h3>
+
+<p>Cada instância do componente Vue passa por uma série de etapas de
+  inicialização quando é criada, por exemplo:</p>
+  <ul>
+    <li>ela precisa configurar a observação de dados,</li>
+    <li>compilar o template,</li>
+    <li>montar a instância no DOM, e</li>
+    <li>atualizar o DOM quando os dados forem alterados.</li>
+  </ul>
+  <p>Ao longo do caminho, um componente também executa funções chamadas
+  <i>Lyfe cycles hooks</i>
+  que possibilitam aos usuários a oportunidade de adicionar seu
+  próprio código em estágios específicos do ciclo de vida do componente.</p>
+
+<p>Em outras palavras, um <i>hook</i> seria um ponto da aplicação
+  em que o programador pode intervir na execução da página de uma forma simples.
+  Seria como se o Vue desse, por exemplo, uma permissão  de execução
+  de alguma tarefa antes de mostrar a div para o usuário.
+  Se o programador desejar intervir neste ponto para, por exemplo,
+  carregar alguns registros de um banco antes, esses <i>hooks</i> possibilitam
+ essa intervenção.</p>
+
+<p>Esses "ganchos" podem ser chamados em diferentes fases do ciclo de vida da
+  instância de um objeto componente. Os <i>hooks</i> mais conhecidos
+  e ais usados são
+  <knd>created, mounted, updated</kbd> e <kbd>unmounted</kbd>.</p>
+
+<p>Na
+  <a href="https://vuejs.org/guide/essentials/lifecycle.html" target="_blank">página</a>
+da Vue temos uma imagem que retrata o ciclo de vida de uma instância de
+um componente. Estude essa figura.</p>
+
+<h4>Lyfe cycles hooks na prática</h4>
+  <p>Nesta seção iremos trabalhar com dois componentes: 1) o primeiro é o já
+    utilizado <kbd>PrimoComp.vue</kbd> para testarmos o "binding", já o 2)
+    é um componente novo, <kbd>LifeCycle.vue</kbd>, que mostra pelo navegador
+    e pela console, as etapas de criação de um componente.
+    Veja e replique esse novo componente como no código abaixo:</p>
+
+<img src="images/lf1.png" alt="Componente LifeCycle." class="center">
+
+  <p>Sabemos que para ativarmos o novo componente, <kbd>LifeCycle.vue</kbd>,
+    precisamos importá-lo e chamar sua execução pelo <kbd>App.vue</kbd>.<br>
+    Veja a nova versão do <kbd>App.vue</kbd> abaixo:</p>
+
+<img src="images/lf2.png" alt="App.vue com o lifeCycle." class="center">
+
+  <p>Esses dois códigos atuando conjuntamente geram, ao final, um resultado
+    similar ao mostrado na figura abaixo:</p>
+<img src="images/lf3.png" alt="Página mostrando os lifeCycle hooks." class="center">
+  <p>Lembrem-se de visualizar os estágios de acontecimentos pela console.<br>
+  Tente verificar como ocorre o chamado para <kbd>updated()</kbd></p>
+
+<h3>Hierarquia de componentes</h3>
+<p>Neste estudo vamos tratar de componentes hierarquizados no conceito
+  de DOM que foi apropriado pelo Vue. Iremos criar dois componentes, um
+  dependente do outro.<br> Vamos começar com o primeiro componentes,
+  chamado aqui de <kbd>AutoDesc.vue</kbd>:</p>
+  <img src="images/desc1.png" alt="AutoDesc.vue." class="center">
+
+<p>Para usarmos esse componente novo temos que alterar o <kbd>App.vue</kbd>.<br>
+  Vejamos como ficaria esse código: </p>
+  <img src="images/appDesc1.png" alt="AutoDesc.vue." class="center">
+<p>Códigos estes que irão gerar uma tela semelhante a esta abaixo:</p>
+<img src="images/telaDesc1.png" alt="Saída de AutoDesc.vue." class="center">
+
+ <p>Pois agora iremos completar a descrição do automóvel inserindo um
+   novo componente com uma lista básica de características deste carro.<br>
+   Este é o código do novo componente, aqui chamado de <kbd>InfoDesc.vue</kbd>.</p>
+   <img src="images/InfoDesc.png" alt="InfoDesc.vue." class="center">
+
+<p>Notem que a base estrutural de declaração de um componente é sempre a mesma,
+  ou seja, temos a porção template, a script, o export com o nome do componente,
+  o campo de dados, eventualmente o campo de métodos e por aí segue.</p>
+
+<p>Reparem também que nomeamos esses componentes sempre com "nomes duplos" (quase).
+  Isso é uma exigência de Vue para não conflitar com possíveis criações
+  de novos rótulos HTML com nomes similares.</p>
+
+<p>A grande alteração ocorre agora que vamos alterar o componente
+   <kbd>AutoDesc.vue</kbd> para ter o componente de descrição, o
+   <kbd>InfoDesc.vue</kbd> como vinculado a este componente <kbd>AutoDesc.vue</kbd>.
+ Cnsiderando a hierarquia DOM, <kbd>InfoDesc.vue</kbd> será filho de
+  <kbd>AutoDesc.vue</kbd>.</p>
+  <p>Veja <kbd>AutoDesc.vue</kbd> alterado na imagem abaixo:</p>
+  <img src="images/AutoDesc.png" alt="AutoDesc.vue." class="center">
+
+  <p>Reparem nas linhas 4, 9, 13 e 14.</p>
+
+  <h4>Reflexões</h4>
+  <p>Considerando a construção do <kbd>App.vue</kbd> e que ele permanece
+    inalterado, podemos perceber que este também é um componente Vue,
+    aliás é a raíz da árvore de componente. Descende dele agora os componentes
+    <kbd>PrimoComp.vue</kbd>, <kbd>CarDesc.vue</kbd> e, deste último
+    descente <kbd>InfoDesc.vue</kbd>.</p>
+  <p>Outra consideração importantíssima é que a criação de um componente
+    específico normalmente deve estar associada à reutilização de software,
+    neste caso, de componentes.</p>
+
+  <p>FIM de Vue!</p>
+
+  <div id="footer">
+    Copyright &copy; 2022 EESR
+  </div>
+</html>

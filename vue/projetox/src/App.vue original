@@ -1,19 +1,21 @@
 <template>
+  <PrimoComp />
   <div>
-    <PrimoComp />
-    <AutoDesc />
+    <p>Estou no {{ local }} </p>
   </div>
 </template>
 
 <script>
 import PrimoComp from './components/PrimoComp.vue'
-import AutoDesc from './components/AutoDesc.vue'
-
 export default {
   name: 'App',
   components: {
-    PrimoComp,
-    AutoDesc
+    PrimoComp
+  },
+  data() {
+    return {
+      local:"DCM USP"
+    }
   }
 }
 </script>

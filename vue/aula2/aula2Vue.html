@@ -196,7 +196,14 @@ comando <kbd>vue upgrade --next</kbd>.</p>
    <p>O <kbd>App.vue</kbd> está no diretório <kbd>src</kbd> e o <kbd>HelloWorld.vue</kbd>
      está no diretório <kbd>components</kbd>.
   <p>O <kbd>App.vue</kbd> é um módulo central que irá gerenciar toda a aplicação.
+    Este é o início da execução do Vue e é chamado pelo <kbd>main.js</kbd>.
   </p>
+
+  <img src="images/mainJS.png" alt="main.js." class="center">
+  <p>Note que o <kbd>main.js</kbd> cria e chama a <kbd>App.vue</kbd>. Por isso
+    que no script da <kbd>App.vue</kbd> temos que exportar essa aplicação
+    para o componente en que está o header, dentro do template.<br>
+  Veja esses detalhes no código da imagem abaixo</p>
 
   <p>Tendo apagado todo o conteúdo do <kbd>App.vue</kbd>, deixe-o
     com o seguinte conteúdo:</p>
@@ -207,10 +214,17 @@ comando <kbd>vue upgrade --next</kbd>.</p>
   <code> npm run serve </code>
 
   <p>Depois, abrindo o navegador, acesse <kbd>http://localhost:8080/</kbd>
-    e veja seu código Vue sendo executado.</p>
+    e veja seu código Vue sendo executado.<br>
+    Esse header é o único "componente" sendo executado, mas na verdade ainda
+    não é um componente, é apenas um nó HTML no conjunto dos nós manipulados
+    pelo Vue.
+  </p>
+
 
   <p>O código em execução deverá ser assim:</p>
   <img src="images/appv1run.png" alt="Primeira versão Vue via CLI running." class="center">
+
+<p>Esse resultado é muito próximo ao que tínhmamos usando o CDN.</p>
 
     <h4>Criando nosso primeiro componente via CLI</h4>
     <p>Todos os componentes usados pelos usuários devem ficar no diretório
