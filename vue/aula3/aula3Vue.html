@@ -167,10 +167,48 @@ um componente. Estude essa figura.</p>
     inalterado, podemos perceber que este também é um componente Vue,
     aliás é a raíz da árvore de componente. Descende dele agora os componentes
     <kbd>PrimoComp.vue</kbd>, <kbd>CarDesc.vue</kbd> e, deste último
-    descente <kbd>InfoDesc.vue</kbd>.</p>
+    descente <kbd>InfoDesc.vue</kbd>. Temos assim uma árvore de componentes,
+  como no DOM.</p>
   <p>Outra consideração importantíssima é que a criação de um componente
     específico normalmente deve estar associada à reutilização de software,
     neste caso, de componentes.</p>
+
+  <h3>Reaproveitando componentes</h3>
+  <p>Vamos agora ampliar nossa página incluindo um formulário que poderá,
+    na característica de componente (mesmo que simples), ser reutilizado
+    por outras aplicações.</p>
+
+  <p>Nosso objetivo é criarmos componentes novos para que a página tenha
+    a seguinte aparência final:</p>
+    <img src="images/telaFinal.png" alt="Tela final" class="center">
+
+  <p>Vamos dividir esse formulário em componentes e armazená-los num diretório
+    à parte chamado </kbd>forms</kbd>.<br>
+    São estes os dois componentes que criaremos:<kbd>InputText.vue</kbd> e
+    <kbd>SubmitText.vue</kbd>.<br>
+    Vejamos os seus códigos fonte abaixo. Primeiro o <kbd>InputText.vue</kbd>:
+  </p>
+  <img src="images/inputText.png" alt="InputText.vue" class="center">
+
+  <p>E agora o <kbd>SubmitText.vue</kbd>:
+  </p>
+  <img src="images/submitText.png" alt="SubmitText.vue" class="center">
+
+  <p>Um terceiro componente é obrigatório nesta configuração pois este irá
+    abrigar os dois componentes anteriores. Este componente será o
+    <kbd>FormCar.vue</kbd>, como decrito na imagem abaixo:</p>
+    <img src="images/formCar.png" alt="FormCar.vue" class="center">
+  <p>Este último ficará na pasta <kbd>components</kbd> juntamente
+    com </kbd>AutoDesc.vue</kbd>. </p>
+
+  <p>Resta-nos agora alterar o componente </kbd>AutoDesc.vue</kbd>
+    para acomodar o novo componente <kbd>FormCar</kbd> que é "pai"
+    de <kbd>InputText.vue</kbd> e <kbd>SubmitText.vue</kbd><p>.
+    <img src="images/formCar.png" alt="FormCar.vue" class="center">
+
+  <div>
+  <p>Assim encerramos nossa introdução ao Vue.</p>
+  </div>
 
   <p>FIM de Vue!</p>
 
