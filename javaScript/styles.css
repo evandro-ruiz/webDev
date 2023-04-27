@@ -3,7 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  padding-bottom:1ex; 
+  padding-bottom:1ex;
 }
 
 html,body{margin:0;padding:0}
@@ -18,6 +18,7 @@ div#navigation{background:#F6F0E0;}
 div#navigation ul{margin:15px 0; padding:0; list-style-type:none;}
 div#navigation li{margin-bottom:5px;}
 div#extra{background:#CCC8B3;}
+div#tarefa{background-color: #737CA1}
 div#footer{background:#c2d9e8;}
 div#footer p{margin:0;padding:5px 10px}
 div#container{width:700px;margin:0 auto}
