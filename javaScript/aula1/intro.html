@@ -72,6 +72,9 @@
       nome na variável chamada <kbd>nome</kbd>;
     <li>Perceba que há uma concatenação de strings.</li>
   </ul>
+  <p>O código fonte completo pode ser visto
+    <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula1/code01Rotulo.html"
+    target="_blank">aqui</a>.</p>
 
   <h3>API</h3>
   <p>As APIs (<em>Application Programming Interfaces</em>, ou Interface de Programação
@@ -90,6 +93,38 @@
         tais como tocar música e mostrar vídeos em uma página da web,
         como capturar vídeos com a sua câmera, entre outras;</li>
     </ul>
+    <p>Deveremos fazer uma aula apenas sobre APIs as quais podem ser
+      vistas como o grande foco de JS.</p>
+
+  <h3>Vamos testar um botão vinculado a um script</h3>
+
+  <pre class="prettyprint">
+    function mostrarDiaHora() {
+      // Obtem a data e hora atual
+      var dataHoraAtual = new Date();
+
+      // Funções que devolvem data e hora
+      var dataFormatada = dataHoraAtual.toLocaleDateString();
+      var horaFormatada = dataHoraAtual.toLocaleTimeString();
+
+      // Exibir a data e hora
+      var mensagem = 'Data: ' + dataFormatada + &apos;&lt;br&gt;Hora: ' + horaFormatada;
+      document.getElementById("resultado").innerHTML = mensagem;
+    }
+  </pre>
+  <p>Reforço que o código acima deve estar estre os rótulos &lt;script&gt;
+    &lt;/script&gt; e dentro do escopo do cabeçalho HTML.</p>
+
+  <p>Este código deve mostrar o horário local do sistema ao apertar
+    o botão. Reparem nas chamadas das funções que retornam o dia-mês-ano
+    local além do horário
+  </p>
+
+  <p>Notem que este código só se completa com o corpo do texto
+    HTML que pode ser visto <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula1/code01A.html"
+    target="_blank">aqui</a>.</p>
+
+
 
   <h3>Mais um teste</h3>
 

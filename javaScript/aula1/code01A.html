@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mais um teste sobre JavaScript</title>
+
+<script>
+function mostrarDiaHora() {
+  // Obtem a data e hora atual
+  var dataHoraAtual = new Date();
+
+  // Funções que devolvem data e hora
+  var dataFormatada = dataHoraAtual.toLocaleDateString();
+  var horaFormatada = dataHoraAtual.toLocaleTimeString();
+
+  // Exibir a data e hora
+  var mensagem = 'Data: ' + dataFormatada + '<br>Hora: ' + horaFormatada;
+  document.getElementById("resultado").innerHTML = mensagem;
+}
+</script>
+</head>
+<body>
+
+<button onclick='mostrarDiaHora()'>Mostrar Dia e Hora</button>
+<p id='resultado'></p>
+
+</html>
