@@ -49,27 +49,27 @@
   <p>Este é o código responsável pelo dinaminsmo apresentado por esse botão.</p>
 
   <pre class="prettyprint">
-    const para = document.querySelector('p');
+    var para = document.querySelector('p');
 
     para.addEventListener('click', atualizarNome);
 
     function atualizarNome() {
-      var nome = prompt('Insira um novo nome');
-      para.textContent = 'Jogador 1: ' + nome;
+      var nome = prompt('Escreva seu preferido');
+      para.textContent = 'Doce predileto: ' + nome;
     }
   </pre>
 
   <p>No código acima podemos ver as seguintes situações:</p>
   <ul>
-    <li>Definimos uma constante <kbd>para</kbd> que recupera o elemento documento
+    <li>Definimos uma variável <kbd>para</kbd> que recupera o elemento documento
     HTML a ser trabalhado, ou seja, um parágrafo;</li>
 
     <li>O código responde a um evento na página web.
     Foi usado o <em>click</em> que é o evento provocado pelo mouse
-    que dispara a função;</li>
+    que dispara a função <kbd>atualizarNome()</kbd>;</li>
 
-    <li>Neste exemplo um novo nome será inserido e armazenamos o
-      nome em uma variável chamada <kbd>nome</kbd>;
+    <li>Neste exemplo um novo termo será inserido e armazenamos o
+      nome na variável chamada <kbd>nome</kbd>;
     <li>Perceba que há uma concatenação de strings.</li>
   </ul>
 
