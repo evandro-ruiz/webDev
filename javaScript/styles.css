@@ -6,6 +6,41 @@
   padding-bottom:1ex;
 }
 
+/* inicio da configuração para a imagem de 3 blocos */
+.container {
+    display: flex;
+    flex-direction: column; /* Display blocks in a column */
+    justify-content: center; /* Center blocks horizontally */
+    align-items: center; /* Center blocks vertically */
+  }
+
+  .block {
+      height: 50px;
+      display: flex;
+      justify-content: center; /* Center text horizontally */
+      align-items: center; /* Center text vertically */
+      color: white; /* Text color */
+      border-radius: 5px; /* Rounded corners */
+  }
+
+  /* Styles for each individual block */
+  /* Styles for each individual block */
+  .block:nth-child(1) {
+      background-color: #87CEEB; /* Sky Blue */
+      width: 100px;
+  }
+
+  .block:nth-child(2) {
+      background-color: #0000FF; /* Medium Blue */
+      width: 200px;
+  }
+
+  .block:nth-child(3) {
+      background-color: #00008B; /* Dark Blue */
+      width: 300px;
+  }
+  /* fim da configuração para a imagem de 3 blocos */
+
 html,body{margin:0;padding:0}
 body{font: 90%arial,sans-serif;text-align:center}
 p{margin:0 10px 10px}
