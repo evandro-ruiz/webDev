@@ -154,11 +154,9 @@
       document.body.appendChild(para);
     }
 
-    const botoes = document.querySelectorAll('button');
+    const botao = document.getElementById('bot');
 
-    for(var i = 0; i < botoes.length ; i++) {
-      botoes[i].addEventListener('click', criarParagrafo);
-    }
+    botao.addEventListener('click', criarParagrafo);
   </pre>
 
   <p>Na dúvida, veja o código fonte
@@ -179,17 +177,16 @@
       do seu arquivo HMTL;</li>
     <li>Nesse arquivo acrescente o seguinte código fonte:
     <pre class="prettyprint">
-      function createParagraph() {
-        let para = document.createElement('p');
-        para.textContent = 'Você clicou no botão!';
-        document.body.appendChild(para);
-      }
+      function criarParagrafo() {
+          let para = document.createElement('p');
+          para.textContent = 'Você clicou no botão!';
+          document.body.appendChild(para);
+        }
 
-      const buttons = document.querySelectorAll('button');
+        const botao = document.getElementById('bot');
 
-      for(let i = 0; i < buttons.length ; i++) {
-        buttons[i].addEventListener('click', createParagraph);
-      }
+        botao.addEventListener('click', criarParagrafo);
+
     </pre>
     </li>
 

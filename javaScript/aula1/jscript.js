@@ -1,12 +1,10 @@
 
-function createParagraph() {
+function criarParagrafo() {
   let para = document.createElement('p');
   para.textContent = 'Você clicou no botão!';
   document.body.appendChild(para);
 }
 
-const buttons = document.querySelectorAll('button');
+const botao = document.getElementById('bot');
 
-for(let i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
-}
+botao.addEventListener('click', criarParagrafo);

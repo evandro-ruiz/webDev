@@ -5,7 +5,7 @@
   <title>Exemplo aplicando JavaScript</title>
 </head>
 <body>
-  <button>Clique em mim</button>
+  <button id='bot'>Clique em mim</button>
 
   <script>
   function criarParagrafo() {
@@ -14,11 +14,10 @@
     document.body.appendChild(para);
   }
 
-  const botoes = document.querySelectorAll('button');
+  const botao = document.getElementById('bot');
 
-  for(var i = 0; i < botoes.length ; i++) {
-    botoes[i].addEventListener('click', criarParagrafo);
-  }
+  botao.addEventListener('click', criarParagrafo);
+  
   </script>
 
 </body>
