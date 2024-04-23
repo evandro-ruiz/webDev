@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Advice Slip (XMLHttpRequest)</title>
+</head>
+<body>
+
+<h1>Conselho Aleatório:</h1>
+
+<p id="advice"></p>
+
+<button onclick="getRandomAdvice()">Obter Conselho</button>
+
+<script>
+    // Função para obter um conselho aleatório da API Advice Slip usando XMLHttpRequest
+    function getRandomAdvice() {
+        // Criando uma nova instância do objeto XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+
+        // Configurando a requisição GET para a API Advice Slip
+        xhr.open('GET', 'https://api.adviceslip.com/advice', true);
+
+        // Configurando a função de callback para quando a resposta for recebida
+        xhr.onload = function() {
+            // Verificando se a resposta foi bem-sucedida (código de status 200 a 299)
+            if (xhr.status >= 200 && xhr.status < 300) {
+                // Convertendo a resposta JSON para um objeto JavaScript
+                var response = JSON.parse(xhr.responseText);
+                // Exibindo o número e o conselho na página
+                var adviceElement = document.getElementById('advice');
+                adviceElement.textContent = response.slip.advice;
+            } else {
+                // Exibindo mensagem de erro se a requisição não foi bem-sucedida
+                console.error('Erro ao obter o conselho:', xhr.statusText);
+            }
+        };
+
+        // Configurando a função de callback para tratamento de erros de rede
+        xhr.onerror = function() {
+            console.error('Erro de rede ao fazer a requisição.');
+        };
+
+        // Enviando a requisição
+        xhr.send();
+    }
+</script>
+
+</body>
+</html>

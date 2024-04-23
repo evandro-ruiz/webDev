@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste da API Advice Slip</title>
+</head>
+<body>
+
+<h1>Conselhos Aleatórios:</h1>
+
+<p id="conselho"></p>
+
+<button onclick="getRandomAdvice()">Obter Conselho</button>
+
+<script>
+    // Função para obter um conselho aleatório da API Advice Slip
+    function getRandomAdvice() {
+        // Fazendo a requisição para a API Advice Slip que retorna um conselho aleatório
+        fetch('https://api.adviceslip.com/advice')
+            .then(function(response) {
+                // Verificando se a resposta foi bem-sucedida (código de status 200 a 299)
+                if (response.ok) {
+                    // Convertendo a resposta JSON para um objeto JavaScript
+                    return response.json();
+                } else {
+                    // Caso contrário, lançamos um erro com a mensagem de status da resposta
+                    throw new Error('Erro ao obter o conselho: ' + response.statusText);
+                }
+            })
+            .then(function(data) {
+                // Exibindo o conselho na página
+                var adviceElement = document.getElementById('conselho');
+                adviceElement.textContent = 'Conselho #' + data.slip.id + ': ' + data.slip.advice;
+            })
+            .catch(function(error) {
+                // Capturando e exibindo erros de rede ou erros de tratamento de resposta
+                console.error('Erro:', error);
+            });
+    }
+</script>
+
+</body>
+</html>
