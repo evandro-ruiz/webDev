@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metropolitan Museum of Art API</title>
+</head>
+<body>
+
+<h1>Imagens do Metropolitan Museum of Art</h1>
+<p>Pesquise por palavras-chave, e.g. nomes de artistas (Dali, Picasso).<br> 
+  Como o retorno esperado é por imagens, tenha paciência.</b>
+
+<form onsubmit="getArtworks(event)">
+    <label for="search">Pesquisar:</label>
+    <input type="text" id="search">
+    <button type="submit">Pesquisar</button>
+</form>
+
+<div id="artworks"></div>
+
+<script>
+    // Função para recuperar imagens do Metropolitan Museum of Art
+    function getArtworks(event) {
+        event.preventDefault(); // Prevenir o envio do formulário
+
+        var searchTerm = document.getElementById('search').value;
+        var apiUrl = 'https://collectionapi.metmuseum.org/public/collection/v1/search?q=' + encodeURIComponent(searchTerm);
+
+        // Criando uma nova instância do objeto XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+
+        // Configurando a requisição GET para a API do Metropolitan Museum of Art
+        xhr.open('GET', apiUrl);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    displayArtworks(data.objectIDs);
+                } else {
+                    console.error('Erro ao obter os dados:', xhr.statusText);
+                }
+            }
+        };
+
+        // Enviando a requisição
+        xhr.send();
+    }
+
+    // Função para exibir as obras de arte na página
+    function displayArtworks(objectIDs) {
+        var artworksDiv = document.getElementById('artworks');
+        artworksDiv.innerHTML = ''; // Limpar o conteúdo anterior
+
+        if (objectIDs.length > 0) {
+            objectIDs.forEach(function(objectID) {
+                // Criando uma nova instância do objeto XMLHttpRequest
+                var xhr = new XMLHttpRequest();
+
+                // Configurando a requisição GET para obter informações da obra de arte
+                xhr.open('GET', 'https://collectionapi.metmuseum.org/public/collection/v1/objects/' + objectID);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            var artwork = JSON.parse(xhr.responseText);
+                            if (artwork.primaryImageSmall) {
+                                var img = document.createElement('img');
+                                img.src = artwork.primaryImageSmall;
+                                artworksDiv.appendChild(img);
+                            }
+                        } else {
+                            console.error('Erro ao obter a obra de arte:', xhr.statusText);
+                        }
+                    }
+                };
+
+                // Enviando a requisição
+                xhr.send();
+            });
+        } else {
+            artworksDiv.textContent = 'Nenhuma obra de arte encontrada.';
+        }
+    }
+</script>
+
+</body>
+</html>
