@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 1 de Requisição HTTP com JavaScript</title>
+</head>
+<body>
+
+<script>
+// 1. Cria uma instância do objeto XMLHttpRequest
+let xhr = new XMLHttpRequest();
+
+// 2. GET faz uma requisição para URL /article/.../load
+xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true);
+
+// 3. Envia a requisição na rede
+xhr.send();
+
+// 4. Recebida a mensagem essa parte é executada
+xhr.onload = function() {
+  if (xhr.status != 200) { // status da resposta
+    alert(`Erro (404) ${xhr.status}: ${xhr.statusText}`);
+    // e.g. 404: página não encontrada
+  } else { // resultado da recuperação
+    alert(`Feito! Peguei ${xhr.response.length} bytes`);
+  }
+};
+
+xhr.onerror = function() {
+  alert("Erro de requisição");
+};
+</script>
+
+</body>
+</html>

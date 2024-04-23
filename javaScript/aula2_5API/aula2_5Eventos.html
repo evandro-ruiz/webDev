@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../styles.css" />
+  <title>Eventos em JavaScript</title>
+
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <div id="container">
+  <div id="header"><h1>Introdução a APIs com JavaScript</h1></div>
+
+  <h3>Objetivo</h3>
+  <ul>
+    <li>Entender o que é uma API e como ela funciona;</li>
+    <li>Aprender a fazer requisições HTTP com JavaScript;</li>
+    <li>Praticar a integração de APIs externas em aplicações web.</li>
+  </ul>
+
+  <h3>Introdução às APIs</h3>
+
+    <h4>O que é uma API?</h4>
+    <p>No contexto de JavaScript, uma API (Interface de Programação de Aplicações, em português)
+      se refere a um conjunto de regras e padrões que permitem que diferentes
+      softwares se comuniquem entre si. Em outras palavras, uma API define como
+      componentes de software devem interagir uns com os outros.
+
+    <p>Existem vários tipos de APIs no contexto de JavaScript:</p>
+
+    <ul>
+      <li><strong>APIs de navegador (<i>Browser</i> APIs):</strong> São interfaces
+        fornecidas pelos navegadores web para permitir a interação com recursos
+        do navegador, como manipulação do DOM, manipulação de eventos,
+        geolocalização, armazenamento local (localStorage e sessionStorage),
+        manipulação de cookies, acesso a câmera e microfone, entre outros;</li>
+
+    <li><strong>APIs de terceiros (<i>Third-party</i> APIs):</strong>
+      São interfaces disponibilizadas por serviços ou plataformas externas que
+      permitem que aplicativos JavaScript acessem funcionalidades ou dados
+      específicos desses serviços. Exemplos incluem APIs de redes sociais
+      (Facebook, Twitter, Instagram), APIs de serviços de pagamento
+      (PayPal, Stripe), APIs de mapas (Google Maps, Mapbox),
+      APIs de previsão do tempo, APIs de criptomoedas, entre outras;</li>
+
+    <li><strong>APIs RESTful (<i>Representational State Transfer</i>):</strong>
+       São interfaces baseadas no protocolo HTTP que permitem a comunicação
+       entre sistemas distribuídos na web. Essas APIs seguem os princípios de
+       design REST e são usadas para criar serviços web que podem ser consumidos
+       por aplicativos web e móveis. As operações mais comuns em APIs RESTful
+       são GET (para recuperar dados), POST (para criar novos dados),
+       PUT (para atualizar dados existentes) e DELETE (para excluir dados).</li>
+
+    <li><strong>APIs de bibliotecas e frameworks:</strong>
+      São interfaces disponibilizadas por bibliotecas e frameworks JavaScript
+      que permitem estender as funcionalidades da linguagem ou facilitar o
+      desenvolvimento de aplicativos. Exemplos incluem a API do jQuery,
+      API do React, API do Vue.js, entre outros. </li>
+    </ul>
+    <p>Em resumo, no contexto de JavaScript, uma API é uma interface que define
+      como você pode interagir com diferentes partes de um sistema,
+      seja com o navegador, serviços externos ou bibliotecas/frameworks
+      JavaScript. Essas APIs fornecem métodos e funcionalidades que podem ser
+      utilizados pelos desenvolvedores para criar aplicações web dinâmicas e
+      interativas.</p>
+
+    <h4>Tipos de APIs (RESTful, SOAP, etc.)</h4>
+    <p>No contexto de JavaScript, as APIs REST, RESTful e SOAP referem-se a diferentes
+    estilos de arquitetura para a construção de serviços web que permitem a
+    comunicação entre sistemas distribuídos na web. Vamos entender cada uma delas:</p>
+
+    <ul>
+      <li><strong>API REST (<i>Representational State Transfer</i>):</strong>
+        <ul>
+          <li>Uma API REST é um estilo arquitetural que define um conjunto de
+         princípios e restrições para projetar serviços web;</li>
+          <li>As APIs REST são baseadas no protocolo HTTP e usam os métodos
+            padrão do HTTP (GET, POST, PUT, DELETE) para realizar operações
+            sobre os recursos;</li>
+          <li>Os recursos são representados por URLs (<i>Uniform Resource Locators</i>)
+            e são manipulados por meio das operações HTTP mencionadas;</li>
+          <li>
+           As APIs REST geralmente respondem com dados em formatos leves como
+           JSON (<i>JavaScript Object Notation</i>) ou XML (<i>Extensible Markup Language</i>);</li>
+
+          <li>As APIs REST promovem a escalabilidade, a simplicidade e a
+            interoperabilidade entre diferentes sistemas.</li>
+        </ul>
+      <li><strong>API RESTful (RESTful API)</strong>
+        <ul>
+          <li>Uma API RESTful é uma implementação de uma API seguindo os
+            princípios do estilo arquitetural REST;</li>
+          <li>Uma API RESTful adere aos princípios de design REST,
+            como identificação de recursos, manipulação de recursos por meio de
+            representações, uso de métodos HTTP de forma adequada
+            (GET, POST, PUT, DELETE), entre outros;</li>
+          <li>Uma API é considerada RESTful quando segue esses princípios de
+            design e fornece uma interface web que pode ser facilmente
+            compreendida e utilizada por outros sistemas.</li>
+        </ul>
+
+      <li><strong>API SOAP (<i>Simple Object Access Protocol</i>)</strong>
+        <ul>
+           <li>Uma API SOAP é baseada no protocolo de comunicação SOAP,
+             que define uma estrutura XML para a troca de mensagens entre
+             sistemas distribuídos na web;</li>
+           <li>As mensagens SOAP são encapsuladas em envelopes XML e
+             enviadas via HTTP ou outros protocolos;</li>
+           <li>As APIs SOAP definem operações detalhadas e complexas,
+             geralmente utilizando WSDL (<i>Web Services Description Language</i>)
+             para descrever a interface da API;</li>
+           <li>As APIs SOAP são consideradas mais verbosas e menos simples do
+             que as APIs REST, devido à complexidade do protocolo SOAP e
+             das mensagens XML.</li>
+        </ul>
+
+    <p>Em resumo, as APIs REST e RESTful seguem os princípios do estilo
+      arquitetural REST e são baseadas no protocolo HTTP,
+      enquanto as APIs SOAP são baseadas no protocolo SOAP e utilizam mensagens XML.
+      Cada uma dessas abordagens tem suas próprias vantagens e
+      é adequada para diferentes cenários de desenvolvimento de software.
+      No contexto de JavaScript, as APIs REST e RESTful são mais comuns
+      devido à sua simplicidade, escalabilidade e interoperabilidade.</p>
+
+    <h5>Diferença entre as abordagens REST e RESTful</h5>
+    <p>Enquanto uma API REST pode seguir apenas <em>parcialmente</em> os princípios do
+      REST, uma API RESTful segue <em>rigorosamente</em> todos os princípios de design REST.
+      Em resumo, a principal diferença entre API REST e RESTful é o nível de
+      aderência aos princípios do estilo arquitetural REST.
+      Uma API RESTful é uma implementação mais pura e completa do REST.</p>
+
+    <h4>Exemplos de APIs populares e casos de uso</h4>
+    Dois exemplos populares de APIs em JavaScript e seus respectivos casos de uso são:
+
+    <ul>
+      <li>Google Maps API</li>
+      <dl>
+       <dt>Descrição:</dt>
+         <p>A Google Maps API permite integrar mapas
+         interativos e funcionalidades de localização em aplicações web.</p>
+       <dt>Casos de Uso:</dt>
+         <ul>
+           <li>Serviços de Localização: Uma aplicação de entrega de alimentos
+           pode utilizar a Google Maps API para permitir que os usuários vejam
+           a localização atual dos entregadores e rastreiem o progresso da
+           entrega em tempo real;</li>
+         <li>Mapas Interativos: Um site de viagens pode integrar a Google Maps
+           API para exibir destinos turísticos, pontos de interesse e
+           rotas de transporte público em um mapa interativo para ajudar os
+           usuários a planejar suas viagens.</li>
+         </ul>
+       </dl>
+
+    <li>Twitter API</li>
+      <dl>
+       <dt>Descrição:</dt>
+         <p>A Twitter API permite acessar os dados e
+       funcionalidades da plataforma de mídia social Twitter, como postagens,
+       perfis de usuários, tendências e busca.</p>
+         <dt>Casos de Uso:</dt>
+           <ul>
+             <li>Integração Social: Uma aplicação de gerenciamento de mídia
+               social pode usar a Twitter API para permitir que os usuários
+               publiquem automaticamente tweets em suas contas do Twitter
+               quando realizarem determinadas ações na aplicação;</li>
+             <li>Análise de Sentimento: Uma empresa de análise de dados pode
+               utilizar a Twitter API para coletar tweets relacionados a um
+               determinado tópico e analisar o sentimento das postagens para
+               entender a opinião pública sobre o assunto.</li>
+            </ul>
+      </dl>
+    </ul>
+
+    <p>Esses são apenas alguns exemplos de como as APIs em JavaScript podem
+      ser utilizadas para integrar funcionalidades poderosas em aplicações web,
+      desde mapas interativos até integração com redes sociais e
+      análise de dados. As possibilidades são vastas e dependem da
+      criatividade e das necessidades específicas de cada projeto.</p>
+
+    <h3>Requisições HTTP em JavaScript</h3>
+
+    <h4>Introdução ao objeto XMLHttpRequest</h4>
+
+    <p>O XMLHttpRequest foi introduzido inicialmente pela Microsoft em 1999 como
+    parte do Internet Explorer 5.0 e posteriormente adotado por outros navegadores.
+    Desde então, tornou-se uma ferramenta essencial para o desenvolvimento de
+    aplicações web interativas e dinâmicas.</p>
+
+    <p>Funcionalidades Principais:</p>
+
+    <dl>
+      <dt>Requisições Assíncronas:</dt>
+       <p>O XMLHttpRequest permite fazer requisições HTTP assíncronas, o que significa
+          que o navegador pode continuar executando outras tarefas enquanto
+          aguarda a resposta do servidor. Isso evita bloqueios na interface do
+          usuário e melhora a experiência do usuário final;</p>
+      <dt>Comunicação com o Servidor:</dt>
+      <p>Com o XHR (XMLHttpRequest), é possível enviar solicitações para o
+        servidor web e receber respostas sem a necessidade de recarregar a página.
+        Isso possibilita a criação de aplicações web dinâmicas que podem
+        interagir com servidores remotos de forma eficiente;<p>
+      <dt>Atualização Dinâmica de Conteúdo:</dt>
+       <p>O XHR é comumente usado para atualizar partes específicas de uma página
+       web com novos dados do servidor, sem recarregar a página inteira.
+       Isso permite criar interfaces de usuário dinâmicas e responsivas.</p>
+
+      <dt>Suporte a Diferentes Tipos de Dados:</dt>
+      <p>O XHR suporta diferentes
+      tipos de dados, como texto, XML e JSON. Isso permite que os desenvolvedores
+      escolham o formato mais adequado para os dados que estão sendo
+      transmitidos entre o cliente e o servidor;</p>
+      <dt>Manipulação de Eventos:</dt>
+      <p> O XHR fornece uma série de eventos que podem ser usados para monitorar
+        o progresso da requisição, como onload (quando a resposta é recebida
+        com sucesso), onerror (quando ocorre um erro durante a requisição) e
+        onprogress (para acompanhar o progresso do envio ou recebimento de
+        dados).</p>
+    </dl>
+
+    <p>Na imagem abaixo vemos um primeiro exemplo do uso do <code>XMLHttpRequest</code>.</p>
+    <img src="../images/requestExe1.png" alt="Um primeiro exemplo de request." class="center">
+
+    <p>Criamos uma nova instância do objeto <code>XMLHttpRequest</code>.
+      Configuramos a requisição GET para o endpoint
+      <code>https://jsonplaceholder.typicode.com/posts/1,</code> que retorna
+      informações de um post fictício.
+      Definimos a função de callback <code>onload</code>, que é chamada quando
+      a resposta é recebida com sucesso. Verificamos se o código de status da
+      resposta está dentro da faixa de sucesso (200-299), então convertemos a
+      resposta JSON para um objeto JavaScript e exibimos os dados na console.
+      Também definimos a função de callback <code>onerror</code>, que é chamada
+      em caso de erro na requisição.
+      Enviamos a requisição usando o método <code>send()</code>.</p>
+
+    <p>Quando um navegador requisita um serviço de um servidor web, um erro pode
+      ocorrer, como o erro &ldquo;404 Not Found&rdquo;. Veja as
+      principais mensagens de erro em
+      <a href="https://www.w3schools.com/tags/ref_httpmessages.asp">W3Schools.com!</a>.</p>
+
+    <p>Lembrando que este script acima deve estar envolto num códido HTML,
+      dentro dos rótulos <code>body</code>,
+      como exemplificado na imagem a seguir:</p>
+    <img src="../images/corpoRequest.png" alt="Código HTML de suporte ao request." class="center">
+
+  <h4>Melhorando as saídas do XMLHttpRequest</h4>
+  <p>No exemplo abaixo acrescentamos uma visualização do texto recuperado
+    na requisição do serviço.</p>
+
+  <img src="../images/requestExe2.png" alt="Acrescentando a resposta ao request." class="center">
+
+  <p>Neste exemplo, o JavaScript pega o elemento com o <code>id resposta</code>
+    usando <code>document.getElementById('resposta')</code>, e então define o
+    <code>innerHTML</code> desse elemento com os dados da resposta da requisição.
+    Os dados são inseridos como parágrafos, utilizando a interpolação de string
+    <code>(${...})</code> para exibir os valores das propriedades do objeto
+      JSON retornado pela API.</p>
+  <p>Ah! Na imagem acima a função <code>xhr.onerror = function()</code>
+    ficou de fora, mas deve sempre permanecer no código.</p>
+
+  <p>Vejamos agora uma última melhoria no código. Vamos declarar e definir
+    uma função que acompanha o progresso da requisição.</p>
+
+    <img src="../images/requestExe3.png" alt="Acompanhando a resposta ao request." class="center">
+  <p>Perceba que esta função pode ser inserida depois da função
+    <code>xhr.send()</code>.</p>
+  <p>Codifique e testem o código acima. Se tiverem dificuldades
+  veja o código fonte
+    <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula2_5API/requestExe2.html"
+    target="_blank">aqui</a>.</p>
+
+  <p>O código em execução encontra-se
+    <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula2_5API/requestExe2.html">aqui</a>
+
+  <h4>Mais um exemplo de recuperação de dados usando Fetch</h4>
+
+  <p>A recuperação de dados vista no código a seguir utiliza uma abordagem
+    mais moderna, a API Fetch, que é mais simples e legível.</p>
+
+  <p>Neste exemplo:</p>
+  <ul>
+    <li>Utilizamos a função fetch() para fazer uma requisição GET para a URL
+      <code>https://jsonplaceholder.typicode.com/posts,</code> que retorna uma
+      lista de posts no formato JSON; </li>
+    <li>Utilizamos os métodos .then() e .catch() para processar a resposta da
+      requisição e tratar erros, respectivamente;</li>
+    <li>Se a resposta for bem-sucedida, convertemos a resposta para JSON usando
+      <code>response.json()</code> e exibimos os títulos dos posts em uma lista
+      não ordenada na página.</li>
+    <li>Se ocorrer um erro durante a requisição ou ao processar a resposta,
+      capturamos e exibimos o erro na console.</li>
+  </ul>
+  <p>Este é apenas um exemplo básico de como obter dados de uma API pública
+    usando JavaScript.</p>
+
+    Veja o código fonte
+      <a href="https://github.com/evandro-ruiz/webDev/blob/main/javaScript/aula2_5API/fetchExe1.html"
+      target="_blank">aqui</a>.</p>
+
+    <p>O código em execução encontra-se
+      <a href="https://evandro-ruiz.github.io/webDev/javaScript/aula2_5API/fetchExe1.html">aqui</a>
+
+
+    <h4>Fazendo requisições GET, POST, PUT e DELETE</h4>
+    <h4>Tratamento de respostas e erros</h4>
+
+    <h3>Consumindo APIs externas</h3>
+
+    <h4>Obtendo dados de uma API pública</h4>
+    <h4>Extraindo e exibindo informações em uma página web</h4>
+    <h4>Manipulação de dados recebidos (JSON, XML)</h4>
+
+
+    <h3>Desafio prático</h3>
+
+    <p>Desenvolver uma pequena aplicação web que utilize uma API externa.
+    Implementar funcionalidades básicas, como pesquisa, filtragem ou
+    exibição de resultados.</p>
+
+
+
+
+
+</html>
